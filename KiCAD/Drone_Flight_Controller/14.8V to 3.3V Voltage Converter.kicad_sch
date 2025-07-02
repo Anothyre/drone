@@ -925,23 +925,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at -2.54 7.62 0)
+			(property "Reference" "Q1"
+				(at 5.08 1.2701 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "NPN"
-				(at -2.54 5.08 0)
+			(property "Value" "BUJ303B,127"
+				(at 5.08 -1.2699 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
 				(at 63.5 0 0)
 				(effects
 					(font
@@ -950,7 +952,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
+			(property "Datasheet" "https://www.mouser.at/datasheet/2/848/buj303b-1520633.pdf"
 				(at 63.5 0 0)
 				(effects
 					(font
@@ -987,6 +989,15 @@
 				)
 			)
 			(property "Sim.Pins" "1=C 2=B 3=E"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Link" "https://www.mouser.at/ProductDetail/WeEn-Semiconductors/BUJ303B127?qs=6YAT8rHPFU95z59kcTFynA%3D%3D"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1138,7 +1149,7 @@
 						)
 					)
 				)
-				(pin open_emitter line
+				(pin power_out line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "E"
@@ -1510,107 +1521,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
 		(at 165.1 90.17)
@@ -1635,12 +1545,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "578dd9ff-b73b-417b-87af-09d2a5d010a6")
-	)
-	(junction
-		(at 189.23 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6428a321-7933-4bed-a510-73ab9802e99a")
 	)
 	(junction
 		(at 124.46 85.09)
@@ -1732,16 +1636,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 101.6) (xy 189.23 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d3dfd09-3a7f-4b87-9324-8fbd1a8b3367")
-	)
-	(wire
-		(pts
 			(xy 162.56 90.17) (xy 165.1 90.17)
 		)
 		(stroke
@@ -1762,7 +1656,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 111.76) (xy 87.63 111.76)
+			(xy 124.46 111.76) (xy 87.63 111.76)
 		)
 		(stroke
 			(width 0)
@@ -1812,7 +1706,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 90.17) (xy 114.3 111.76)
+			(xy 124.46 90.17) (xy 124.46 111.76)
 		)
 		(stroke
 			(width 0)
@@ -1859,16 +1753,6 @@
 			(type default)
 		)
 		(uuid "5e4cb38c-3d23-4deb-b8d0-a65a29b4caf4")
-	)
-	(wire
-		(pts
-			(xy 196.85 99.06) (xy 196.85 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68486c6c-15c5-4055-b847-4d7733e9d6ab")
 	)
 	(wire
 		(pts
@@ -1962,7 +1846,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 90.17) (xy 127 90.17)
+			(xy 124.46 90.17) (xy 127 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2836,7 +2720,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
+		(property "Datasheet" "~"
 			(at 154.94 90.17 0)
 			(effects
 				(font
@@ -3711,72 +3595,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 196.85 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d23164c2-ea1e-47c0-8fba-4a1e4e1e2795")
-		(property "Reference" "#FLG01"
-			(at 196.85 97.155 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 196.85 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 196.85 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.85 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 196.85 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e481888c-0b2c-4385-87f1-0a693c4eb862")
-		)
-		(instances
-			(project ""
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#FLG01")
 					(unit 1)
 				)
 			)

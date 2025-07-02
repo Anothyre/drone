@@ -1975,6 +1975,12 @@
 		(uuid "eaa223f6-d165-4e69-9097-b70bd640a494")
 	)
 	(junction
+		(at 73.66 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6e63c4a-e5ff-46b8-99e8-d65f1f30063a")
+	)
+	(junction
 		(at 142.24 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2092,6 +2098,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 99.06) (xy 161.29 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4857b77b-dca3-4482-91b5-ce5952666c08")
+	)
+	(wire
+		(pts
 			(xy 142.24 81.28) (xy 152.4 81.28)
 		)
 		(stroke
@@ -2122,6 +2138,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 83.82) (xy 161.29 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "553bf849-a51b-4488-938a-08c0c4be66e0")
+	)
+	(wire
+		(pts
 			(xy 120.65 144.78) (xy 120.65 142.24)
 		)
 		(stroke
@@ -2149,16 +2175,6 @@
 			(type default)
 		)
 		(uuid "5e841a47-c129-422f-9958-2fe79e70e407")
-	)
-	(wire
-		(pts
-			(xy 161.29 101.6) (xy 161.29 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62583bf6-8221-4a58-ab4f-be741cca0b2f")
 	)
 	(wire
 		(pts
@@ -2362,16 +2378,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 83.82) (xy 161.29 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b41621d8-b91e-4121-84b0-0f0d6b44e310")
-	)
-	(wire
-		(pts
 			(xy 71.12 93.98) (xy 73.66 93.98)
 		)
 		(stroke
@@ -2479,6 +2485,26 @@
 			(type default)
 		)
 		(uuid "e1c302b6-6535-439f-ab63-e10f1a05d334")
+	)
+	(wire
+		(pts
+			(xy 81.28 73.66) (xy 81.28 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed6db56b-585f-47c2-996d-f7262daf465d")
+	)
+	(wire
+		(pts
+			(xy 81.28 76.2) (xy 73.66 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa0faafb-9201-42aa-ba0d-d2b907ef160e")
 	)
 	(global_label "D+"
 		(shape input)
@@ -2630,6 +2656,139 @@
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "#PWR09")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Opamp_Dual")
+		(at 163.83 91.44 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f8f88a8-9867-4849-b1c1-0f0aa54f3337")
+		(property "Reference" "U6"
+			(at 162.56 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AS358"
+			(at 162.56 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual operational amplifier"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_dual"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "064f8fbb-ad34-473d-8746-544540b3650b")
+		)
+		(pin "6"
+			(uuid "8fe0e44b-f1e8-4b82-8158-d479a41449e5")
+		)
+		(pin "7"
+			(uuid "44ed53cc-8216-46b3-b15c-780f014d7f8c")
+		)
+		(pin "1"
+			(uuid "90e07d06-f9ed-42cd-b852-2e2383e68b48")
+		)
+		(pin "3"
+			(uuid "2e9095e8-55e6-4230-a3f2-be766abcd85f")
+		)
+		(pin "8"
+			(uuid "d7018734-ddb0-4233-a6f4-b1a9afe57d25")
+		)
+		(pin "2"
+			(uuid "c34aa9c5-858c-45cf-9446-36f92d05e150")
+		)
+		(pin "4"
+			(uuid "528a06df-fa13-48ef-bcfe-87d818249c59")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "U6")
+					(unit 3)
 				)
 			)
 		)
@@ -3070,6 +3229,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 81.28 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6cbe4b68-2ed3-4f1c-89e5-c5538c2594b0")
+		(property "Reference" "#FLG04"
+			(at 81.28 71.755 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 81.28 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 81.28 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e1d2f70-d4f4-4bbe-b82f-ec449187a7f9")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 109.22 92.71 180)
 		(unit 1)
@@ -3141,139 +3366,6 @@
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "J1")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 163.83 91.44 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "764f89b5-2abe-4193-bfe3-3ed117faca46")
-		(property "Reference" "U5"
-			(at 162.56 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AS358"
-			(at 162.56 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 163.83 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "064f8fbb-ad34-473d-8746-544540b3650d")
-		)
-		(pin "6"
-			(uuid "8fe0e44b-f1e8-4b82-8158-d479a41449e7")
-		)
-		(pin "7"
-			(uuid "44ed53cc-8216-46b3-b15c-780f014d7f8e")
-		)
-		(pin "1"
-			(uuid "90e07d06-f9ed-42cd-b852-2e2383e68b4a")
-		)
-		(pin "3"
-			(uuid "2e9095e8-55e6-4230-a3f2-be766abcd861")
-		)
-		(pin "8"
-			(uuid "c729f3a6-d238-4cde-93f4-7555f569fa61")
-		)
-		(pin "2"
-			(uuid "c34aa9c5-858c-45cf-9446-36f92d05e152")
-		)
-		(pin "4"
-			(uuid "5b53fed3-0bbd-46d8-b4a2-15ad6f52cbc9")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "U5")
-					(unit 3)
 				)
 			)
 		)
