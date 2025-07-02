@@ -2042,10 +2042,6 @@
 		(uuid "50b7d784-a0b0-4b6e-9eaf-1762691f112a")
 	)
 	(no_connect
-		(at 392.43 69.85)
-		(uuid "676fb601-4006-4396-abb0-06e3c9dfb76b")
-	)
-	(no_connect
 		(at 162.56 99.06)
 		(uuid "73fbb85b-7a2d-4883-ba58-0d17326ef925")
 	)
@@ -3294,7 +3290,7 @@
 		(uuid "f683519c-17ec-4bff-ba79-86e933ada1bc")
 	)
 	(label "IO23"
-		(at 210.82 104.14 180)
+		(at 209.55 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3304,7 +3300,7 @@
 		(uuid "098869d5-aa3d-48df-97bf-6ccd6cf550f6")
 	)
 	(label "IO27"
-		(at 205.74 111.76 180)
+		(at 204.47 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3314,7 +3310,7 @@
 		(uuid "0a4159df-72c7-482d-b1c3-e57757aebc3c")
 	)
 	(label "IO21"
-		(at 210.82 99.06 180)
+		(at 209.55 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3324,7 +3320,7 @@
 		(uuid "1d9c96e2-b3fd-485d-b134-6fa5ae4704b0")
 	)
 	(label "Motor3"
-		(at 213.36 83.82 180)
+		(at 212.09 83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3334,7 +3330,7 @@
 		(uuid "1ffe04c0-6064-4ce1-b1ac-ea1ffe58c655")
 	)
 	(label "Motor1"
-		(at 213.36 78.74 180)
+		(at 212.09 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3344,7 +3340,7 @@
 		(uuid "662efddd-05e7-4e25-bbb5-755684cb9041")
 	)
 	(label "Motor2"
-		(at 213.36 81.28 180)
+		(at 212.09 81.28 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3354,7 +3350,7 @@
 		(uuid "66a37ba0-d045-44b3-bfcc-9c4db1f16c9c")
 	)
 	(label "IO22"
-		(at 210.82 101.6 180)
+		(at 209.55 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3364,7 +3360,7 @@
 		(uuid "75b879f4-0bcb-4ae0-be1b-83d47c2e629c")
 	)
 	(label "IO19"
-		(at 218.44 96.52 180)
+		(at 217.17 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3374,7 +3370,7 @@
 		(uuid "9641c687-f933-4f2f-9e0b-b8411b8048c4")
 	)
 	(label "IO16"
-		(at 218.44 88.9 180)
+		(at 217.17 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3384,7 +3380,7 @@
 		(uuid "b07e1b5a-cb6c-44d8-a36e-7087f05ba405")
 	)
 	(label "IO26"
-		(at 205.74 109.22 180)
+		(at 204.47 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3394,7 +3390,7 @@
 		(uuid "b1459da6-dbcb-4e5d-9be2-e1d68db8aa63")
 	)
 	(label "IO18"
-		(at 218.44 93.98 180)
+		(at 217.17 93.98 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3404,7 +3400,7 @@
 		(uuid "b220da6c-5b96-4e36-9ba0-d60056f35b58")
 	)
 	(label "IO25"
-		(at 205.74 106.68 180)
+		(at 204.47 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3414,7 +3410,7 @@
 		(uuid "c799eefc-cd1c-46f2-8720-a46944c8010e")
 	)
 	(label "Motor4"
-		(at 213.36 86.36 180)
+		(at 212.09 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3424,7 +3420,7 @@
 		(uuid "d2e31466-e7d8-4972-830e-9b2698c3edce")
 	)
 	(label "IO17"
-		(at 218.44 91.44 180)
+		(at 217.17 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3641,7 +3637,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0033af1d-b09f-43b3-9e51-db62f2d3aa2d")
-		(property "Reference" "U?"
+		(property "Reference" "U23"
 			(at 179.9433 55.88 0)
 			(effects
 				(font
@@ -3806,7 +3802,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "U?")
+					(reference "U23")
 					(unit 1)
 				)
 			)
@@ -3822,7 +3818,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00a7fe3f-5305-46a0-8052-2b7adbfb65e5")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0103"
 			(at 124.46 140.97 0)
 			(effects
 				(font
@@ -3872,7 +3868,73 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 124.46 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "339cbb0a-b141-47ac-9939-94c6fae0cb2d")
+		(property "Reference" "#PWR012"
+			(at 124.46 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 124.46 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 124.46 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "305a99ac-e265-44ae-a520-e7ef30258936")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -3888,7 +3950,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45454955-3d83-49ed-b969-63e06fd98a0c")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0101"
 			(at 177.8 138.43 0)
 			(effects
 				(font
@@ -3938,7 +4000,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -3954,7 +4016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "698f089f-cf3d-4e79-b878-3b323b1d938d")
-		(property "Reference" "U?"
+		(property "Reference" "U22"
 			(at 131.6833 91.44 0)
 			(effects
 				(font
@@ -4096,7 +4158,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "U?")
+					(reference "U22")
 					(unit 1)
 				)
 			)
@@ -4112,7 +4174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "80a842f9-ebe0-46cf-aac0-44c9ad7a7b7a")
-		(property "Reference" "C?"
+		(property "Reference" "C21"
 			(at 158.75 109.2199 0)
 			(effects
 				(font
@@ -4166,73 +4228,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "C?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 124.46 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81ddb28c-5e79-4680-93d3-f5185aaa3d91")
-		(property "Reference" "#PWR?"
-			(at 124.46 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 124.46 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.46 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 124.46 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bcefc37c-63db-4153-8da8-a73abcb8e4dd")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -4248,7 +4244,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3ff54e2-af29-4934-a759-87ab0c2047fe")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0102"
 			(at 177.8 57.15 0)
 			(effects
 				(font
@@ -4298,7 +4294,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -4314,7 +4310,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c60d53ce-a159-42fe-ab6a-8f203ea32254")
-		(property "Reference" "U?"
+		(property "Reference" "U21"
 			(at 102.87 114.2298 0)
 			(effects
 				(font
@@ -4393,7 +4389,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "U?")
+					(reference "U21")
 					(unit 1)
 				)
 			)
@@ -4409,7 +4405,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0bb91e6-b4a4-4129-b0c7-175a92a3d147")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0105"
 			(at 91.44 110.49 0)
 			(effects
 				(font
@@ -4459,7 +4455,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -4475,7 +4471,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3278859-4c87-4c00-ae6f-621fdeb595e3")
-		(property "Reference" "C?"
+		(property "Reference" "C22"
 			(at 148.59 116.84 90)
 			(effects
 				(font
@@ -4527,7 +4523,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "C?")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -4543,7 +4539,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3bb7cf8-a1e3-43a2-ad02-ac678fd81de5")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0106"
 			(at 88.9 138.43 0)
 			(effects
 				(font
@@ -4593,7 +4589,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
-					(reference "#PWR?")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
