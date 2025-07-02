@@ -672,6 +672,10 @@
     [
       "be1bc5c9-9814-4f01-a307-b935c6145e5a",
       "uC and sensors"
+    ],
+    [
+      "be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4",
+      "Buzzer"
     ]
   ],
   "text_variables": {}
