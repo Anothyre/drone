@@ -668,6 +668,10 @@
     [
       "260564b2-f35d-47a6-9418-8c7c5bce9239",
       "Connectors & Power"
+    ],
+    [
+      "be1bc5c9-9814-4f01-a307-b935c6145e5a",
+      "uC and sensors"
     ]
   ],
   "text_variables": {}
