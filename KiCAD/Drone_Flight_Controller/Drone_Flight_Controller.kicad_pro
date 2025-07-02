@@ -577,6 +577,36 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Library",
+          "name": "Sim.Library",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Name",
+          "name": "Sim.Name",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -630,6 +660,14 @@
     [
       "05daaa24-e506-4b9a-9564-8bf799413ca8",
       "Root"
+    ],
+    [
+      "93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd",
+      "14.8V to 3.3V Voltage Converter"
+    ],
+    [
+      "260564b2-f35d-47a6-9418-8c7c5bce9239",
+      "Connectors & Power"
     ]
   ],
   "text_variables": {}
