@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Drone Flight Controller")
-		(date "2025-06-30")
+		(date "2025-07-07")
 		(rev "V1")
 		(company "HTL Steyr")
 		(comment 1 "Brandner; Hinterberger")
@@ -50,6 +50,48 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 76.2 25.4)
+		(size 38.1 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8aeacdae-c3f2-480a-a34d-37642627b117")
+		(property "Sheetname" "Battery Monitoring"
+			(at 76.2 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Battery Monitoring.kicad_sch"
+			(at 76.2 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8"
+					(page "6")
 				)
 			)
 		)

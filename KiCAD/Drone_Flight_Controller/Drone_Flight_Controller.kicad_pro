@@ -554,7 +554,7 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -681,6 +681,10 @@
     [
       "be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4",
       "Buzzer"
+    ],
+    [
+      "8aeacdae-c3f2-480a-a34d-37642627b117",
+      "Battery Monitoring"
     ]
   ],
   "text_variables": {}
