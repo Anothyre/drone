@@ -228,7 +228,19 @@
   "erc": {
     "erc_exclusions": [
       [
+        "lib_symbol_mismatch|1270000|1117600|698f089f-cf3d-4e79-b878-3b323b1d938d|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
         "lib_symbol_mismatch|1752600|901700|fe29407d-41a0-4002-b3cc-f2ebd37b2017|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|2070100|876300|fe29407d-41a0-4002-b3cc-f2ebd37b2017|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "pin_to_pin|2095500|927100|d706183a-f9a2-4c2f-8d9d-414d8583add6|50999054-0375-4917-800b-c518ff607f41|/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd|/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd|/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd",
         ""
       ]
     ],
@@ -685,6 +697,10 @@
     [
       "8aeacdae-c3f2-480a-a34d-37642627b117",
       "Battery Monitoring"
+    ],
+    [
+      "8421779c-d2a0-463b-acfb-bef6fd845f5d",
+      "USB & Status LEDs"
     ]
   ],
   "text_variables": {}
