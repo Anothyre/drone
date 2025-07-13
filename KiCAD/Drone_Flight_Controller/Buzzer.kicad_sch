@@ -903,7 +903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18f5470d-8986-4345-b34e-9a137164ba13")
-		(property "Reference" "R10"
+		(property "Reference" "R501"
 			(at 106.68 99.06 90)
 			(effects
 				(font
@@ -964,7 +964,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "R10")
+					(reference "R501")
 					(unit 1)
 				)
 			)
@@ -980,7 +980,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d2fc75c-6f88-48f3-b4d5-770ef556909f")
-		(property "Reference" "BZ1"
+		(property "Reference" "BZ501"
 			(at 135.89 90.1699 0)
 			(effects
 				(font
@@ -1043,7 +1043,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "BZ1")
+					(reference "BZ501")
 					(unit 1)
 				)
 			)
@@ -1059,7 +1059,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "768e4994-56f7-4036-b03f-6ffefa04ea83")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0501"
 			(at 120.65 86.36 0)
 			(effects
 				(font
@@ -1109,7 +1109,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "#PWR010")
+					(reference "#PWR0501")
 					(unit 1)
 				)
 			)
@@ -1125,7 +1125,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3a0ce7e-28ec-4b3f-8e56-d8dcc29531d4")
-		(property "Reference" "R9"
+		(property "Reference" "R502"
 			(at 123.19 90.1699 0)
 			(effects
 				(font
@@ -1188,7 +1188,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "R9")
+					(reference "R502")
 					(unit 1)
 				)
 			)
@@ -1204,7 +1204,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf1a496e-1930-4b6d-b0f9-3d32c3f2f606")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR0502"
 			(at 120.65 119.38 0)
 			(effects
 				(font
@@ -1254,7 +1254,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "#PWR011")
+					(reference "#PWR0502")
 					(unit 1)
 				)
 			)
@@ -1270,7 +1270,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1dac3a7-2ed2-4969-b0d8-dbf325ae6478")
-		(property "Reference" "Q2"
+		(property "Reference" "Q501"
 			(at 123.19 104.1399 0)
 			(effects
 				(font
@@ -1330,7 +1330,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "Q2")
+					(reference "Q501")
 					(unit 1)
 				)
 			)
