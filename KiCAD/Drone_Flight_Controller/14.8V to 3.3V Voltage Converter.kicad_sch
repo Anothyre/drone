@@ -2725,7 +2725,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12edc6fe-95f2-4075-890e-78a06b2871ab")
-		(property "Reference" "R207"
+		(property "Reference" "R202"
 			(at 165.1 64.77 90)
 			(effects
 				(font
@@ -2786,7 +2786,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "R207")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -2802,7 +2802,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3429b496-a343-4c5d-8bca-50290ed41b6d")
-		(property "Reference" "#FLG0203"
+		(property "Reference" "#FLG0202"
 			(at 229.87 94.615 0)
 			(effects
 				(font
@@ -2852,7 +2852,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#FLG0203")
+					(reference "#FLG0202")
 					(unit 1)
 				)
 			)
@@ -2947,7 +2947,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "492b3b00-8fcf-4075-89b9-6a3bcd0eb459")
-		(property "Reference" "#PWR0202"
+		(property "Reference" "#PWR0203"
 			(at 49.53 110.49 0)
 			(effects
 				(font
@@ -2997,7 +2997,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#PWR0202")
+					(reference "#PWR0203")
 					(unit 1)
 				)
 			)
@@ -3012,7 +3012,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4ce19521-12af-4410-8f4e-9e1e7d435a90")
-		(property "Reference" "R205"
+		(property "Reference" "R208"
 			(at 132.08 95.25 90)
 			(effects
 				(font
@@ -3073,7 +3073,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "R205")
+					(reference "R208")
 					(unit 1)
 				)
 			)
@@ -3234,7 +3234,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77f9027d-780d-4e30-9c95-0d200aaf4926")
-		(property "Reference" "R208"
+		(property "Reference" "R205"
 			(at 212.09 74.9299 0)
 			(effects
 				(font
@@ -3297,7 +3297,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "R208")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -3444,7 +3444,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ecc45ef-a481-4403-b584-8a2e99de3802")
-		(property "Reference" "#PWR0203"
+		(property "Reference" "#PWR0204"
 			(at 209.55 120.65 0)
 			(effects
 				(font
@@ -3494,7 +3494,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#PWR0203")
+					(reference "#PWR0204")
 					(unit 1)
 				)
 			)
@@ -3510,7 +3510,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8020f71d-e118-43cc-91dd-d7fbe244e40c")
-		(property "Reference" "R202"
+		(property "Reference" "R204"
 			(at 52.07 72.3899 0)
 			(effects
 				(font
@@ -3573,7 +3573,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "R202")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -4177,7 +4177,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2beca4e-e6d5-4a51-ab1a-7e309fbb950e")
-		(property "Reference" "#FLG0202"
+		(property "Reference" "#FLG0203"
 			(at 201.93 116.205 0)
 			(effects
 				(font
@@ -4227,7 +4227,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#FLG0202")
+					(reference "#FLG0203")
 					(unit 1)
 				)
 			)
@@ -4242,7 +4242,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b0a6f57a-84b9-4961-a4b2-51b9e12656d4")
-		(property "Reference" "R204"
+		(property "Reference" "R207"
 			(at 132.08 88.9 90)
 			(effects
 				(font
@@ -4303,7 +4303,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "R204")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -4595,7 +4595,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f30bcbbf-4ea4-4e67-a3cf-64bba1e79d1d")
-		(property "Reference" "#PWR0204"
+		(property "Reference" "#PWR0202"
 			(at 220.98 100.33 0)
 			(effects
 				(font
@@ -4645,7 +4645,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/93fa31b3-ffc2-4fc8-af5e-8c3024b36dbd"
-					(reference "#PWR0204")
+					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
