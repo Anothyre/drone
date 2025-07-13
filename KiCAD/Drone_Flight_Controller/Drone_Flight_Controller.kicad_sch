@@ -55,6 +55,48 @@
 		)
 	)
 	(sheet
+		(at 74.93 63.5)
+		(size 39.37 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8421779c-d2a0-463b-acfb-bef6fd845f5d")
+		(property "Sheetname" "USB & Status LEDs"
+			(at 74.93 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "USB & Status LEDs.kicad_sch"
+			(at 74.93 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 76.2 25.4)
 		(size 38.1 25.4)
 		(exclude_from_sim no)
