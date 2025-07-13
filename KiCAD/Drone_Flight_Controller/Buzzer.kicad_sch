@@ -919,7 +919,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 106.68 107.188 90)
 			(effects
 				(font
@@ -928,7 +928,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
 			(at 106.68 105.41 0)
 			(effects
 				(font
@@ -939,6 +939,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 106.68 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Panasonic/ERA-6AEB181V?qs=sGAEpiMZZMtlubZbdhIBIK8nywws5AKnTCAIBrFldM0%3D"
+			(at 106.68 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1134,7 +1143,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 118.872 91.44 90)
 			(effects
 				(font
@@ -1143,7 +1152,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/392/n_catalog_partition01_en-1140338.pdf"
 			(at 120.65 91.44 0)
 			(effects
 				(font
@@ -1153,6 +1162,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 120.65 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Susumu/RG2012P-102-B-T5?qs=sGAEpiMZZMtlubZbdhIBIPbXU5%252BlCJyDoLLmdukvSY0%3D"
 			(at 120.65 91.44 0)
 			(effects
 				(font
