@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "uC and sensors")
-		(date "2025-07-13")
+		(date "2025-07-17")
 		(rev "V1")
 		(company "HTL Steyr")
 		(comment 1 "Hinterberger")
@@ -2925,7 +2925,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 96.52) (xy 261.62 96.52)
+			(xy 224.79 96.52) (xy 228.6 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3105,7 +3105,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 101.6) (xy 261.62 101.6)
+			(xy 224.79 101.6) (xy 228.6 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3275,7 +3275,7 @@
 	)
 	(global_label "Programming CTS"
 		(shape input)
-		(at 261.62 96.52 0)
+		(at 228.6 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3285,7 +3285,7 @@
 		)
 		(uuid "3c1d11f4-4b09-4119-b5eb-2547fb617dc1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 281.5987 96.52 0)
+			(at 248.5787 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3339,28 +3339,6 @@
 			)
 		)
 	)
-	(global_label "GPS RX"
-		(shape input)
-		(at 228.6 88.9 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8200a8f9-155b-4031-a05b-23a64fb0b0cb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 238.7818 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Motor[1..4]"
 		(shape input)
 		(at 242.57 63.5 90)
@@ -3383,6 +3361,28 @@
 			)
 		)
 	)
+	(global_label "GPS TX"
+		(shape input)
+		(at 228.6 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9aa687c6-bcdb-476d-80b7-50bd67ef58fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 238.4794 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Buzzer"
 		(shape input)
 		(at 228.6 109.22 0)
@@ -3396,6 +3396,28 @@
 		(uuid "9e2081c8-312f-4b1c-a903-419e1d9dba6d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 237.9352 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GPS RX"
+		(shape input)
+		(at 228.6 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ad6255e6-493c-4eb9-8705-e278d541c4c7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 238.7818 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3449,31 +3471,9 @@
 			)
 		)
 	)
-	(global_label "GPS TX"
-		(shape input)
-		(at 228.6 91.44 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b7cfbace-25c7-4f88-b6d7-5a99f8ed660e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 238.4794 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Programming RTS"
 		(shape input)
-		(at 261.62 101.6 0)
+		(at 228.6 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3483,7 +3483,7 @@
 		)
 		(uuid "e20f9086-7168-4f74-aee4-239b6d798094")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 281.5987 101.6 0)
+			(at 248.5787 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
