@@ -1650,7 +1650,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:BC546"
+		(symbol "Transistor_BJT:BC846"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1667,7 +1667,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC546"
+			(property "Value" "BC846"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -1676,7 +1676,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -1687,7 +1687,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1697,7 +1697,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
+			(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1715,7 +1715,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1724,7 +1724,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC546_0_1"
+			(symbol "BC846_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -1761,7 +1761,7 @@
 					)
 				)
 			)
-			(symbol "BC546_1_1"
+			(symbol "BC846_1_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -1808,7 +1808,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1826,7 +1826,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1844,7 +1844,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3737,6 +3737,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 256.54 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "003ab422-6854-42bc-9d7e-ed9e2d3b45ba")
+		(property "Reference" "Q707"
+			(at 261.62 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 261.62 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 261.62 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 256.54 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 256.54 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 256.54 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bd103902-0a4e-4c74-aaed-8bd1a654cb1a")
+		)
+		(pin "1"
+			(uuid "ee9cacd0-dc3b-41d3-9ed5-d8ee70833597")
+		)
+		(pin "3"
+			(uuid "eceb6950-daaa-4fcd-869c-64411442d6b7")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q707")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 208.28 59.69 270)
 		(mirror x)
@@ -3883,6 +3968,91 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "#PWR0706")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 205.74 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1425aca6-f166-4763-9b3b-c06c2c2ffcb5")
+		(property "Reference" "Q702"
+			(at 210.82 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 210.82 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 210.82 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 205.74 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 205.74 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 205.74 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "977120da-e5b8-445f-9325-1489ff43e8bf")
+		)
+		(pin "1"
+			(uuid "36af977c-4b60-4076-a368-6875363fa348")
+		)
+		(pin "3"
+			(uuid "0f9aedf4-49a5-41b6-8526-46eeabca09e3")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q702")
 					(unit 1)
 				)
 			)
@@ -4198,91 +4368,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "D704")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 246.38 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2ec38f8f-8e6f-463e-bb29-ca61c19268d0")
-		(property "Reference" "Q706"
-			(at 251.46 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 251.46 135.8899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 251.46 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 246.38 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 246.38 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 246.38 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b4c20c9a-d822-4972-85c5-25193853c619")
-		)
-		(pin "1"
-			(uuid "d09b45b0-f900-49a9-9757-31c6a1ddfc54")
-		)
-		(pin "3"
-			(uuid "67ff4ed5-a66b-4385-bb97-7a944ca56b47")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q706")
 					(unit 1)
 				)
 			)
@@ -4804,6 +4889,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 215.9 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "577ef3c4-af1e-44c4-99fd-2ee0d7fa70b6")
+		(property "Reference" "Q703"
+			(at 220.98 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 220.98 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 220.98 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 215.9 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 215.9 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 215.9 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a16afe0b-cc3e-4023-84df-4f5f787dc2c4")
+		)
+		(pin "1"
+			(uuid "cc61168b-516d-4970-b157-dd4208e487ab")
+		)
+		(pin "3"
+			(uuid "014ae8e5-53ca-4c1d-9d29-1583b1794a67")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 218.44 48.26 0)
 		(unit 1)
@@ -4863,176 +5033,6 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "#PWR0704")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 195.58 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d830156-5102-4504-8e97-79fe5f225f51")
-		(property "Reference" "Q701"
-			(at 200.66 69.8499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 200.66 72.3899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 200.66 73.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 195.58 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 195.58 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 195.58 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "79bd86f9-6fb0-4996-8490-3bd86ae65e26")
-		)
-		(pin "1"
-			(uuid "b9a09822-3933-4f28-8e3c-d567a291aca9")
-		)
-		(pin "3"
-			(uuid "f4bc7994-45ca-498d-a2af-ad42b24a646c")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q701")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 215.9 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64f6c955-34e8-4d8f-b777-36628d59fdf5")
-		(property "Reference" "Q703"
-			(at 220.98 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 220.98 97.7899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 220.98 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 215.9 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 215.9 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 215.9 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "be045cec-d2ee-42b2-91d9-a074cbd6e1a6")
-		)
-		(pin "1"
-			(uuid "3ef9107e-35a2-418f-aa9e-63e4cb0392c5")
-		)
-		(pin "3"
-			(uuid "1da92b14-a6fd-4c32-8957-e315956c1617")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q703")
 					(unit 1)
 				)
 			)
@@ -5124,17 +5124,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 256.54 147.32 0)
+		(lib_id "Transistor_BJT:BC846")
+		(at 236.22 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "68d33748-3eeb-43d0-a27b-c136e8ffc191")
-		(property "Reference" "Q707"
-			(at 261.62 146.0499 0)
+		(uuid "66bece26-1870-4350-8081-82b9c09ff158")
+		(property "Reference" "Q705"
+			(at 241.3 120.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5142,8 +5142,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC546"
-			(at 261.62 148.5899 0)
+		(property "Value" "BC846C"
+			(at 241.3 123.1899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5151,8 +5151,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 261.62 149.225 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 241.3 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5162,8 +5162,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 256.54 147.32 0)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5172,8 +5172,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 256.54 147.32 0)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5181,8 +5181,8 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 256.54 147.32 0)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5191,103 +5191,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "b5ef344e-dd83-49a8-abbf-22196062cdd4")
+			(uuid "21e96935-b0b8-4867-9bea-32fb04886571")
 		)
 		(pin "1"
-			(uuid "760f5fb7-d1a1-43d1-8f0d-e35fa88c3682")
+			(uuid "a496f1c0-d855-40d6-8454-712f8c1f0133")
 		)
 		(pin "3"
-			(uuid "9c608f8a-5461-412c-ad98-e3cb6112bfce")
+			(uuid "4811baa5-1c97-442c-ac4d-347ce450bd41")
 		)
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q707")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 205.74 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b0ce156-0650-43e3-8da3-87b4e77a9e69")
-		(property "Reference" "Q702"
-			(at 210.82 82.5499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 210.82 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 210.82 85.725 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 205.74 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 205.74 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 205.74 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "742126ce-b48a-46b0-9303-e671894f3395")
-		)
-		(pin "1"
-			(uuid "ac502a9b-8430-4658-ba55-120d9dd29d20")
-		)
-		(pin "3"
-			(uuid "c89229b3-94b7-4788-9065-d0a1f5c20e25")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q702")
+					(reference "Q705")
 					(unit 1)
 				)
 			)
@@ -5646,91 +5561,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 226.06 109.22 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "948ecf9a-f820-471a-aa3e-6149a5fc9592")
-		(property "Reference" "Q704"
-			(at 231.14 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 231.14 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 231.14 111.125 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 226.06 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 226.06 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 226.06 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f5111fda-e2df-48b9-b842-a29bed944544")
-		)
-		(pin "1"
-			(uuid "071f3cbf-104c-44b4-92ec-53c3b7dd18ca")
-		)
-		(pin "3"
-			(uuid "353a1a88-e2e7-4eaf-84e3-a628c8a63d66")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q704")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:-BATT")
 		(at 218.44 157.48 180)
 		(unit 1)
@@ -5857,6 +5687,91 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "#PWR0711")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 246.38 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f8d1c6a-08f4-49bd-ac14-ddf02f2df67c")
+		(property "Reference" "Q706"
+			(at 251.46 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 251.46 135.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 251.46 136.525 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 246.38 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 246.38 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 246.38 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "12eaf187-ff60-4911-909d-c276770c757e")
+		)
+		(pin "1"
+			(uuid "7f70f7d4-a01d-4321-87ec-4053c6f29a2a")
+		)
+		(pin "3"
+			(uuid "38ea754b-b150-4037-8b2a-8b96c9313e97")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q706")
 					(unit 1)
 				)
 			)
@@ -6162,6 +6077,176 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "D705")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 195.58 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be918922-26e8-4818-95f6-daa14bd6c92e")
+		(property "Reference" "Q701"
+			(at 200.66 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 200.66 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 200.66 73.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "43745bff-e8cf-40d3-907e-b85e5c31ad84")
+		)
+		(pin "1"
+			(uuid "43c65428-87c5-4f0d-952b-998a52b4e21d")
+		)
+		(pin "3"
+			(uuid "77471c9c-cc12-47ba-bf85-0c9acd91cc63")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q701")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC846")
+		(at 226.06 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c29258b2-8395-4cbb-bc13-80c45357d65a")
+		(property "Reference" "Q704"
+			(at 231.14 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC846C"
+			(at 231.14 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 231.14 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/bc846.pdf"
+			(at 226.06 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 65V Vce, NPN Transistor, SOT-23"
+			(at 226.06 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC846C?qs=OlC7AqGiEDmSUP142tuCgw%3D%3D"
+			(at 226.06 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7228a3c4-9483-4659-88aa-cfa3431b3d37")
+		)
+		(pin "1"
+			(uuid "fde622d6-9a26-46ee-b16d-7d8362f02dc4")
+		)
+		(pin "3"
+			(uuid "e869b2ae-358f-41f9-8cc9-a4129f9b7028")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "Q704")
 					(unit 1)
 				)
 			)
@@ -6643,91 +6728,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "R703")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC546")
-		(at 236.22 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fc69d503-4170-4d55-9877-8d053307a9de")
-		(property "Reference" "Q705"
-			(at 241.3 120.6499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC546"
-			(at 241.3 123.1899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 241.3 123.825 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/request/datasheet/bc546.pdf"
-			(at 236.22 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-			(at 236.22 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diotec-Semiconductor/BC546C?qs=OlC7AqGiEDlT38zQPMTMuw%3D%3D"
-			(at 236.22 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "df81da24-84df-43b9-bb8a-2e5fac20ef2b")
-		)
-		(pin "1"
-			(uuid "7842d929-dd82-4263-8bf8-b8303daaf1c8")
-		)
-		(pin "3"
-			(uuid "cc5c561a-185e-4f52-9629-31627d2b48ba")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "Q705")
 					(unit 1)
 				)
 			)
