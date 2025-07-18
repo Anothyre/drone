@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Battery Monitoring")
-		(date "2025-07-07")
+		(date "2025-07-18")
 		(rev "V1")
 		(company "HTL Steyr")
 		(comment 1 "Brandner")
@@ -788,12 +788,6 @@
 		)
 	)
 	(junction
-		(at 106.68 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f081ce6-13d4-48d6-a5ea-4be3995f0eeb")
-	)
-	(junction
 		(at 85.09 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -806,18 +800,20 @@
 		(uuid "4ad970af-9a8a-4cb0-8290-8d222dc224c5")
 	)
 	(junction
+		(at 128.27 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cce5cf1-abbc-4a46-82c3-f57e7c805db3")
+	)
+	(junction
 		(at 105.41 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e1672a30-d568-4427-962e-eec0889c11b4")
 	)
-	(no_connect
-		(at 123.19 68.58)
-		(uuid "f618135e-f67a-4ab8-85dd-968e9b6052cf")
-	)
 	(wire
 		(pts
-			(xy 105.41 41.91) (xy 107.95 41.91)
+			(xy 105.41 41.91) (xy 110.49 41.91)
 		)
 		(stroke
 			(width 0)
@@ -844,6 +840,26 @@
 			(type default)
 		)
 		(uuid "16b42f10-f364-4e99-b5f6-ecb605a03bae")
+	)
+	(wire
+		(pts
+			(xy 128.27 44.45) (xy 130.81 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a5fb41c-bfaa-4fd6-95b7-424ce4725705")
+	)
+	(wire
+		(pts
+			(xy 107.95 46.99) (xy 107.95 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ec028bf-7e79-4a34-87fa-2acf59e33059")
 	)
 	(wire
 		(pts
@@ -897,13 +913,23 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 71.12) (xy 107.95 71.12)
+			(xy 128.27 52.07) (xy 128.27 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "40078d00-9f48-4f9f-9df8-782a513146d9")
+		(uuid "3eba8832-88d6-43cf-aae1-1e47a16c7ad0")
+	)
+	(wire
+		(pts
+			(xy 110.49 46.99) (xy 107.95 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41d16cbe-0ebd-439a-ad7a-0314730068cb")
 	)
 	(wire
 		(pts
@@ -927,23 +953,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 66.04) (xy 106.68 68.58)
+			(xy 125.73 44.45) (xy 128.27 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7fa92c37-3fdb-48d7-bcd9-3a40be5c808b")
-	)
-	(wire
-		(pts
-			(xy 106.68 68.58) (xy 106.68 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "806eb64a-3ae9-4ea9-a007-45e78e0f4c61")
+		(uuid "7ee489a1-0e5b-41e8-951d-bbb0f611f6df")
 	)
 	(wire
 		(pts
@@ -1017,16 +1033,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 74.93) (xy 104.14 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6bb2873-9678-46fe-a25a-0ba06d75076f")
-	)
-	(wire
-		(pts
 			(xy 93.98 50.8) (xy 96.52 50.8)
 		)
 		(stroke
@@ -1034,6 +1040,16 @@
 			(type default)
 		)
 		(uuid "cd25ec99-38dc-4be1-90fe-0eea0ba7f52f")
+	)
+	(wire
+		(pts
+			(xy 107.95 52.07) (xy 128.27 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d89d0975-cf95-4b49-91de-8c70316229be")
 	)
 	(wire
 		(pts
@@ -1055,29 +1071,9 @@
 		)
 		(uuid "e87dbd2f-fb55-426c-b264-cd5085d2d2eb")
 	)
-	(wire
-		(pts
-			(xy 104.14 68.58) (xy 106.68 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e973a4e0-9826-4a9d-b6e5-c6c469d0dff5")
-	)
-	(wire
-		(pts
-			(xy 107.95 66.04) (xy 106.68 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0b18ba4-09ae-41fb-ab7b-b8fa008d89b8")
-	)
 	(global_label "BATT Monitor"
 		(shape input)
-		(at 107.95 41.91 0)
+		(at 130.81 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1085,9 +1081,9 @@
 			)
 			(justify left)
 		)
-		(uuid "1d85aa08-a3d2-4ffc-9ab6-1bf46cd1d344")
+		(uuid "53fec262-a690-4d1e-98d6-7cd5a495706d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.2117 41.91 0)
+			(at 146.0717 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1328,7 +1324,7 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Dual")
-		(at 115.57 68.58 0)
+		(at 118.11 44.45 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1337,7 +1333,7 @@
 		(fields_autoplaced yes)
 		(uuid "3fb2106b-9c1c-4b57-a6c1-5999834d402a")
 		(property "Reference" "U302"
-			(at 115.57 58.42 0)
+			(at 118.11 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1345,7 +1341,7 @@
 			)
 		)
 		(property "Value" "AS358"
-			(at 115.57 60.96 0)
+			(at 118.11 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1353,7 +1349,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1362,7 +1358,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1371,7 +1367,7 @@
 			)
 		)
 		(property "Description" "Dual operational amplifier"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1380,7 +1376,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1389,7 +1385,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1398,7 +1394,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1407,7 +1403,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1416,7 +1412,7 @@
 			)
 		)
 		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 115.57 68.58 0)
+			(at 118.11 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1791,72 +1787,6 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8aeacdae-c3f2-480a-a34d-37642627b117"
 					(reference "#PWR0603")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:-BATT")
-		(at 104.14 74.93 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b7d8dd27-d623-4625-9b30-fc2e69de846a")
-		(property "Reference" "#PWR0604"
-			(at 104.14 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "-BATT"
-			(at 104.14 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 104.14 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 104.14 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"-BATT\""
-			(at 104.14 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "06d12b3a-5f8b-4763-8f79-ba4c11df00f0")
-		)
-		(instances
-			(project ""
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8aeacdae-c3f2-480a-a34d-37642627b117"
-					(reference "#PWR0604")
 					(unit 1)
 				)
 			)
