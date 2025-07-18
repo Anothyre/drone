@@ -564,7 +564,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Drone_Flight_Controller.stl",
       "svg": "",
       "vrml": ""
     },
