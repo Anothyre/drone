@@ -79,7 +79,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "5V_to_3.3V_Voltage_Converter.kicad_sch"
+		(property "Sheetfile" "5V to 3.3V Voltage Converter.kicad_sch"
 			(at 74.93 127.5846 0)
 			(effects
 				(font
