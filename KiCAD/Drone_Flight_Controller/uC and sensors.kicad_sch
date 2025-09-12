@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "uC and sensors")
-		(date "2025-07-17")
-		(rev "V1")
+		(date "2025-09-12")
+		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Hinterberger")
 	)
@@ -2168,10 +2168,6 @@
 		(uuid "e928363b-be99-45db-8c1b-2cbce43e5cca")
 	)
 	(no_connect
-		(at 224.79 121.92)
-		(uuid "14fffe90-5bbc-4f91-8715-dfb2581baee7")
-	)
-	(no_connect
 		(at 194.31 93.98)
 		(uuid "31ad7e55-f138-48de-abbc-cdc29c3ac40b")
 	)
@@ -2182,18 +2178,6 @@
 	(no_connect
 		(at 224.79 93.98)
 		(uuid "3e51af35-4201-48e3-964f-b829aef0ca52")
-	)
-	(no_connect
-		(at 224.79 111.76)
-		(uuid "57647826-a037-4fe9-81d9-189b1cf31e3b")
-	)
-	(no_connect
-		(at 224.79 114.3)
-		(uuid "5c1bfb49-32dc-4b5c-8777-2690cc4aaf0f")
-	)
-	(no_connect
-		(at 224.79 119.38)
-		(uuid "60d11b57-4079-4d6d-9b75-45c9027e0d79")
 	)
 	(no_connect
 		(at 194.31 68.58)
@@ -2208,8 +2192,8 @@
 		(uuid "9c9e051f-2100-4225-883b-43572b2bf9cc")
 	)
 	(no_connect
-		(at 224.79 116.84)
-		(uuid "aacdc5d1-c005-41fa-a07f-d320dd312284")
+		(at 224.79 111.76)
+		(uuid "a9d2be9e-f08a-4731-9dec-bcb7d92c76d2")
 	)
 	(no_connect
 		(at 194.31 71.12)
@@ -2228,6 +2212,15 @@
 		(uuid "f8a8ab23-162a-49b5-a5aa-a71f6a1bc63f")
 	)
 	(bus_entry
+		(at 252.73 124.46)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a1e5696-4f4e-4d20-b30a-cefe650ae80e")
+	)
+	(bus_entry
 		(at 240.03 86.36)
 		(size 2.54 -2.54)
 		(stroke
@@ -2237,6 +2230,15 @@
 		(uuid "497d3de7-d970-4eb1-a119-cfddcef8a12c")
 	)
 	(bus_entry
+		(at 252.73 119.38)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e95d013-d7bf-478b-9b95-9373f271f0e0")
+	)
+	(bus_entry
 		(at 240.03 81.28)
 		(size 2.54 -2.54)
 		(stroke
@@ -2244,6 +2246,24 @@
 			(type default)
 		)
 		(uuid "a416aee8-433d-4fb1-94c0-89d86f3eac6b")
+	)
+	(bus_entry
+		(at 252.73 116.84)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b892ad6a-0489-4ca4-a638-b2e6af248e96")
+	)
+	(bus_entry
+		(at 252.73 121.92)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9cee7fe-5c74-4595-982e-cc7cc6650308")
 	)
 	(bus_entry
 		(at 240.03 78.74)
@@ -2345,6 +2365,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 114.3) (xy 250.19 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09f36e38-71e3-4b00-97b4-93e8efe0120c")
+	)
+	(wire
+		(pts
 			(xy 55.88 38.1) (xy 252.73 38.1)
 		)
 		(stroke
@@ -2433,6 +2463,16 @@
 		)
 		(uuid "21669b24-83f0-47a4-9879-a2a43235b4bb")
 	)
+	(bus
+		(pts
+			(xy 252.73 119.38) (xy 252.73 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27c01255-d27c-47cc-922b-731bb515607c")
+	)
 	(wire
 		(pts
 			(xy 106.68 109.22) (xy 106.68 91.44)
@@ -2492,6 +2532,16 @@
 			(type default)
 		)
 		(uuid "3530b75c-5da1-4cb4-861e-92cd85b32458")
+	)
+	(bus
+		(pts
+			(xy 252.73 116.84) (xy 252.73 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "363598c7-fa2d-4a47-86c8-31b770fba6fa")
 	)
 	(bus
 		(pts
@@ -2773,6 +2823,16 @@
 		)
 		(uuid "63aedee8-f9c2-48f1-b27c-49bc32be9e2f")
 	)
+	(bus
+		(pts
+			(xy 252.73 124.46) (xy 252.73 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64f23169-13d3-49b2-a2b6-8a6a626ac7a5")
+	)
 	(wire
 		(pts
 			(xy 109.22 132.08) (xy 124.46 132.08)
@@ -2855,6 +2915,26 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 116.84) (xy 250.19 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b9e86dd-d273-48a8-8cc1-6129dfcf8bf1")
+	)
+	(wire
+		(pts
+			(xy 224.79 119.38) (xy 250.19 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c7c38c0-9d8f-45ec-bbbc-02b070facf53")
+	)
+	(wire
+		(pts
 			(xy 194.31 96.52) (xy 189.23 96.52)
 		)
 		(stroke
@@ -2912,6 +2992,16 @@
 			(type default)
 		)
 		(uuid "8c57d5f7-1ba9-4158-915c-fec208490b99")
+	)
+	(bus
+		(pts
+			(xy 252.73 121.92) (xy 252.73 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cfedbce-6763-45c7-90e3-c2b845715432")
 	)
 	(wire
 		(pts
@@ -3225,6 +3315,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 121.92) (xy 250.19 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f32f73f5-5ac8-4a39-9604-fd4262051464")
+	)
+	(wire
+		(pts
 			(xy 58.42 40.64) (xy 234.95 40.64)
 		)
 		(stroke
@@ -3242,6 +3342,16 @@
 			(justify right bottom)
 		)
 		(uuid "1ffe04c0-6064-4ce1-b1ac-ea1ffe58c655")
+	)
+	(label "IO33"
+		(at 250.19 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "400c3ebe-4af5-4b9a-b2f0-326c694079a4")
 	)
 	(label "Motor1"
 		(at 238.76 78.74 180)
@@ -3263,6 +3373,36 @@
 		)
 		(uuid "66a37ba0-d045-44b3-bfcc-9c4db1f16c9c")
 	)
+	(label "IO32"
+		(at 250.19 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a3745425-54a8-44b4-bec7-87996c80e398")
+	)
+	(label "IO35"
+		(at 250.19 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b5a5e979-2c83-4227-9b56-ee33767a6f18")
+	)
+	(label "IO34"
+		(at 250.19 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "beb05d3d-6563-4afd-bcdf-0c7033209b86")
+	)
 	(label "Motor4"
 		(at 238.76 86.36 180)
 		(effects
@@ -3272,6 +3412,28 @@
 			(justify right bottom)
 		)
 		(uuid "d2e31466-e7d8-4972-830e-9b2698c3edce")
+	)
+	(global_label "IO[32..35]"
+		(shape input)
+		(at 252.73 127 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "02939e23-9e33-4673-b7a4-fe5267afac88")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 252.73 139.6615 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(global_label "Programming CTS"
 		(shape input)
