@@ -9,7 +9,7 @@
 		(date "2025-07-13")
 		(rev "V1")
 		(company "HTL Steyr")
-		(comment 1 "Brander")
+		(comment 1 "Brandner")
 	)
 	(lib_symbols
 		(symbol "Connector:USB_C_Plug_USB2.0"
