@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Connectors & Power")
-		(date "2025-07-13")
-		(rev "V1")
+		(date "2025-09-12")
+		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Brandner")
 	)
@@ -841,6 +841,156 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2036,6 +2186,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+BATT"
 			(power)
 			(pin_numbers
@@ -2478,6 +2753,12 @@
 		)
 	)
 	(junction
+		(at 250.19 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0333bc61-9f80-4250-8406-cdad20e157c8")
+	)
+	(junction
 		(at 177.8 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2568,6 +2849,12 @@
 		(uuid "4e5aa5fd-a321-4cc5-ae5c-8e0ea96abb93")
 	)
 	(junction
+		(at 250.19 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "58fb7b6e-694b-459b-b10e-9111731cc2c5")
+	)
+	(junction
 		(at 64.77 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2584,6 +2871,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "636cca8a-8fd1-4dc2-bd71-a9c7cef58fba")
+	)
+	(junction
+		(at 250.19 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ce0470d-07f7-4fff-bd03-8e9f204951b6")
 	)
 	(junction
 		(at 86.36 41.91)
@@ -2608,6 +2901,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "817a9f45-a71d-4173-b292-d1f5ac3e4753")
+	)
+	(junction
+		(at 222.25 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89b48bf0-40f4-401e-babe-7b00cb6d90f5")
+	)
+	(junction
+		(at 222.25 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a37e169-f73a-4967-8ff3-4a930f42ff32")
 	)
 	(junction
 		(at 115.57 96.52)
@@ -2706,6 +3011,12 @@
 		(uuid "beeee808-a816-421b-a608-915c17d7b8a7")
 	)
 	(junction
+		(at 222.25 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bf30dd04-60d2-4581-975c-5b17441c14e2")
+	)
+	(junction
 		(at 53.34 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2764,6 +3075,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0fa6bce-0032-4997-a74b-ceb8dfc81dc6")
+	)
+	(junction
+		(at 222.25 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f446e29f-0a71-48b4-8ebb-eca055c094bb")
 	)
 	(junction
 		(at 86.36 76.2)
@@ -2838,6 +3155,16 @@
 			(type default)
 		)
 		(uuid "0704dae0-68b8-48c0-bb07-484e204bef0f")
+	)
+	(wire
+		(pts
+			(xy 250.19 21.59) (xy 250.19 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07aff6e0-e3cd-4cf1-bbbb-fe45939ec6d0")
 	)
 	(wire
 		(pts
@@ -2941,6 +3268,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 21.59) (xy 259.08 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14e9aadb-b553-4586-b59f-cc937a5a399e")
+	)
+	(wire
+		(pts
 			(xy 107.95 38.1) (xy 114.3 38.1)
 		)
 		(stroke
@@ -3028,6 +3365,16 @@
 			(type default)
 		)
 		(uuid "26e52edf-4d2a-42c5-8641-3a6f97c3179a")
+	)
+	(wire
+		(pts
+			(xy 259.08 24.13) (xy 250.19 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "283ede51-87e1-4b09-a17c-f5652057573a")
 	)
 	(wire
 		(pts
@@ -3361,6 +3708,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 24.13) (xy 250.19 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c2dcd0b-47fe-4fda-858d-5c4b95ef8ce0")
+	)
+	(wire
+		(pts
 			(xy 133.35 78.74) (xy 133.35 76.2)
 		)
 		(stroke
@@ -3481,6 +3838,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 123.19) (xy 222.25 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c2aa1b7-92ab-4e5b-a77a-cd76d0b4921b")
+	)
+	(wire
+		(pts
 			(xy 40.64 96.52) (xy 40.64 99.06)
 		)
 		(stroke
@@ -3551,6 +3918,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 24.13) (xy 222.25 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72240355-1f6e-4f7a-a31e-a2f7a36af0bb")
+	)
+	(wire
+		(pts
 			(xy 177.8 34.29) (xy 177.8 41.91)
 		)
 		(stroke
@@ -3568,6 +3945,16 @@
 			(type default)
 		)
 		(uuid "738acd65-ee26-48d6-9977-adc34fdc6652")
+	)
+	(wire
+		(pts
+			(xy 238.76 57.15) (xy 250.19 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "739d61e2-49c3-4efe-9cef-cdce5f1ec388")
 	)
 	(wire
 		(pts
@@ -3871,6 +4258,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 24.13) (xy 250.19 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9616b920-0c31-4261-ba95-8356290647e6")
+	)
+	(wire
+		(pts
 			(xy 198.12 80.01) (xy 200.66 80.01)
 		)
 		(stroke
@@ -3961,6 +4358,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 90.17) (xy 250.19 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fb41a19-5b12-4c07-816a-e2affa5af3c9")
+	)
+	(wire
+		(pts
 			(xy 137.16 49.53) (xy 137.16 52.07)
 		)
 		(stroke
@@ -4008,6 +4415,16 @@
 			(type default)
 		)
 		(uuid "a4438b8d-a2d4-4c09-a47f-ba92b813ab29")
+	)
+	(wire
+		(pts
+			(xy 250.19 57.15) (xy 250.19 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a449d111-86c8-46be-a009-49f9f69831e7")
 	)
 	(wire
 		(pts
@@ -4178,6 +4595,16 @@
 			(type default)
 		)
 		(uuid "b7511e92-24aa-4111-abfd-ce3e68139147")
+	)
+	(wire
+		(pts
+			(xy 231.14 90.17) (xy 222.25 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9433eac-d289-4713-a0d7-662d37835934")
 	)
 	(wire
 		(pts
@@ -4461,6 +4888,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 90.17) (xy 250.19 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddbb931b-ab55-4a9e-a554-528c40d2ac34")
+	)
+	(wire
+		(pts
 			(xy 224.79 110.49) (xy 222.25 110.49)
 		)
 		(stroke
@@ -4568,6 +5005,26 @@
 			(type default)
 		)
 		(uuid "ec982dc5-f7a3-4081-85b4-d2fd106fbf61")
+	)
+	(wire
+		(pts
+			(xy 238.76 123.19) (xy 250.19 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecc90ec6-2fc1-4b89-9aad-cecda0fffed3")
+	)
+	(wire
+		(pts
+			(xy 231.14 57.15) (xy 222.25 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f18977eb-955b-43aa-b1be-3c9889a48786")
 	)
 	(wire
 		(pts
@@ -4782,6 +5239,82 @@
 				)
 				(justify left)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 234.95 123.19 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00ab294b-e057-45b8-a78c-d60a26c228c0")
+		(property "Reference" "D1"
+			(at 234.95 125.476 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT60BE6359HTMA1"
+			(at 234.95 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 234.95 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/70/1/Infineon-BAT60BSERIES-DS-v01_01-en.pdf"
+			(at 234.95 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 234.95 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Infineon-Technologies/BAT60BE6359HTMA1?qs=znymxvEW7YnVGCVVXuqMnw%3D%3D"
+			(at 234.95 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b5c4e39e-5752-4d1f-89a3-c4d0cccf3aa6")
+		)
+		(pin "1"
+			(uuid "d287bc1a-bd74-460f-bb5b-bc1b2e566614")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D1")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -5968,6 +6501,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 259.08 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3484b5fa-ca63-451c-8422-3220c4632d2b")
+		(property "Reference" "#FLG01"
+			(at 259.08 19.685 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 259.08 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22f8b38b-7532-468a-8cea-ceb7f3508c35")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_BJT:BC846")
 		(at 205.74 80.01 0)
 		(unit 1)
@@ -6047,6 +6646,82 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "Q301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 234.95 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ecd0c2d-7ed4-4b60-a541-5e9052d10949")
+		(property "Reference" "D2"
+			(at 234.95 92.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT60BE6359HTMA1"
+			(at 234.95 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 234.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/70/1/Infineon-BAT60BSERIES-DS-v01_01-en.pdf"
+			(at 234.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 234.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Infineon-Technologies/BAT60BE6359HTMA1?qs=znymxvEW7YnVGCVVXuqMnw%3D%3D"
+			(at 234.95 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c9818284-f8f7-4d02-a584-b0b2738c2170")
+		)
+		(pin "1"
+			(uuid "2e28d454-0824-43c1-993a-d9ee084822d9")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -6499,6 +7174,82 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "#PWR0301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 234.95 24.13 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "62cb0e99-a612-472c-a78b-787289e2322a")
+		(property "Reference" "D4"
+			(at 234.95 26.416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT60BE6359HTMA1"
+			(at 234.95 28.956 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 234.95 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/70/1/Infineon-BAT60BSERIES-DS-v01_01-en.pdf"
+			(at 234.95 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 234.95 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Infineon-Technologies/BAT60BE6359HTMA1?qs=znymxvEW7YnVGCVVXuqMnw%3D%3D"
+			(at 234.95 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "532684c4-f3a3-45d9-ba26-321cdc777a69")
+		)
+		(pin "1"
+			(uuid "7c03059c-c4ad-4814-a551-d56a04cce865")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -7664,6 +8415,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 234.95 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "946f08ee-9c9c-41a1-a0e5-47216b8b4d1a")
+		(property "Reference" "D3"
+			(at 234.95 59.436 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT60BE6359HTMA1"
+			(at 234.95 61.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 234.95 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/70/1/Infineon-BAT60BSERIES-DS-v01_01-en.pdf"
+			(at 234.95 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 234.95 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Infineon-Technologies/BAT60BE6359HTMA1?qs=znymxvEW7YnVGCVVXuqMnw%3D%3D"
+			(at 234.95 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ffef4f40-f1c3-4867-b43c-1f006a796ddf")
+		)
+		(pin "1"
+			(uuid "90785823-3542-48d4-9b7a-cb3a8e9ef3ed")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 114.3 60.96 0)
 		(unit 1)
@@ -8186,6 +9013,72 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "J302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 250.19 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8330d8a-b836-4255-a996-642c72df0cb4")
+		(property "Reference" "#PWR01"
+			(at 250.19 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+4V76"
+			(at 250.19 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 250.19 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d325072-5d55-475a-8d66-80ae9594e509")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
