@@ -719,7 +719,7 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "5V_to_3.3V_Voltage_Converter.kicad_sch",
     "plot_directory": "",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
@@ -759,6 +759,10 @@
     [
       "8421779c-d2a0-463b-acfb-bef6fd845f5d",
       "USB & Status LEDs"
+    ],
+    [
+      "8391f985-3d82-4c30-aead-1780846e9311",
+      "5V to 3.3V  Voltage Converter"
     ]
   ],
   "text_variables": {}

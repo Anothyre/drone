@@ -1,0 +1,15 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "95244184-9073-4387-8809-effaebfebf95")
+	(paper "A4")
+	(title_block
+		(title "5V to 3.3V Voltage Converter")
+		(date "2025-09-12")
+		(rev "V1")
+		(company "HTL Steyr")
+		(comment 1 "Brandner")
+	)
+	(lib_symbols)
+)

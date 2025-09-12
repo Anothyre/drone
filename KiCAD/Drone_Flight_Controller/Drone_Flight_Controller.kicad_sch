@@ -55,6 +55,48 @@
 		)
 	)
 	(sheet
+		(at 74.93 101.6)
+		(size 38.1 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8391f985-3d82-4c30-aead-1780846e9311")
+		(property "Sheetname" "5V to 3.3V  Voltage Converter"
+			(at 74.93 100.8884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "5V_to_3.3V_Voltage_Converter.kicad_sch"
+			(at 74.93 127.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 74.93 63.5)
 		(size 39.37 25.4)
 		(exclude_from_sim no)
