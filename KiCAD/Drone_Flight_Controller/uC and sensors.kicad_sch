@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "uC and sensors")
-		(date "2025-09-12")
+		(date "2025-09-15")
 		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Hinterberger")
@@ -2735,16 +2735,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 60.96) (xy 227.33 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e261c23-2c0c-4871-b2b5-d25ecc8bb40f")
-	)
-	(wire
-		(pts
 			(xy 224.79 88.9) (xy 228.6 88.9)
 		)
 		(stroke
@@ -2845,16 +2835,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 63.5) (xy 224.79 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65c3a291-ba37-4c8c-8266-f9af926c634b")
-	)
-	(wire
-		(pts
 			(xy 184.15 27.94) (xy 184.15 101.6)
 		)
 		(stroke
@@ -2892,6 +2872,16 @@
 			(type default)
 		)
 		(uuid "76215909-3cdb-4bf8-a302-3a9ff01f6fd5")
+	)
+	(wire
+		(pts
+			(xy 227.33 50.8) (xy 227.33 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78d2c3fd-3a28-444d-8e5e-dd684d528bc5")
 	)
 	(wire
 		(pts
@@ -3055,6 +3045,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 63.5) (xy 224.79 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9841c9f8-c402-4379-8b5b-4e4f2bbed534")
+	)
+	(wire
+		(pts
 			(xy 106.68 30.48) (xy 232.41 30.48)
 		)
 		(stroke
@@ -3182,6 +3182,16 @@
 			(type default)
 		)
 		(uuid "c6cd112f-9662-4f49-ba16-32fb4cb5e2e2")
+	)
+	(wire
+		(pts
+			(xy 227.33 60.96) (xy 227.33 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb8e1a37-6d0c-48e9-b6ba-dad38ed99353")
 	)
 	(wire
 		(pts
@@ -3591,7 +3601,7 @@
 	)
 	(global_label "~{Programming}"
 		(shape input)
-		(at 227.33 60.96 90)
+		(at 227.33 50.8 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3601,7 +3611,7 @@
 		)
 		(uuid "b05f596a-9e0f-4f6c-a08c-e1153c3a7f8b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 227.33 45.396 90)
+			(at 227.33 35.236 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4050,10 +4060,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "698f089f-cf3d-4e79-b878-3b323b1d938d")
 		(property "Reference" "U403"
-			(at 131.6833 91.44 0)
+			(at 131.572 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4062,7 +4071,7 @@
 			)
 		)
 		(property "Value" "BNO055"
-			(at 131.6833 93.98 0)
+			(at 131.572 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4351,6 +4360,82 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
 					(reference "R401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 227.33 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9103a9a-eeda-41a8-a70a-865de0e6361a")
+		(property "Reference" "R1"
+			(at 223.52 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.7k"
+			(at 225.298 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 229.108 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 227.33 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 227.33 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Panasonic/ERA-6AEB272V?qs=sGAEpiMZZMtlubZbdhIBINMa8yaPrN5wOlaFrC8qQgQ%3D"
+			(at 227.33 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c170f63-418f-4ae5-a36f-43f8b8970a74")
+		)
+		(pin "2"
+			(uuid "d5336bd1-657b-4a7e-b1aa-62d0651ed67c")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be1bc5c9-9814-4f01-a307-b935c6145e5a"
+					(reference "R1")
 					(unit 1)
 				)
 			)
