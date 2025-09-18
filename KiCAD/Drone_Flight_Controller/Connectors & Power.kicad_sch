@@ -3101,15 +3101,6 @@
 		(uuid "fa94e6a3-8e05-4fc0-96ef-ebb1582b87c2")
 	)
 	(bus_entry
-		(at 31.75 127)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0cfd4c62-a0a9-4dc0-8c51-18883d1ff7cd")
-	)
-	(bus_entry
 		(at 160.02 44.45)
 		(size -2.54 -2.54)
 		(stroke
@@ -3119,15 +3110,6 @@
 		(uuid "16b511c9-ecf0-4d73-92dc-27a38073a329")
 	)
 	(bus_entry
-		(at 31.75 121.92)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b0753ac-51cf-4186-b8d1-35fa8ff25e7d")
-	)
-	(bus_entry
 		(at 160.02 41.91)
 		(size -2.54 -2.54)
 		(stroke
@@ -3135,24 +3117,6 @@
 			(type default)
 		)
 		(uuid "429933ed-0aee-4026-9cbf-e3ddddb7c0dc")
-	)
-	(bus_entry
-		(at 31.75 124.46)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d3a543b-9037-43bf-9bd5-b726387b4182")
-	)
-	(bus_entry
-		(at 31.75 119.38)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8689979a-167a-4858-afac-5cd9a128aa91")
 	)
 	(bus_entry
 		(at 160.02 39.37)
@@ -3384,16 +3348,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 116.84) (xy 34.29 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "262305bf-c62c-43f3-af1e-a5a7224461ba")
-	)
-	(wire
-		(pts
 			(xy 30.48 31.75) (xy 41.91 31.75)
 		)
 		(stroke
@@ -3421,16 +3375,6 @@
 			(type default)
 		)
 		(uuid "283ede51-87e1-4b09-a17c-f5652057573a")
-	)
-	(wire
-		(pts
-			(xy 39.37 124.46) (xy 34.29 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28f42669-01f8-4949-b37e-e2c10d9226ff")
 	)
 	(wire
 		(pts
@@ -3502,16 +3446,6 @@
 		)
 		(uuid "2fe36a8d-0312-4f38-bb7a-4f98fd04562e")
 	)
-	(bus
-		(pts
-			(xy 31.75 127) (xy 31.75 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30249632-55fb-4f6f-a7d0-b500386d62e2")
-	)
 	(wire
 		(pts
 			(xy 64.77 31.75) (xy 53.34 31.75)
@@ -3531,16 +3465,6 @@
 			(type default)
 		)
 		(uuid "32440603-3eaf-4e30-b69a-a00ed0246a02")
-	)
-	(bus
-		(pts
-			(xy 31.75 124.46) (xy 31.75 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "329435a2-7348-4379-aafc-bf848d6b366c")
 	)
 	(wire
 		(pts
@@ -3691,26 +3615,6 @@
 			(type default)
 		)
 		(uuid "50ae4849-f9c7-4cf7-87e5-dfc1d515b79e")
-	)
-	(bus
-		(pts
-			(xy 31.75 121.92) (xy 31.75 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "515e716c-cb8e-4c0e-bf4c-4a150755cc7d")
-	)
-	(wire
-		(pts
-			(xy 39.37 121.92) (xy 34.29 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51f9b458-0393-4822-9d69-1f6525ff224b")
 	)
 	(wire
 		(pts
@@ -4212,16 +4116,6 @@
 		)
 		(uuid "886e44b8-b7a9-45cd-a140-36810ac61ad5")
 	)
-	(bus
-		(pts
-			(xy 31.75 119.38) (xy 31.75 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a41b731-0f48-42ff-a22e-a89555c97564")
-	)
 	(wire
 		(pts
 			(xy 222.25 44.45) (xy 222.25 54.61)
@@ -4671,16 +4565,6 @@
 			(type default)
 		)
 		(uuid "b055fbd0-2d1b-4fbb-95d0-d33bcc4b66cf")
-	)
-	(wire
-		(pts
-			(xy 39.37 119.38) (xy 34.29 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1b1dab7-a5be-4f37-893c-5bb02f162ca2")
 	)
 	(wire
 		(pts
@@ -5262,16 +5146,6 @@
 		)
 		(uuid "01ce005a-ec59-45c5-9d8a-cca6279e478c")
 	)
-	(label "IO33"
-		(at 34.29 119.38 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1a4a30fe-d04d-4926-8bd3-2c6acfcf29a4")
-	)
 	(label "Motor3"
 		(at 161.29 41.91 0)
 		(effects
@@ -5282,26 +5156,6 @@
 		)
 		(uuid "326d3b62-bff5-481a-b113-5e0fdebcc7b1")
 	)
-	(label "IO32"
-		(at 34.29 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "390a8d08-b48c-4317-bb66-cc8c54262500")
-	)
-	(label "IO34"
-		(at 34.29 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "51a5ebc1-2513-4143-a486-f653e0a49ca0")
-	)
 	(label "Motor1"
 		(at 161.29 36.83 0)
 		(effects
@@ -5311,16 +5165,6 @@
 			(justify left bottom)
 		)
 		(uuid "96d712ff-988c-4cc9-b452-2529521e50cf")
-	)
-	(label "IO35"
-		(at 34.29 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bd990620-d16f-47a9-a7c9-2d2674df53e4")
 	)
 	(label "Motor4"
 		(at 161.29 44.45 0)
@@ -5394,28 +5238,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IO[32..35]"
-		(shape input)
-		(at 31.75 129.54 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a5844a42-8a2d-4c01-b4a7-612561e2e004")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 31.75 142.2015 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -5642,88 +5464,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "Q309")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 44.45 119.38 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "11a3a142-c91b-4ce5-92d1-cfc63f31f2f4")
-		(property "Reference" "J1"
-			(at 44.45 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x04"
-			(at 44.45 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 44.45 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "/"
-			(at 44.45 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 44.45 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "/"
-			(at 44.45 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "d19b2e09-6f5c-4bd9-8a13-db997076a59c")
-		)
-		(pin "1"
-			(uuid "945e4131-38bf-47b1-b8e9-21a98158f739")
-		)
-		(pin "2"
-			(uuid "df119754-6bc0-4849-85a6-8d9a051b8fc2")
-		)
-		(pin "4"
-			(uuid "ae36ec5d-aa14-4575-adea-2734acdb6de2")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "J1")
 					(unit 1)
 				)
 			)
