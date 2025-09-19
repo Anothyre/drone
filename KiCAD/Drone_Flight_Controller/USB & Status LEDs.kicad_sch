@@ -6040,7 +6040,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 97.79 45.72 0)
 			(effects
 				(font

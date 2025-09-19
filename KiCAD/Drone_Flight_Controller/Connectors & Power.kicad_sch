@@ -6688,7 +6688,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 246.38 123.19 0)
 			(effects
 				(font
@@ -7128,7 +7128,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 102.87 0)
 			(effects
 				(font
@@ -7137,7 +7137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 102.87 0)
 			(effects
 				(font
@@ -7173,7 +7173,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 102.87 0)
 			(effects
 				(font
@@ -8404,7 +8404,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 246.38 90.17 0)
 			(effects
 				(font
@@ -8761,7 +8761,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 107.95 0)
 			(effects
 				(font
@@ -8770,7 +8770,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 107.95 0)
 			(effects
 				(font
@@ -8806,7 +8806,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 107.95 0)
 			(effects
 				(font
@@ -9094,7 +9094,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 140.97 0)
 			(effects
 				(font
@@ -9103,7 +9103,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 140.97 0)
 			(effects
 				(font
@@ -9139,7 +9139,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 140.97 0)
 			(effects
 				(font
@@ -9399,7 +9399,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 246.38 24.13 0)
 			(effects
 				(font
@@ -9628,7 +9628,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 135.89 0)
 			(effects
 				(font
@@ -9637,7 +9637,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 135.89 0)
 			(effects
 				(font
@@ -9673,7 +9673,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 135.89 0)
 			(effects
 				(font
@@ -10873,7 +10873,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 69.85 0)
 			(effects
 				(font
@@ -10882,7 +10882,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 69.85 0)
 			(effects
 				(font
@@ -10918,7 +10918,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 69.85 0)
 			(effects
 				(font
@@ -10967,7 +10967,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 246.38 57.15 0)
 			(effects
 				(font
@@ -11637,7 +11637,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 36.83 0)
 			(effects
 				(font
@@ -11646,7 +11646,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 36.83 0)
 			(effects
 				(font
@@ -11682,7 +11682,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 36.83 0)
 			(effects
 				(font
@@ -11874,7 +11874,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 74.93 0)
 			(effects
 				(font
@@ -11883,7 +11883,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 74.93 0)
 			(effects
 				(font
@@ -11919,7 +11919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 74.93 0)
 			(effects
 				(font
@@ -12816,7 +12816,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 200.66 41.91 0)
 			(effects
 				(font
@@ -12825,7 +12825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/308/1/1N914_D-3574539.pdf"
+		(property "Datasheet" "https://www.taiwansemi.com/assets/datasheet/pdf.php?pn=1N4148WS"
 			(at 200.66 41.91 0)
 			(effects
 				(font
@@ -12861,7 +12861,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.mouser.at/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D"
+		(property "Link" "https://www.mouser.at/ProductDetail/Taiwan-Semiconductor/1N4148WS-RRG?qs=KwaGCOX4wIbeBaq5Ynva5w%3D%3D"
 			(at 200.66 41.91 0)
 			(effects
 				(font
