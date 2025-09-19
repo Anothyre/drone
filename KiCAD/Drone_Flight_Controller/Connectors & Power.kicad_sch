@@ -8918,7 +8918,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d816f71-370c-410a-a164-47274adaf2bb")
-		(property "Reference" "J206"
+		(property "Reference" "Motor4"
 			(at 242.57 139.6999 0)
 			(effects
 				(font
@@ -8984,7 +8984,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "J206")
+					(reference "Motor4")
 					(unit 1)
 				)
 			)
@@ -9773,7 +9773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6fa05787-8442-4243-86a8-95f02ba2a8a2")
-		(property "Reference" "J203"
+		(property "Reference" "Motor2"
 			(at 242.57 73.6599 0)
 			(effects
 				(font
@@ -9839,7 +9839,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "J203")
+					(reference "Motor2")
 					(unit 1)
 				)
 			)
@@ -11390,7 +11390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6602cb6-7d6f-4e74-b25d-bc1d13e264dc")
-		(property "Reference" "J202"
+		(property "Reference" "Motor1"
 			(at 242.57 40.6399 0)
 			(effects
 				(font
@@ -11456,7 +11456,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "J202")
+					(reference "Motor1")
 					(unit 1)
 				)
 			)
@@ -12719,7 +12719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "df798134-84c2-4d40-8ab6-88b6ecb56f41")
-		(property "Reference" "J204"
+		(property "Reference" "Motor3"
 			(at 242.57 106.6799 0)
 			(effects
 				(font
@@ -12785,7 +12785,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "J204")
+					(reference "Motor3")
 					(unit 1)
 				)
 			)
