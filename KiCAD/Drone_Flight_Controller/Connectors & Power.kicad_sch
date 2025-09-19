@@ -3463,7 +3463,7 @@
 		(uuid "0333bc61-9f80-4250-8406-cdad20e157c8")
 	)
 	(junction
-		(at 125.73 119.38)
+		(at 106.68 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10ec209b-5905-4958-8e9b-b2c1e91fb174")
@@ -3487,18 +3487,6 @@
 		(uuid "2556abf2-5c05-4533-98e2-8a8f65b241b2")
 	)
 	(junction
-		(at 99.06 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "27000cad-d71a-4fe1-ac75-4f0e2f8a2331")
-	)
-	(junction
-		(at 107.95 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "27f1da42-6dc8-4d8a-81a2-c67686528c9e")
-	)
-	(junction
 		(at 233.68 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3515,12 +3503,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "415d9660-a2cc-4d54-b1f3-90d3a7099596")
-	)
-	(junction
-		(at 99.06 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "45a0921e-10be-4896-b5b0-bd8e5e87d4cc")
 	)
 	(junction
 		(at 219.71 138.43)
@@ -3559,7 +3541,7 @@
 		(uuid "608e68fe-1f42-49c3-8670-f35639d37693")
 	)
 	(junction
-		(at 116.84 99.06)
+		(at 97.79 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "636cca8a-8fd1-4dc2-bd71-a9c7cef58fba")
@@ -3643,7 +3625,7 @@
 		(uuid "8a37e169-f73a-4967-8ff3-4a930f42ff32")
 	)
 	(junction
-		(at 116.84 119.38)
+		(at 97.79 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8ca14cd6-d6e0-4414-8cc3-329e1f390027")
@@ -3701,12 +3683,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9f2d13c6-d284-4393-abca-d281faee6f3c")
-	)
-	(junction
-		(at 107.95 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a2a01ac6-0d13-4b0f-b983-cac64f2a5821")
 	)
 	(junction
 		(at 219.71 105.41)
@@ -3769,7 +3745,7 @@
 		(uuid "d71d5d41-e973-4979-bb60-e6aabf93703b")
 	)
 	(junction
-		(at 125.73 99.06)
+		(at 106.68 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da79a513-428c-41e8-b34f-e69a168a0a74")
@@ -4227,17 +4203,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 99.06) (xy 99.06 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "200cd6d1-1e25-482d-838f-08aaa21aa0e7")
-	)
-	(wire
-		(pts
-			(xy 116.84 116.84) (xy 116.84 119.38)
+			(xy 97.79 116.84) (xy 97.79 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4587,16 +4553,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 116.84) (xy 107.95 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4857b77b-dca3-4482-91b5-ce5952666c08")
-	)
-	(wire
-		(pts
 			(xy 43.18 54.61) (xy 54.61 54.61)
 		)
 		(stroke
@@ -4657,16 +4613,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 101.6) (xy 107.95 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "553bf849-a51b-4488-938a-08c0c4be66e0")
-	)
-	(wire
-		(pts
 			(xy 194.31 36.83) (xy 196.85 36.83)
 		)
 		(stroke
@@ -4697,7 +4643,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 99.06) (xy 116.84 99.06)
+			(xy 87.63 99.06) (xy 97.79 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4777,7 +4723,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 101.6) (xy 134.62 99.06)
+			(xy 115.57 101.6) (xy 115.57 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4877,16 +4823,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 99.06) (xy 107.95 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "698f43c0-949b-40eb-93f7-b8bce6ec8ac0")
-	)
-	(wire
-		(pts
 			(xy 143.51 41.91) (xy 156.21 41.91)
 		)
 		(stroke
@@ -4897,7 +4833,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 116.84) (xy 125.73 119.38)
+			(xy 106.68 116.84) (xy 106.68 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4944,16 +4880,6 @@
 			(type default)
 		)
 		(uuid "6d458ffb-8951-4ec6-8192-f6f2812e334e")
-	)
-	(wire
-		(pts
-			(xy 99.06 116.84) (xy 99.06 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d64b651-560b-4673-9aa2-5871fbafa6e7")
 	)
 	(wire
 		(pts
@@ -5047,7 +4973,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 101.6) (xy 125.73 99.06)
+			(xy 106.68 101.6) (xy 106.68 99.06)
 		)
 		(stroke
 			(width 0)
@@ -5077,7 +5003,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 119.38) (xy 125.73 119.38)
+			(xy 97.79 119.38) (xy 106.68 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5267,7 +5193,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 99.06) (xy 134.62 99.06)
+			(xy 106.68 99.06) (xy 115.57 99.06)
 		)
 		(stroke
 			(width 0)
@@ -5407,16 +5333,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 119.38) (xy 116.84 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96ccfff6-3058-4513-a694-0a83ec69c5f9")
-	)
-	(wire
-		(pts
 			(xy 233.68 140.97) (xy 236.22 140.97)
 		)
 		(stroke
@@ -5437,7 +5353,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 99.06) (xy 125.73 99.06)
+			(xy 97.79 99.06) (xy 106.68 99.06)
 		)
 		(stroke
 			(width 0)
@@ -5507,7 +5423,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 119.38) (xy 99.06 119.38)
+			(xy 87.63 119.38) (xy 97.79 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5967,16 +5883,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 119.38) (xy 107.95 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7cfac03-4d7a-4bee-9f97-51b90a365406")
-	)
-	(wire
-		(pts
 			(xy 68.58 162.56) (xy 68.58 165.1)
 		)
 		(stroke
@@ -6007,7 +5913,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 119.38) (xy 134.62 119.38)
+			(xy 106.68 119.38) (xy 115.57 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6114,16 +6020,6 @@
 			(type default)
 		)
 		(uuid "d873d6e5-2256-4596-848a-3fd8c72aa204")
-	)
-	(wire
-		(pts
-			(xy 87.63 99.06) (xy 99.06 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d926ea01-e320-4fef-96a6-2ab190e22dd2")
 	)
 	(wire
 		(pts
@@ -6297,7 +6193,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 101.6) (xy 116.84 99.06)
+			(xy 97.79 101.6) (xy 97.79 99.06)
 		)
 		(stroke
 			(width 0)
@@ -6457,7 +6353,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 116.84) (xy 134.62 119.38)
+			(xy 115.57 116.84) (xy 115.57 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7199,7 +7095,7 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Dual")
-		(at 137.16 109.22 0)
+		(at 118.11 109.22 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7208,7 +7104,7 @@
 		(fields_autoplaced yes)
 		(uuid "197fb10d-559a-4c8c-8e93-4d8fcfb5ad35")
 		(property "Reference" "U202"
-			(at 135.89 107.9499 0)
+			(at 116.84 107.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7217,7 +7113,7 @@
 			)
 		)
 		(property "Value" "AS358"
-			(at 135.89 110.4899 0)
+			(at 116.84 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7226,7 +7122,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7235,7 +7131,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7244,7 +7140,7 @@
 			)
 		)
 		(property "Description" "Dual operational amplifier"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7253,7 +7149,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7262,7 +7158,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7271,7 +7167,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7280,7 +7176,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7289,7 +7185,7 @@
 			)
 		)
 		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 137.16 109.22 0)
+			(at 118.11 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7593,139 +7489,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 110.49 109.22 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1f8f88a8-9867-4849-b1c1-0f0aa54f3337")
-		(property "Reference" "U204"
-			(at 109.22 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AS358"
-			(at 109.22 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 110.49 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "064f8fbb-ad34-473d-8746-544540b3650b")
-		)
-		(pin "6"
-			(uuid "8fe0e44b-f1e8-4b82-8158-d479a41449e5")
-		)
-		(pin "7"
-			(uuid "44ed53cc-8216-46b3-b15c-780f014d7f8c")
-		)
-		(pin "1"
-			(uuid "90e07d06-f9ed-42cd-b852-2e2383e68b48")
-		)
-		(pin "3"
-			(uuid "2e9095e8-55e6-4230-a3f2-be766abcd85f")
-		)
-		(pin "8"
-			(uuid "d7018734-ddb0-4233-a6f4-b1a9afe57d25")
-		)
-		(pin "2"
-			(uuid "c34aa9c5-858c-45cf-9446-36f92d05e150")
-		)
-		(pin "4"
-			(uuid "528a06df-fa13-48ef-bcfe-87d818249c59")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "U204")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_BJT:BC856")
 		(at 217.17 146.05 0)
 		(unit 1)
@@ -7886,7 +7649,7 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Dual")
-		(at 119.38 109.22 0)
+		(at 100.33 109.22 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7895,7 +7658,7 @@
 		(fields_autoplaced yes)
 		(uuid "2be1ecf9-4861-4b00-bd89-cc2b802dffad")
 		(property "Reference" "U205"
-			(at 118.11 107.9499 0)
+			(at 99.06 107.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7904,7 +7667,7 @@
 			)
 		)
 		(property "Value" "AS358"
-			(at 118.11 110.4899 0)
+			(at 99.06 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7913,7 +7676,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7922,7 +7685,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7931,7 +7694,7 @@
 			)
 		)
 		(property "Description" "Dual operational amplifier"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7940,7 +7703,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7949,7 +7712,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7958,7 +7721,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7967,7 +7730,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7976,7 +7739,7 @@
 			)
 		)
 		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 119.38 109.22 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10219,7 +9982,7 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Dual")
-		(at 128.27 109.22 0)
+		(at 109.22 109.22 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10228,7 +9991,7 @@
 		(fields_autoplaced yes)
 		(uuid "8121b8b8-3158-48cd-80d1-8b701e8624d5")
 		(property "Reference" "U201"
-			(at 127 107.9499 0)
+			(at 107.95 107.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10237,7 +10000,7 @@
 			)
 		)
 		(property "Value" "AS358"
-			(at 127 110.4899 0)
+			(at 107.95 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10246,7 +10009,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10255,7 +10018,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10264,7 +10027,7 @@
 			)
 		)
 		(property "Description" "Dual operational amplifier"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10273,7 +10036,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10282,7 +10045,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10291,7 +10054,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10300,7 +10063,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10309,7 +10072,7 @@
 			)
 		)
 		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 128.27 109.22 0)
+			(at 109.22 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13241,138 +13004,6 @@
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "C207")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 101.6 109.22 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f710a851-d7a3-4ab9-9e81-75d542eb3be1")
-		(property "Reference" "U203"
-			(at 100.33 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AS358"
-			(at 100.33 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/115/DIOD_S_A0005046231_1-2542568.pdf"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/Diodes-Incorporated/AS358MTR-G1?qs=FKu9oBikfSlRUA%252BzgDv25w%3D%3D"
-			(at 101.6 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "064f8fbb-ad34-473d-8746-544540b3650c")
-		)
-		(pin "6"
-			(uuid "8fe0e44b-f1e8-4b82-8158-d479a41449e6")
-		)
-		(pin "7"
-			(uuid "44ed53cc-8216-46b3-b15c-780f014d7f8d")
-		)
-		(pin "1"
-			(uuid "90e07d06-f9ed-42cd-b852-2e2383e68b49")
-		)
-		(pin "3"
-			(uuid "2e9095e8-55e6-4230-a3f2-be766abcd860")
-		)
-		(pin "8"
-			(uuid "36df2303-8ad0-4979-bf2e-3883354519c1")
-		)
-		(pin "2"
-			(uuid "c34aa9c5-858c-45cf-9446-36f92d05e151")
-		)
-		(pin "4"
-			(uuid "5a56f086-caae-4516-8f8d-0f24adfc0858")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
-					(reference "U203")
-					(unit 3)
 				)
 			)
 		)
