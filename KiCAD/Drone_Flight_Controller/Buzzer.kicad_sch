@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Buzzer")
-		(date "2025-07-02")
-		(rev "V1")
+		(date "2025-09-19")
+		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Felix Brandner")
 	)
@@ -1098,7 +1098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "768e4994-56f7-4036-b03f-6ffefa04ea83")
-		(property "Reference" "#PWR0401"
+		(property "Reference" "+3V3"
 			(at 120.65 86.36 0)
 			(effects
 				(font
@@ -1107,12 +1107,13 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 120.65 77.47 0)
+		(property "Value" "+3V3"
+			(at 123.19 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -1148,7 +1149,7 @@
 		(instances
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/be7f0ff9-fd1d-432b-97a6-9126ad5ddcf4"
-					(reference "#PWR0401")
+					(reference "+3V3")
 					(unit 1)
 				)
 			)

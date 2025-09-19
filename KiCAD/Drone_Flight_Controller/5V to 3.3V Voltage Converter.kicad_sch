@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "5V to 3.3V Voltage Converter")
-		(date "2025-09-12")
-		(rev "V1")
+		(date "2025-09-19")
+		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Brandner")
 	)

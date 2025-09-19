@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "uC and sensors")
-		(date "2025-09-18")
+		(date "2025-09-19")
 		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Hinterberger")
@@ -4193,7 +4193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 95.25 60.96 0)
 			(effects
 				(font
@@ -4390,7 +4390,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 142.24 64.77 0)
 			(effects
 				(font
@@ -5064,7 +5064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 195.58 58.42 0)
 			(effects
 				(font
@@ -5301,7 +5301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 45.72 78.74 0)
 			(effects
 				(font
