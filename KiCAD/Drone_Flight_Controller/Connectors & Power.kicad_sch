@@ -6831,7 +6831,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 74.168 90)
 			(effects
 				(font
@@ -6840,7 +6840,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/KOA_Speer_RN73R__8_20_24.pdf"
 			(at 187.96 72.39 0)
 			(effects
 				(font
@@ -6851,6 +6851,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 187.96 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/KOA-Speer/RN73R2ATTD1002B25?qs=sGAEpiMZZMtlubZbdhIBIMWCRdMSCzTZYWNHqlmKHZA%3D"
+			(at 187.96 72.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8847,7 +8856,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 140.208 90)
 			(effects
 				(font
@@ -8856,7 +8865,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/KOA_Speer_RN73R__8_20_24.pdf"
 			(at 187.96 138.43 0)
 			(effects
 				(font
@@ -8867,6 +8876,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 187.96 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/KOA-Speer/RN73R2ATTD1002B25?qs=sGAEpiMZZMtlubZbdhIBIMWCRdMSCzTZYWNHqlmKHZA%3D"
+			(at 187.96 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11780,7 +11798,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 41.148 90)
 			(effects
 				(font
@@ -11789,7 +11807,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/KOA_Speer_RN73R__8_20_24.pdf"
 			(at 187.96 39.37 0)
 			(effects
 				(font
@@ -11800,6 +11818,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 187.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/KOA-Speer/RN73R2ATTD1002B25?qs=sGAEpiMZZMtlubZbdhIBIMWCRdMSCzTZYWNHqlmKHZA%3D"
+			(at 187.96 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13612,7 +13639,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 107.188 90)
 			(effects
 				(font
@@ -13621,7 +13648,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/KOA_Speer_RN73R__8_20_24.pdf"
 			(at 187.96 105.41 0)
 			(effects
 				(font
@@ -13632,6 +13659,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 187.96 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/KOA-Speer/RN73R2ATTD1002B25?qs=sGAEpiMZZMtlubZbdhIBIMWCRdMSCzTZYWNHqlmKHZA%3D"
+			(at 187.96 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
