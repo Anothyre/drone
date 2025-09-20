@@ -1649,7 +1649,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-5_Vertical"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-5_Horizontal_TabDown"
 			(at 104.14 78.74 0)
 			(effects
 				(font
