@@ -58,24 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "lib_footprint_mismatch|131500000|81500000|9ab3c3f3-fe40-43f8-8cb4-2e95f252279a|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|176382500|77407500|794adf86-78b0-4a2a-b60e-59e0bb405db6|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|176500000|46870000|0d6f6177-690e-4004-ae33-abe304e06198|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "text_thickness|144400000|109700000|a42cfc96-20f4-428e-8461-fec3afd95dde|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -204,7 +187,10 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.2,
+        0.35,
+        0.5
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
