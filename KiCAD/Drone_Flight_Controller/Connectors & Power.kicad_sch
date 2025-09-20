@@ -8137,7 +8137,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "140"
+		(property "Value" "150"
 			(at 91.44 149.8599 0)
 			(effects
 				(font
@@ -8146,7 +8146,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 87.122 148.59 90)
 			(effects
 				(font
@@ -8155,7 +8155,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-re_105_rohs_l.pdf"
 			(at 88.9 148.59 0)
 			(effects
 				(font
@@ -8165,6 +8165,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 88.9 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RE0805DRE07150RL?qs=sGAEpiMZZMtlubZbdhIBIKm0gsRX2fVk4SNsBClYUIM%3D"
 			(at 88.9 148.59 0)
 			(effects
 				(font
@@ -12627,7 +12636,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "65"
+		(property "Value" "75"
 			(at 81.28 149.8599 0)
 			(effects
 				(font
@@ -12636,7 +12645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 76.962 148.59 90)
 			(effects
 				(font
@@ -12645,7 +12654,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-rc_51_rohs_p.pdf"
 			(at 78.74 148.59 0)
 			(effects
 				(font
@@ -12655,6 +12664,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 78.74 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RC0805FR-0775RP?qs=sGAEpiMZZMtlubZbdhIBIEgN9MQql2m6PtgO4vXfRRc%3D"
 			(at 78.74 148.59 0)
 			(effects
 				(font
