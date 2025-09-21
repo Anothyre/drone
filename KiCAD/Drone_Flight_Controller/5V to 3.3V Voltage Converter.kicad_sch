@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "5V to 3.3V Voltage Converter")
-		(date "2025-09-19")
+		(date "2025-09-21")
 		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Brandner")
@@ -1951,7 +1951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "4V76"
+		(property "Value" "+4V76"
 			(at 78.74 62.23 0)
 			(effects
 				(font
