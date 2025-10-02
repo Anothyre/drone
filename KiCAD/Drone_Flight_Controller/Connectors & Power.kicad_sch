@@ -3924,6 +3924,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 147.32) (xy 236.22 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08e4a547-bcf6-4353-8515-1fe83f6367ce")
+	)
+	(wire
+		(pts
 			(xy 247.65 104.14) (xy 247.65 101.6)
 		)
 		(stroke
@@ -3931,6 +3941,16 @@
 			(type default)
 		)
 		(uuid "092fcc92-6620-454d-ad60-feb73e578034")
+	)
+	(wire
+		(pts
+			(xy 224.79 134.62) (xy 236.22 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a443eb7-b0d4-4bbe-8ea9-a6bea331f3c0")
 	)
 	(wire
 		(pts
@@ -4031,6 +4051,16 @@
 			(type default)
 		)
 		(uuid "11bdbee7-13e3-454b-bb6c-1937176322ce")
+	)
+	(wire
+		(pts
+			(xy 224.79 144.78) (xy 224.79 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1220a7ff-99b0-41f5-b200-61b52e3e8335")
 	)
 	(wire
 		(pts
@@ -4474,6 +4504,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 81.28) (xy 236.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f03a0b6-e971-4f95-a0de-40064bd4799c")
+	)
+	(wire
+		(pts
 			(xy 205.74 123.19) (xy 205.74 140.97)
 		)
 		(stroke
@@ -4574,6 +4614,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 45.72) (xy 224.79 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cc06aae-3360-41cd-8103-a0fd4e76ae0d")
+	)
+	(wire
+		(pts
 			(xy 181.61 105.41) (xy 181.61 113.03)
 		)
 		(stroke
@@ -4634,6 +4684,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 101.6) (xy 236.22 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55a03d72-f0aa-4527-96bd-3c2e67735f36")
+	)
+	(wire
+		(pts
 			(xy 135.89 107.95) (xy 138.43 107.95)
 		)
 		(stroke
@@ -4674,6 +4734,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 71.12) (xy 224.79 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57757024-c1ff-44da-aade-5acb02c217fb")
+	)
+	(wire
+		(pts
 			(xy 205.74 24.13) (xy 191.77 24.13)
 		)
 		(stroke
@@ -4711,6 +4781,16 @@
 			(type default)
 		)
 		(uuid "5a5b926d-b1d7-45ff-8f2f-70095cdf4421")
+	)
+	(wire
+		(pts
+			(xy 224.79 111.76) (xy 224.79 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b50d84d-c077-414e-9b1d-b7a6732dd8e0")
 	)
 	(wire
 		(pts
@@ -4841,6 +4921,16 @@
 			(type default)
 		)
 		(uuid "67df3d92-4808-4ab8-aa3f-f57d9448aa68")
+	)
+	(wire
+		(pts
+			(xy 224.79 48.26) (xy 236.22 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67f7052a-9347-42fc-9b04-d86e5332a498")
 	)
 	(wire
 		(pts
@@ -5494,6 +5584,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 68.58) (xy 236.22 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0742b06-c3a9-41d1-b999-421b19783f7d")
+	)
+	(wire
+		(pts
 			(xy 64.77 119.38) (xy 74.93 119.38)
 		)
 		(stroke
@@ -5784,6 +5884,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 114.3) (xy 236.22 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5e21b27-fb4f-410b-b4e4-cb2ac393bc03")
+	)
+	(wire
+		(pts
 			(xy 176.53 41.91) (xy 179.07 41.91)
 		)
 		(stroke
@@ -5954,6 +6064,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 78.74) (xy 224.79 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8e27143-0f25-4d83-9152-72ae6b9febc2")
+	)
+	(wire
+		(pts
 			(xy 179.07 39.37) (xy 181.61 39.37)
 		)
 		(stroke
@@ -5961,6 +6081,16 @@
 			(type default)
 		)
 		(uuid "ca3f07c9-8ec5-4c1b-88a1-761d366ec50e")
+	)
+	(wire
+		(pts
+			(xy 224.79 38.1) (xy 224.79 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca90c5ac-5b07-4053-9ac4-cc44dc643fb0")
 	)
 	(wire
 		(pts
@@ -5991,6 +6121,16 @@
 			(type default)
 		)
 		(uuid "cd3139ee-feba-4f3b-a932-b4810b151772")
+	)
+	(wire
+		(pts
+			(xy 224.79 137.16) (xy 224.79 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd8d29ff-ed7f-4f27-8a4d-057d83f0b9bd")
 	)
 	(wire
 		(pts
@@ -6474,6 +6614,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 35.56) (xy 236.22 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4469255-759d-4e3a-85e3-e76da9e23250")
+	)
+	(wire
+		(pts
 			(xy 236.22 111.76) (xy 236.22 114.3)
 		)
 		(stroke
@@ -6561,6 +6711,16 @@
 			(type default)
 		)
 		(uuid "fd2acc8f-751a-465c-a7fc-47a4bcc73463")
+	)
+	(wire
+		(pts
+			(xy 224.79 104.14) (xy 224.79 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd87ada8-21f3-4603-a409-1bd7e7e1b772")
 	)
 	(wire
 		(pts
@@ -8703,6 +8863,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 224.79 140.97 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "473a75ea-0771-4def-a9e9-d178bd750612")
+		(property "Reference" "C13"
+			(at 228.6 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 228.6 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.8248 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 224.79 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e3e34401-084f-4430-bc29-1b363cba35b8")
+		)
+		(pin "1"
+			(uuid "6902664d-e97a-4e5d-868a-626e5292a1e2")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
 		(at 213.36 140.97 0)
 		(mirror y)
@@ -8711,10 +8942,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4d816f71-370c-410a-a164-47274adaf2bb")
 		(property "Reference" "Motor4"
-			(at 214.63 139.6999 0)
+			(at 206.248 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8723,7 +8953,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 214.63 142.2399 0)
+			(at 206.248 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8966,7 +9196,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5c29bb62-9f4f-47d2-9780-1fa33fcf055b")
 		(property "Reference" "#PWR0214"
 			(at 259.08 162.56 0)
@@ -9636,10 +9865,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6fa05787-8442-4243-86a8-95f02ba2a8a2")
 		(property "Reference" "Motor2"
-			(at 214.63 73.6599 0)
+			(at 206.248 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9648,7 +9876,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 214.63 76.1999 0)
+			(at 206.248 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11397,10 +11625,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a6602cb6-7d6f-4e74-b25d-bc1d13e264dc")
 		(property "Reference" "Motor1"
-			(at 214.63 40.6399 0)
+			(at 206.248 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11409,7 +11636,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 214.63 43.1799 0)
+			(at 206.248 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12261,6 +12488,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 224.79 74.93 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8389934-793d-4f03-8ed5-751c46dc30c0")
+		(property "Reference" "C11"
+			(at 228.6 73.6599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 228.6 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.8248 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 224.79 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3931f2ea-ef40-4797-9d71-9d28da15d33b")
+		)
+		(pin "1"
+			(uuid "acd6e842-261f-4011-b2b6-2957b675728b")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 55.88 69.85 0)
 		(unit 1)
@@ -12842,10 +13140,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "df798134-84c2-4d40-8ab6-88b6ecb56f41")
 		(property "Reference" "Motor3"
-			(at 214.63 106.6799 0)
+			(at 206.248 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12854,7 +13151,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 214.63 109.2199 0)
+			(at 206.248 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13301,6 +13598,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 224.79 107.95 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f721c714-eeee-40a0-9df0-a81a104277f2")
+		(property "Reference" "C12"
+			(at 228.6 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 228.6 109.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.8248 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 224.79 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ec764dff-af4c-48b7-be3b-d84e3ca4f5ae")
+		)
+		(pin "1"
+			(uuid "9de2af52-23d4-488c-9699-1709167ac2b0")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 62.23 176.53 90)
 		(unit 1)
@@ -13380,6 +13748,77 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "D214")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 224.79 41.91 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb046662-24e8-43f9-a6a4-aef0584562eb")
+		(property "Reference" "C10"
+			(at 228.6 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 228.6 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.8248 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e8f78254-6340-47f0-8b6c-2771ad010554")
+		)
+		(pin "1"
+			(uuid "7e2dc398-74cf-4ff6-b816-cd62771d8b03")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "C10")
 					(unit 1)
 				)
 			)
