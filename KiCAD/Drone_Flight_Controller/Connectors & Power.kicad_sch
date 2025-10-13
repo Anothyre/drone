@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Connectors & Power")
-		(date "2025-09-27")
+		(date "2025-10-13")
 		(rev "V2")
 		(company "HTL Steyr")
 		(comment 1 "Brandner")
@@ -1070,6 +1070,174 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3362,6 +3530,12 @@
 		(uuid "10ec209b-5905-4958-8e9b-b2c1e91fb174")
 	)
 	(junction
+		(at 247.65 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "226a5e33-d5c7-44f2-9b43-ff5b129ad333")
+	)
+	(junction
 		(at 53.34 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3374,10 +3548,28 @@
 		(uuid "252b3d2e-ee2f-4eb4-9968-d98a8648df76")
 	)
 	(junction
+		(at 247.65 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a4a2784-3c5e-4f99-abc0-044498537394")
+	)
+	(junction
+		(at 247.65 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "306b3947-1833-4619-9bf8-911f6b76c9a2")
+	)
+	(junction
 		(at 205.74 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "30aec5fd-87f5-418f-acd3-012da064d944")
+	)
+	(junction
+		(at 247.65 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "351f6966-2115-479b-95d4-d78a12e45a4c")
 	)
 	(junction
 		(at 31.75 119.38)
@@ -3396,6 +3588,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4620c094-4fcb-4263-a565-f9996264bd8a")
+	)
+	(junction
+		(at 247.65 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4653e37c-28ac-47c9-8ec6-402d45a5113c")
 	)
 	(junction
 		(at 191.77 39.37)
@@ -3590,6 +3788,12 @@
 		(uuid "92d6488d-220e-499d-8bd0-7a57c1b27ae1")
 	)
 	(junction
+		(at 247.65 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "99f18a6d-68d6-4bf3-955f-4ad116a88062")
+	)
+	(junction
 		(at 181.61 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3600,6 +3804,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bc08d8c-a214-468c-832b-2d5acea68a45")
+	)
+	(junction
+		(at 247.65 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c07846a-56f8-459f-af03-2c812eccca30")
 	)
 	(junction
 		(at 205.74 87.63)
@@ -3678,6 +3888,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c860849e-547d-40cb-ac81-7c7c9f2960fe")
+	)
+	(junction
+		(at 247.65 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cda706c9-ea22-457f-9849-6039c258b1bd")
 	)
 	(junction
 		(at 43.18 179.07)
@@ -4081,6 +4297,16 @@
 			(type default)
 		)
 		(uuid "13101920-93b9-44d4-9a34-7ba433bdb3dd")
+	)
+	(wire
+		(pts
+			(xy 256.54 81.28) (xy 247.65 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13164637-6651-4371-99e9-41d866f1540c")
 	)
 	(wire
 		(pts
@@ -4494,6 +4720,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 111.76) (xy 256.54 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dff482c-2618-4076-af3f-15ec0c61273a")
+	)
+	(wire
+		(pts
 			(xy 236.22 24.13) (xy 205.74 24.13)
 		)
 		(stroke
@@ -4531,6 +4767,16 @@
 			(type default)
 		)
 		(uuid "422b0cc5-bfd3-4636-8a96-ea51f7c991c1")
+	)
+	(wire
+		(pts
+			(xy 256.54 48.26) (xy 247.65 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "434909e4-9b68-40aa-90d8-8ef8caad4188")
 	)
 	(wire
 		(pts
@@ -4624,6 +4870,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 45.72) (xy 256.54 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dc4ca5f-eb50-443e-8b49-c549071dae6c")
+	)
+	(wire
+		(pts
 			(xy 181.61 105.41) (xy 181.61 113.03)
 		)
 		(stroke
@@ -4631,6 +4887,16 @@
 			(type default)
 		)
 		(uuid "4eb583f0-e00c-4cf4-ac31-922ae9853bbf")
+	)
+	(wire
+		(pts
+			(xy 256.54 104.14) (xy 256.54 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fc906b5-2af0-4786-b266-72784f7199df")
 	)
 	(wire
 		(pts
@@ -4824,6 +5090,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 68.58) (xy 247.65 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c3409aa-722d-4cba-9556-523acd725226")
+	)
+	(wire
+		(pts
 			(xy 92.71 101.6) (xy 92.71 99.06)
 		)
 		(stroke
@@ -4941,6 +5217,16 @@
 			(type default)
 		)
 		(uuid "682fec3a-e6d7-4ba1-b8d7-73b5c92381d5")
+	)
+	(wire
+		(pts
+			(xy 256.54 147.32) (xy 247.65 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6865c518-eb06-439b-ae90-4d4a736d044d")
 	)
 	(bus
 		(pts
@@ -5924,6 +6210,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 78.74) (xy 256.54 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9af4cd8-e0f6-4b80-90d7-466290a9e699")
+	)
+	(wire
+		(pts
 			(xy 64.77 99.06) (xy 64.77 105.41)
 		)
 		(stroke
@@ -5981,6 +6277,16 @@
 			(type default)
 		)
 		(uuid "c187ef28-b084-408f-8547-05fa80954cee")
+	)
+	(wire
+		(pts
+			(xy 256.54 38.1) (xy 256.54 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b58496-d47e-4e1a-ba50-98123dd8f7a5")
 	)
 	(wire
 		(pts
@@ -6064,6 +6370,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 35.56) (xy 247.65 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8d7e98a-5375-438e-9fd7-57a27de2319d")
+	)
+	(wire
+		(pts
 			(xy 224.79 78.74) (xy 224.79 81.28)
 		)
 		(stroke
@@ -6124,6 +6440,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 144.78) (xy 256.54 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd5ee390-ed2f-468c-ac92-8057ddc28877")
+	)
+	(wire
+		(pts
 			(xy 224.79 137.16) (xy 224.79 134.62)
 		)
 		(stroke
@@ -6144,6 +6470,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 71.12) (xy 256.54 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce3514da-5be6-4f22-9739-f50d0ec5ea95")
+	)
+	(wire
+		(pts
 			(xy 166.37 102.87) (xy 166.37 105.41)
 		)
 		(stroke
@@ -6161,6 +6497,16 @@
 			(type default)
 		)
 		(uuid "cead1903-cf5d-4bab-bf8c-d57eed0a4669")
+	)
+	(wire
+		(pts
+			(xy 256.54 101.6) (xy 247.65 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ceb8a70e-be0b-4ab6-9364-e22cca90099c")
 	)
 	(wire
 		(pts
@@ -6231,6 +6577,16 @@
 			(type default)
 		)
 		(uuid "d4718db7-88b6-4ce4-9563-a368a262c4c1")
+	)
+	(wire
+		(pts
+			(xy 256.54 114.3) (xy 247.65 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6b196be-a253-4bca-a9cc-509620279e87")
 	)
 	(wire
 		(pts
@@ -6461,6 +6817,16 @@
 			(type default)
 		)
 		(uuid "e43e6656-1722-4156-96e1-69b72e060d57")
+	)
+	(wire
+		(pts
+			(xy 256.54 134.62) (xy 247.65 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5f8f919-7b2b-4989-b1f6-079024ed4c25")
 	)
 	(wire
 		(pts
@@ -6721,6 +7087,16 @@
 			(type default)
 		)
 		(uuid "fd87ada8-21f3-4603-a409-1bd7e7e1b772")
+	)
+	(wire
+		(pts
+			(xy 256.54 137.16) (xy 256.54 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe050719-849f-404f-b4e2-922c8503f79e")
 	)
 	(wire
 		(pts
@@ -7114,6 +7490,103 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "R204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 256.54 140.97 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03e5d997-9d1a-483f-9b35-61565f193a2b")
+		(property "Reference" "D4"
+			(at 259.08 139.6999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VTVS5V0ASMF-HM3-08"
+			(at 259.08 142.2399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 256.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85891"
+			(at 256.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 256.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 256.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 256.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Vishay-General-Semiconductor/VTVS5V0ASMF-HM3-08?qs=VPy2d4TTPFGNex1IuahNkg%3D%3D"
+			(at 256.54 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5959d39a-c89b-486b-9e28-32471c4c4c93")
+		)
+		(pin "1"
+			(uuid "c2665c02-fe91-4af8-9cdc-808477947593")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -8891,7 +9364,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 223.8248 144.78 0)
 			(effects
 				(font
@@ -8900,7 +9373,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/447/UPY_GPHC_X7R_6_3V_to_250V_25-3461231.pdf"
 			(at 224.79 140.97 0)
 			(effects
 				(font
@@ -8910,6 +9383,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 224.79 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/YAGEO/CC0805KRX7R9BB104?qs=sGAEpiMZZMsh%252B1woXyUXj6%2FbMp0tWpASEs0Wa4bsZsc%3D"
 			(at 224.79 140.97 0)
 			(effects
 				(font
@@ -10311,6 +10793,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D")
+		(at 256.54 107.95 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7fdce7f5-343f-408a-84f3-e3fafc8d5d73")
+		(property "Reference" "D3"
+			(at 259.08 106.6799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VTVS5V0ASMF-HM3-08"
+			(at 259.08 109.2199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 256.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85891"
+			(at 256.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 256.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 256.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 256.54 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Vishay-General-Semiconductor/VTVS5V0ASMF-HM3-08?qs=VPy2d4TTPFGNex1IuahNkg%3D%3D"
+			(at 256.54 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e1d732eb-3ea8-40b4-8e3e-9b6443a54269")
+		)
+		(pin "1"
+			(uuid "3f0161eb-29d7-4914-916b-afb2aee0db64")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Opamp_Dual")
 		(at 86.36 109.22 0)
 		(unit 3)
@@ -10925,6 +11504,103 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "Q207")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 256.54 74.93 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e22b9ed-8f36-44e7-bbac-82319c7fb851")
+		(property "Reference" "D2"
+			(at 259.08 73.6599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VTVS5V0ASMF-HM3-08"
+			(at 259.08 76.1999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 256.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85891"
+			(at 256.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 256.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 256.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 256.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Vishay-General-Semiconductor/VTVS5V0ASMF-HM3-08?qs=VPy2d4TTPFGNex1IuahNkg%3D%3D"
+			(at 256.54 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b4da88b0-16c1-4c3e-85b3-cb60e658b8e0")
+		)
+		(pin "1"
+			(uuid "306e9b63-02b8-4ba0-ade8-74960e72018e")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -12516,7 +13192,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 223.8248 78.74 0)
 			(effects
 				(font
@@ -12525,7 +13201,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/447/UPY_GPHC_X7R_6_3V_to_250V_25-3461231.pdf"
 			(at 224.79 74.93 0)
 			(effects
 				(font
@@ -12535,6 +13211,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 224.79 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/YAGEO/CC0805KRX7R9BB104?qs=sGAEpiMZZMsh%252B1woXyUXj6%2FbMp0tWpASEs0Wa4bsZsc%3D"
 			(at 224.79 74.93 0)
 			(effects
 				(font
@@ -12553,6 +13238,103 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
 					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 256.54 41.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca49b7f2-b001-4b83-b7a7-1d00c1367cff")
+		(property "Reference" "D1"
+			(at 259.08 40.6399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VTVS5V0ASMF-HM3-08"
+			(at 259.08 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85891"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Vishay-General-Semiconductor/VTVS5V0ASMF-HM3-08?qs=VPy2d4TTPFGNex1IuahNkg%3D%3D"
+			(at 256.54 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "717557fe-eed9-4e3e-9861-f5f210662e20")
+		)
+		(pin "1"
+			(uuid "0aa665d6-cf7c-4ff6-885f-ce18fc0c409b")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/260564b2-f35d-47a6-9418-8c7c5bce9239"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -13626,7 +14408,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 223.8248 111.76 0)
 			(effects
 				(font
@@ -13635,7 +14417,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/447/UPY_GPHC_X7R_6_3V_to_250V_25-3461231.pdf"
 			(at 224.79 107.95 0)
 			(effects
 				(font
@@ -13645,6 +14427,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 224.79 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/YAGEO/CC0805KRX7R9BB104?qs=sGAEpiMZZMsh%252B1woXyUXj6%2FbMp0tWpASEs0Wa4bsZsc%3D"
 			(at 224.79 107.95 0)
 			(effects
 				(font
@@ -13782,7 +14573,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 223.8248 45.72 0)
 			(effects
 				(font
@@ -13791,7 +14582,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/447/UPY_GPHC_X7R_6_3V_to_250V_25-3461231.pdf"
 			(at 224.79 41.91 0)
 			(effects
 				(font
@@ -13801,6 +14592,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 224.79 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/YAGEO/CC0805KRX7R9BB104?qs=sGAEpiMZZMsh%252B1woXyUXj6%2FbMp0tWpASEs0Wa4bsZsc%3D"
 			(at 224.79 41.91 0)
 			(effects
 				(font

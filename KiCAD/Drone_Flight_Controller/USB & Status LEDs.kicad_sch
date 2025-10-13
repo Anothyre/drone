@@ -640,6 +640,174 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:D_Schottky"
 			(pin_numbers
 				(hide yes)
@@ -2552,6 +2720,12 @@
 		(uuid "2925a27b-3c0f-4013-8f08-7f4024c37494")
 	)
 	(junction
+		(at 93.98 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "496ec01d-1719-4849-ad64-5489f8d9e87a")
+	)
+	(junction
 		(at 228.6 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2674,16 +2848,6 @@
 			(type default)
 		)
 		(uuid "0dd0b9b6-05f4-455e-a53b-c2873242e297")
-	)
-	(wire
-		(pts
-			(xy 91.44 45.72) (xy 93.98 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e678d9e-f8c9-4f3c-ae0c-1f3d2c93fe1c")
 	)
 	(wire
 		(pts
@@ -3057,6 +3221,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 34.29) (xy 93.98 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65eefba1-001a-4815-86ef-2fa4a9843de4")
+	)
+	(wire
+		(pts
 			(xy 218.44 101.6) (xy 218.44 154.94)
 		)
 		(stroke
@@ -3084,6 +3258,16 @@
 			(type default)
 		)
 		(uuid "76db4c48-0a78-437f-ab42-1ac32b6162c5")
+	)
+	(wire
+		(pts
+			(xy 91.44 45.72) (xy 93.98 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c04fa7-b698-4fc5-ad7e-2eae3599de1b")
 	)
 	(wire
 		(pts
@@ -3187,16 +3371,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 43.18) (xy 109.22 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0ba95b0-9c85-4537-95da-e110d9f38944")
-	)
-	(wire
-		(pts
 			(xy 176.53 83.82) (xy 180.34 83.82)
 		)
 		(stroke
@@ -3204,6 +3378,16 @@
 			(type default)
 		)
 		(uuid "a1a692bd-aa5f-47d6-b346-ba9ee24e53fa")
+	)
+	(wire
+		(pts
+			(xy 93.98 45.72) (xy 101.6 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8412317-b115-45df-9875-3c759d536fc1")
 	)
 	(wire
 		(pts
@@ -3354,6 +3538,16 @@
 			(type default)
 		)
 		(uuid "cef0afa7-7057-43d0-b46d-fbc3855c2a0e")
+	)
+	(wire
+		(pts
+			(xy 93.98 45.72) (xy 93.98 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf8a6587-f796-4efd-bcb7-68a5b7bd725b")
 	)
 	(wire
 		(pts
@@ -3547,13 +3741,13 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 45.72) (xy 101.6 45.72)
+			(xy 109.22 45.72) (xy 111.76 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f97737ed-c462-4dca-83bd-728fd94f316d")
+		(uuid "f7cca331-ef30-490c-a7c3-e3a527a3cf37")
 	)
 	(wire
 		(pts
@@ -5247,7 +5441,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 109.22 43.18 0)
+		(at 93.98 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5256,7 +5450,7 @@
 		(fields_autoplaced yes)
 		(uuid "75818bd6-a0f0-4ac0-b7b3-5db6ef3d89c2")
 		(property "Reference" "#PWR0601"
-			(at 109.22 46.99 0)
+			(at 93.98 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5265,7 +5459,7 @@
 			)
 		)
 		(property "Value" "+4V76"
-			(at 109.22 38.1 0)
+			(at 93.98 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5273,7 +5467,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 43.18 0)
+			(at 93.98 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5282,7 +5476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 43.18 0)
+			(at 93.98 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5291,7 +5485,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 109.22 43.18 0)
+			(at 93.98 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5439,6 +5633,100 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "#PWR0605")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 105.41 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "888b177b-7a8c-479e-bab8-4e755dd72d50")
+		(property "Reference" "D5"
+			(at 105.918 48.514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VTVS5V0ASMF-HM3-08"
+			(at 105.918 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 105.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85891"
+			(at 105.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 105.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 105.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 105.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Vishay-General-Semiconductor/VTVS5V0ASMF-HM3-08?qs=VPy2d4TTPFGNex1IuahNkg%3D%3D"
+			(at 105.41 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7b4e4fab-4203-4b01-9fc6-7c3f33cf00e6")
+		)
+		(pin "1"
+			(uuid "248d8e05-8665-4286-b267-a20d22094dc2")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -5674,7 +5962,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 97.79 45.72 180)
+		(at 93.98 40.64 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5682,7 +5970,7 @@
 		(dnp no)
 		(uuid "a1c8fa62-3180-4ef1-9d88-38028935b195")
 		(property "Reference" "D601"
-			(at 97.79 40.894 0)
+			(at 105.156 41.402 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5690,7 +5978,7 @@
 			)
 		)
 		(property "Value" "BAT60BE6359HTMA1"
-			(at 97.79 42.926 0)
+			(at 105.156 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5698,7 +5986,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
-			(at 97.79 45.72 0)
+			(at 93.98 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5707,7 +5995,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.at/datasheet/3/70/1/Infineon-BAT60BSERIES-DS-v01_01-en.pdf"
-			(at 97.79 45.72 0)
+			(at 93.98 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5716,7 +6004,7 @@
 			)
 		)
 		(property "Description" "Schottky diode"
-			(at 97.79 45.72 0)
+			(at 93.98 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5725,7 +6013,7 @@
 			)
 		)
 		(property "Link" "https://www.mouser.at/ProductDetail/Infineon-Technologies/BAT60BE6359HTMA1?qs=znymxvEW7YnVGCVVXuqMnw%3D%3D"
-			(at 97.79 45.72 0)
+			(at 93.98 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6273,6 +6561,73 @@
 			(project ""
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "#+3V0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 111.76 45.72 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7e97f59-027a-4cae-994d-3c53354ca1e8")
+		(property "Reference" "#PWR04"
+			(at 118.11 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 45.7199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "265f86d7-3cdd-48b9-9c8b-0d28f9b5619c")
+		)
+		(instances
+			(project ""
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
