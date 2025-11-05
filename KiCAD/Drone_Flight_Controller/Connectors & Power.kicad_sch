@@ -8618,7 +8618,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 248.6152 144.78 0)
 			(effects
 				(font
@@ -8627,7 +8627,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/76/1/GRM21BC80J106KE19_01A.pdf"
 			(at 247.65 140.97 0)
 			(effects
 				(font
@@ -8637,6 +8637,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 247.65 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Murata-Electronics/GRM21BC80J106KE19L?qs=wkKrz7WmEgOMmaN3ChiQ7g%3D%3D"
 			(at 247.65 140.97 0)
 			(effects
 				(font
@@ -9908,7 +9917,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 248.6152 45.72 0)
 			(effects
 				(font
@@ -9917,7 +9926,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/76/1/GRM21BC80J106KE19_01A.pdf"
 			(at 247.65 41.91 0)
 			(effects
 				(font
@@ -9927,6 +9936,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 247.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Murata-Electronics/GRM21BC80J106KE19L?qs=wkKrz7WmEgOMmaN3ChiQ7g%3D%3D"
 			(at 247.65 41.91 0)
 			(effects
 				(font
@@ -12712,7 +12730,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 248.6152 78.74 0)
 			(effects
 				(font
@@ -12721,7 +12739,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/76/1/GRM21BC80J106KE19_01A.pdf"
 			(at 247.65 74.93 0)
 			(effects
 				(font
@@ -12731,6 +12749,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 247.65 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Murata-Electronics/GRM21BC80J106KE19L?qs=wkKrz7WmEgOMmaN3ChiQ7g%3D%3D"
 			(at 247.65 74.93 0)
 			(effects
 				(font
@@ -13583,7 +13610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 248.6152 111.76 0)
 			(effects
 				(font
@@ -13592,7 +13619,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.at/datasheet/3/76/1/GRM21BC80J106KE19_01A.pdf"
 			(at 247.65 107.95 0)
 			(effects
 				(font
@@ -13602,6 +13629,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 247.65 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/Murata-Electronics/GRM21BC80J106KE19L?qs=wkKrz7WmEgOMmaN3ChiQ7g%3D%3D"
 			(at 247.65 107.95 0)
 			(effects
 				(font
