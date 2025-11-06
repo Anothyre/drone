@@ -2726,6 +2726,18 @@
 		(uuid "496ec01d-1719-4849-ad64-5489f8d9e87a")
 	)
 	(junction
+		(at 102.87 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5302b066-abac-4a81-8a9b-5962f13a0f5e")
+	)
+	(junction
+		(at 110.49 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62f11c1a-690d-46f1-b9c5-7c2b3d2d13d5")
+	)
+	(junction
 		(at 228.6 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2760,14 +2772,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "daff97bf-cd98-4710-be8a-19ee2b1c8a8e")
-	)
-	(no_connect
-		(at 91.44 50.8)
-		(uuid "680a5a98-6c29-4628-97b3-601ac83ad501")
-	)
-	(no_connect
-		(at 91.44 53.34)
-		(uuid "940003bf-d3d7-4a5b-aec5-23ae53256693")
 	)
 	(wire
 		(pts
@@ -2861,6 +2865,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 45.72) (xy 111.76 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14b83044-0d93-4f5d-abcc-eba37f976508")
+	)
+	(wire
+		(pts
 			(xy 241.3 134.62) (xy 187.96 134.62)
 		)
 		(stroke
@@ -2888,6 +2902,16 @@
 			(type default)
 		)
 		(uuid "1c47e6d3-79f2-421a-80ad-6433cd4a481a")
+	)
+	(wire
+		(pts
+			(xy 91.44 53.34) (xy 93.98 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ddfbd9d-4b15-4ab3-8ecf-15f21bf72f8f")
 	)
 	(wire
 		(pts
@@ -2931,6 +2955,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 50.8) (xy 93.98 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "245dcf96-c5b1-462a-9b31-c1fe8bb4a5ea")
+	)
+	(wire
+		(pts
 			(xy 153.67 81.28) (xy 163.83 81.28)
 		)
 		(stroke
@@ -2938,6 +2972,16 @@
 			(type default)
 		)
 		(uuid "25972281-4837-49e1-adb6-84c2d60bd7c6")
+	)
+	(wire
+		(pts
+			(xy 101.6 53.34) (xy 102.87 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28fbf34e-8442-48fd-b9ea-0f4193eb1301")
 	)
 	(wire
 		(pts
@@ -2951,6 +2995,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 52.07) (xy 110.49 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ba809c1-389e-4e86-83b9-f9a3999573ad")
+	)
+	(wire
+		(pts
 			(xy 68.58 83.82) (xy 68.58 86.36)
 		)
 		(stroke
@@ -2958,6 +3012,16 @@
 			(type default)
 		)
 		(uuid "2c3203e4-25dc-4b8e-abdd-fd6356aa620e")
+	)
+	(wire
+		(pts
+			(xy 102.87 52.07) (xy 102.87 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cbb2c74-04ab-46f7-883c-ba56c771c532")
 	)
 	(wire
 		(pts
@@ -3131,6 +3195,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 50.8) (xy 102.87 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "560628af-2234-4061-98c6-179e5668ce39")
+	)
+	(wire
+		(pts
 			(xy 158.75 134.62) (xy 158.75 86.36)
 		)
 		(stroke
@@ -3241,6 +3315,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 45.72) (xy 110.49 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "706951dc-9346-4efc-8a64-c37a89937b33")
+	)
+	(wire
+		(pts
 			(xy 153.67 78.74) (xy 166.37 78.74)
 		)
 		(stroke
@@ -3328,6 +3412,16 @@
 			(type default)
 		)
 		(uuid "8ad6c308-fadf-4b77-aca4-e14513ba3cc7")
+	)
+	(wire
+		(pts
+			(xy 101.6 50.8) (xy 102.87 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cd217c4-b161-41f8-aac5-7c68d34b8f45")
 	)
 	(wire
 		(pts
@@ -3741,7 +3835,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 45.72) (xy 111.76 45.72)
+			(xy 109.22 45.72) (xy 110.49 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4196,6 +4290,83 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "Q702")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 97.79 50.8 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "160a07ba-1190-476c-bffb-77fe6948963c")
+		(property "Reference" "R1"
+			(at 97.79 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5k1"
+			(at 97.79 48.768 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 97.79 49.022 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 97.79 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
+			(at 97.79 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a788ed1b-5aef-42f7-8b68-78fb294c8cc5")
+		)
+		(pin "2"
+			(uuid "2380477e-18bd-4211-a048-fe467c437dda")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5656,7 +5827,7 @@
 			)
 		)
 		(property "Value" "VTVS5V0ASMF-HM3-08"
-			(at 105.918 51.054 0)
+			(at 105.41 35.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6429,6 +6600,83 @@
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
 					(reference "Q704")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 97.79 53.34 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2a4cfbc-2ffe-4f2c-89bb-ff930ada626e")
+		(property "Reference" "R2"
+			(at 97.79 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5k1"
+			(at 97.79 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 97.79 51.562 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 97.79 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
+			(at 97.79 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51798317-b0f8-43ce-8ac6-b2faf161e1ce")
+		)
+		(pin "2"
+			(uuid "9d64bda1-ab21-40bb-9411-dae2710ab36f")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
+					(reference "R2")
 					(unit 1)
 				)
 			)
