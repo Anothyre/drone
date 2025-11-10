@@ -58,7 +58,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|153365000|97500000|5e05e13f-48ae-41b5-941c-5313cea2f6cd|00000000-0000-0000-0000-000000000000",
+          "Changed hole size"
+        ],
+        [
+          "silk_overlap|122560500|86615000|1c607fef-800d-41e1-9166-4a877a29ec51|a9aaa759-5db6-4d59-9c74-4cd14c9e0535",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
