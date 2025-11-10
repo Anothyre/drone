@@ -60,6 +60,10 @@
       ],
       "drc_exclusions": [
         [
+          "lib_footprint_mismatch|128690000|107950000|15d722f5-67d1-4ad5-a836-9dd6bf8670cc|00000000-0000-0000-0000-000000000000",
+          "Made switch footprint correct"
+        ],
+        [
           "lib_footprint_mismatch|148692500|109161500|0cc5e5bc-39a1-4f33-b40d-83c4e89c3ccc|00000000-0000-0000-0000-000000000000",
           "Moved silkscreen off solder mask "
         ],

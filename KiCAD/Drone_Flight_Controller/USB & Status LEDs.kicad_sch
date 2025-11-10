@@ -4305,8 +4305,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "160a07ba-1190-476c-bffb-77fe6948963c")
-		(property "Reference" "R1"
-			(at 97.79 44.45 90)
+		(property "Reference" "R709"
+			(at 97.79 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4366,7 +4366,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "R1")
+					(reference "R709")
 					(unit 1)
 				)
 			)
@@ -6615,8 +6615,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2a4cfbc-2ffe-4f2c-89bb-ff930ada626e")
-		(property "Reference" "R2"
-			(at 97.79 46.99 90)
+		(property "Reference" "R710"
+			(at 97.79 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6676,7 +6676,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/05daaa24-e506-4b9a-9564-8bf799413ca8/8421779c-d2a0-463b-acfb-bef6fd845f5d"
-					(reference "R2")
+					(reference "R710")
 					(unit 1)
 				)
 			)
