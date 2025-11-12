@@ -1,0 +1,21 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "51ab9491-7068-4b24-bb38-47a0c739796e")
+	(paper "A4")
+	(title_block
+		(title "Drone Flight Controller")
+		(date "2025-11-12")
+		(rev "V3")
+		(company "HTL Steyr")
+		(comment 1 "Brandner, Hinterberger")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
