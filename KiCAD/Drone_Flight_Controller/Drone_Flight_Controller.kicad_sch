@@ -775,7 +775,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0fbc72f8-f474-48af-85b8-7eb466bc09e8")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG01"
 			(at 246.38 43.815 0)
 			(effects
 				(font
@@ -825,7 +825,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "#FLG02")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -841,7 +841,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24f626ed-c5a9-4866-988b-1a2774a0aa03")
-		(property "Reference" "FID2"
+		(property "Reference" "FID1"
 			(at 251.46 106.045 0)
 			(effects
 				(font
@@ -889,7 +889,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "FID2")
+					(reference "FID1")
 					(unit 1)
 				)
 			)
@@ -905,7 +905,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54c13459-5fa5-4319-85d2-b9184c650d7c")
-		(property "Reference" "FID1"
+		(property "Reference" "FID2"
 			(at 251.46 116.205 0)
 			(effects
 				(font
@@ -953,7 +953,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "FID1")
+					(reference "FID2")
 					(unit 1)
 				)
 			)
@@ -969,7 +969,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f8cc5dd-049c-4d92-8acb-3ce76694d09f")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR02"
 			(at 259.08 48.26 0)
 			(effects
 				(font
@@ -1019,7 +1019,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "#PWR011")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1035,7 +1035,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e82f934-eda7-4e01-9e03-51c4c1090c2d")
-		(property "Reference" "G3"
+		(property "Reference" "G1"
 			(at 252.73 55.4086 0)
 			(effects
 				(font
@@ -1083,7 +1083,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "G3")
+					(reference "G1")
 					(unit 1)
 				)
 			)
@@ -1163,7 +1163,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dfa470a7-2963-47a5-990a-135f3ed40975")
-		(property "Reference" "#FLG01"
+		(property "Reference" "#FLG02"
 			(at 259.08 37.465 0)
 			(effects
 				(font
@@ -1213,7 +1213,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "#FLG01")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -1228,7 +1228,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f7d2ec2f-9be5-4e05-9126-7660a6dfbfc3")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR01"
 			(at 246.38 43.18 0)
 			(effects
 				(font
@@ -1278,7 +1278,7 @@
 		(instances
 			(project ""
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e"
-					(reference "#PWR010")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
