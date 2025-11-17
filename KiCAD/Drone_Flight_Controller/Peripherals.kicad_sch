@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "DFC: Core")
-		(date "2025-11-12")
+		(date "2025-11-17")
 		(rev "V3")
 		(company "HTL-Steyr")
 		(comment 1 "Brandner, Hinterberger")
@@ -3426,6 +3426,95 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Battery Low"
+		(exclude_from_sim no)
+		(at 43.18 144.018 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "03c6bbb7-571a-405a-978c-30a59e12b34c")
+	)
+	(text "Heartbeat"
+		(exclude_from_sim no)
+		(at 43.18 133.858 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1f2c8dc6-878a-42a8-8496-88d2c2463208")
+	)
+	(text "GPS Status"
+		(exclude_from_sim no)
+		(at 43.18 141.478 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "25422ca9-a453-40d4-aeda-9efdee4aff23")
+	)
+	(text "Armed"
+		(exclude_from_sim no)
+		(at 43.18 136.398 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3fdd7d5a-4ff5-437c-b1fd-e8ef9a558810")
+	)
+	(text "USB"
+		(exclude_from_sim no)
+		(at 43.18 149.098 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87be9a15-8c91-4131-b657-5cb47b24cde0")
+	)
+	(text "Error"
+		(exclude_from_sim no)
+		(at 43.18 138.938 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a151f3cf-1123-4192-990e-aa3d9bb7c0f5")
+	)
+	(text "Signal"
+		(exclude_from_sim no)
+		(at 43.18 146.558 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f3a238f6-c6cf-4175-b448-a4eb0b82e522")
+	)
+	(junction
+		(at 91.44 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "18d5d936-ab36-4847-81a4-b8988931885f")
+	)
+	(junction
+		(at 46.99 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29b2fcd9-95a2-4719-816d-bf66540596f0")
+	)
 	(junction
 		(at 120.65 81.28)
 		(diameter 0)
@@ -3449,6 +3538,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56c37a2a-f500-4878-a21b-88c440223230")
+	)
+	(junction
+		(at 73.66 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6695e3b5-528a-4ca2-93b0-ef67348e3c62")
+	)
+	(junction
+		(at 55.88 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67e3f214-3617-49db-a5b0-94e1d884e5b3")
 	)
 	(junction
 		(at 38.1 121.92)
@@ -3511,10 +3612,31 @@
 		(uuid "dce9747a-dac1-49bc-b56d-165a3a86b0d2")
 	)
 	(junction
+		(at 64.77 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e7f17bea-63ca-4f2e-ab1b-7f22150bd86b")
+	)
+	(junction
 		(at 45.72 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee5750c3-a46b-41b3-a9f4-af23eecf170c")
+	)
+	(junction
+		(at 82.55 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f39a8486-e1f1-41cd-b1d1-b23775fe6fa0")
+	)
+	(bus_entry
+		(at 38.1 149.86)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1438c6cd-4ee5-4100-80d7-0be314cfa101")
 	)
 	(bus_entry
 		(at 201.93 142.24)
@@ -3526,6 +3648,15 @@
 		(uuid "412e0ee1-6a1c-4181-ae2a-6cfb79e8c0cb")
 	)
 	(bus_entry
+		(at 38.1 137.16)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c4fa003-3cb8-4602-b399-c85a5134ca2e")
+	)
+	(bus_entry
 		(at 201.93 104.14)
 		(size 2.54 2.54)
 		(stroke
@@ -3533,6 +3664,15 @@
 			(type default)
 		)
 		(uuid "555c33b3-a997-4c8e-801e-fc52e3e94429")
+	)
+	(bus_entry
+		(at 38.1 134.62)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b523a57-3ee1-46e2-8013-990f0ce606a2")
 	)
 	(bus_entry
 		(at 120.65 105.41)
@@ -3544,6 +3684,15 @@
 		(uuid "a03c39ea-5f0f-4bc0-9cc3-421edc9b96f1")
 	)
 	(bus_entry
+		(at 38.1 142.24)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b12e4dec-e2f5-4d88-9e64-fe978d516037")
+	)
+	(bus_entry
 		(at 120.65 143.51)
 		(size 2.54 2.54)
 		(stroke
@@ -3551,6 +3700,33 @@
 			(type default)
 		)
 		(uuid "c15a0a76-4bff-4995-bd95-680262aed867")
+	)
+	(bus_entry
+		(at 38.1 144.78)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8cee886-48c8-4ff4-9e9f-c23265c1dc5a")
+	)
+	(bus_entry
+		(at 38.1 139.7)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f662d666-16e9-42ad-a580-5d40539d6213")
+	)
+	(bus_entry
+		(at 38.1 147.32)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb8d8f86-ab58-49a6-9b06-1fcc90e66786")
 	)
 	(wire
 		(pts
@@ -3624,6 +3800,26 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 147.32) (xy 55.88 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff9fe1b-db31-471c-a02d-06a820deb7a6")
+	)
+	(wire
+		(pts
+			(xy 82.55 172.72) (xy 91.44 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "130a3e32-1133-4f4b-a0b3-fde540ff9d40")
+	)
+	(wire
+		(pts
 			(xy 177.8 110.49) (xy 180.34 110.49)
 		)
 		(stroke
@@ -3684,6 +3880,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 142.24) (xy 73.66 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24c752e6-4a41-4ebe-95f6-2ab801528892")
+	)
+	(wire
+		(pts
 			(xy 49.53 67.31) (xy 49.53 69.85)
 		)
 		(stroke
@@ -3691,6 +3897,16 @@
 			(type default)
 		)
 		(uuid "252b4156-2ea3-41bf-b90b-7caa823b5f7d")
+	)
+	(wire
+		(pts
+			(xy 38.1 144.78) (xy 64.77 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "258a7591-e83f-476b-9001-9cb311a993e1")
 	)
 	(wire
 		(pts
@@ -3724,6 +3940,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 170.18) (xy 64.77 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3236f566-5fde-4669-86be-f85f2c7943ce")
+	)
+	(wire
+		(pts
 			(xy 194.31 50.8) (xy 196.85 50.8)
 		)
 		(stroke
@@ -3731,6 +3957,16 @@
 			(type default)
 		)
 		(uuid "33e7801a-4fef-4ef9-af52-312589342417")
+	)
+	(wire
+		(pts
+			(xy 46.99 172.72) (xy 46.99 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "347a5452-3bbf-4060-979d-254aab0e9939")
 	)
 	(wire
 		(pts
@@ -3794,6 +4030,26 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 172.72) (xy 100.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bbff432-3392-4d11-a5b1-cae549b261bc")
+	)
+	(wire
+		(pts
+			(xy 64.77 172.72) (xy 73.66 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ce8ff0a-0fc3-4693-9cb7-ca6603d8c59b")
+	)
+	(wire
+		(pts
 			(xy 177.8 151.13) (xy 177.8 153.67)
 		)
 		(stroke
@@ -3801,6 +4057,26 @@
 			(type default)
 		)
 		(uuid "3fa58981-ee95-43c6-8112-aa66a2b249b5")
+	)
+	(wire
+		(pts
+			(xy 38.1 139.7) (xy 82.55 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41c9d622-1cc7-4cad-b188-efd015399824")
+	)
+	(wire
+		(pts
+			(xy 91.44 170.18) (xy 91.44 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4242e310-db68-4518-98ef-94ef33df3fe1")
 	)
 	(wire
 		(pts
@@ -3874,6 +4150,26 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 172.72) (xy 82.55 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c6dca2a-0f96-4c4f-8116-50bc95993c30")
+	)
+	(bus
+		(pts
+			(xy 35.56 152.4) (xy 35.56 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d8fa90d-d91a-49d3-867a-f3d214110dfc")
+	)
+	(wire
+		(pts
 			(xy 38.1 74.93) (xy 40.64 74.93)
 		)
 		(stroke
@@ -3892,6 +4188,16 @@
 		)
 		(uuid "4fea17d3-f166-4a4f-8f59-ee3ca9e244d9")
 	)
+	(wire
+		(pts
+			(xy 100.33 134.62) (xy 100.33 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50e143c6-07e2-40b0-a837-af1a99a310f0")
+	)
 	(bus
 		(pts
 			(xy 120.65 105.41) (xy 120.65 143.51)
@@ -3902,6 +4208,16 @@
 		)
 		(uuid "514f8fb9-ad4b-464c-87a2-91741b288ebe")
 	)
+	(bus
+		(pts
+			(xy 35.56 144.78) (xy 35.56 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51c34c50-34aa-4209-a8fd-2e414bd22f5e")
+	)
 	(wire
 		(pts
 			(xy 38.1 121.92) (xy 38.1 116.84)
@@ -3911,6 +4227,16 @@
 			(type default)
 		)
 		(uuid "51f1f68f-4902-455a-bfef-8d15e7ffdd2d")
+	)
+	(wire
+		(pts
+			(xy 38.1 149.86) (xy 46.99 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53969378-7017-4ce1-9ff0-f5395b789a89")
 	)
 	(wire
 		(pts
@@ -3992,6 +4318,16 @@
 		)
 		(uuid "62672af4-ed04-4573-8489-3a697782db5e")
 	)
+	(bus
+		(pts
+			(xy 35.56 139.7) (xy 35.56 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65732347-0067-4947-b944-793c8a7a5cd9")
+	)
 	(wire
 		(pts
 			(xy 259.08 149.86) (xy 259.08 152.4)
@@ -4004,6 +4340,26 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 170.18) (xy 73.66 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67811577-c209-46e8-8548-5198ddd6c223")
+	)
+	(bus
+		(pts
+			(xy 35.56 147.32) (xy 35.56 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b56b65c-9eb0-405a-ac7e-29c05e1518de")
+	)
+	(wire
+		(pts
 			(xy 177.8 92.71) (xy 177.8 93.98)
 		)
 		(stroke
@@ -4011,6 +4367,16 @@
 			(type default)
 		)
 		(uuid "6de2a095-99ec-43cd-a839-9ab0f6d82af6")
+	)
+	(wire
+		(pts
+			(xy 38.1 134.62) (xy 100.33 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6eda4dd4-d6e7-4a55-8c40-8b7dab147745")
 	)
 	(wire
 		(pts
@@ -4032,6 +4398,16 @@
 		)
 		(uuid "70ae93d0-aadf-405e-ba6a-ce0b97e02615")
 	)
+	(bus
+		(pts
+			(xy 35.56 137.16) (xy 35.56 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73eca8d2-24f5-4d5f-b6ba-4da8ec0915b4")
+	)
 	(wire
 		(pts
 			(xy 220.98 129.54) (xy 259.08 129.54)
@@ -4041,6 +4417,16 @@
 			(type default)
 		)
 		(uuid "749c466a-7ce2-4f72-9169-d22c681d1e80")
+	)
+	(wire
+		(pts
+			(xy 82.55 139.7) (xy 82.55 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74ba9e43-0d20-4353-80ec-3a76cfe0f689")
 	)
 	(wire
 		(pts
@@ -4084,6 +4470,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 172.72) (xy 64.77 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83f76f9c-0ef0-4eba-a083-578abac8d347")
+	)
+	(wire
+		(pts
 			(xy 40.64 74.93) (xy 40.64 69.85)
 		)
 		(stroke
@@ -4091,6 +4487,16 @@
 			(type default)
 		)
 		(uuid "852c5d59-70ab-4143-8e06-5eb1b1ea81a2")
+	)
+	(wire
+		(pts
+			(xy 91.44 137.16) (xy 91.44 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85c0eebb-ba0e-4913-a52c-05caaeff4d82")
 	)
 	(wire
 		(pts
@@ -4144,6 +4550,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 172.72) (xy 55.88 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ac59f02-fd70-47a7-bf81-1d73125728c0")
+	)
+	(wire
+		(pts
 			(xy 132.08 43.18) (xy 132.08 48.26)
 		)
 		(stroke
@@ -4161,6 +4577,16 @@
 			(type default)
 		)
 		(uuid "8cd63dcd-3e60-4b5a-9601-8a1e993fca44")
+	)
+	(wire
+		(pts
+			(xy 82.55 170.18) (xy 82.55 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ef6137c-dfa5-41ab-8801-895981d8773e")
 	)
 	(wire
 		(pts
@@ -4334,6 +4760,36 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 147.32) (xy 55.88 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afde18c4-9151-446a-b4af-bcd5b6833c16")
+	)
+	(wire
+		(pts
+			(xy 55.88 170.18) (xy 55.88 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff3981e-ca32-4054-8a34-bd609d8e6fbf")
+	)
+	(bus
+		(pts
+			(xy 35.56 142.24) (xy 35.56 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b307ee27-81c8-410c-bbca-a4c35967fb64")
+	)
+	(wire
+		(pts
 			(xy 238.76 106.68) (xy 261.62 106.68)
 		)
 		(stroke
@@ -4344,6 +4800,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 170.18) (xy 100.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd772d1c-0673-4dba-81ce-767b6abf9f6a")
+	)
+	(wire
+		(pts
 			(xy 38.1 116.84) (xy 40.64 116.84)
 		)
 		(stroke
@@ -4351,6 +4817,16 @@
 			(type default)
 		)
 		(uuid "bdc1f933-8db7-4ced-b89a-aed1b88691d5")
+	)
+	(wire
+		(pts
+			(xy 46.99 149.86) (xy 46.99 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0ecd6a7-7db5-4c53-89a6-76088d8db539")
 	)
 	(wire
 		(pts
@@ -4524,6 +5000,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 170.18) (xy 46.99 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7c5e68c-f7f4-4971-a519-df5e75c20920")
+	)
+	(wire
+		(pts
 			(xy 210.82 39.37) (xy 210.82 43.18)
 		)
 		(stroke
@@ -4541,6 +5027,16 @@
 			(type default)
 		)
 		(uuid "e97397ff-834b-49a4-aa92-d0a2762f3b6d")
+	)
+	(wire
+		(pts
+			(xy 73.66 142.24) (xy 73.66 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea72c2b4-166e-45f4-9808-a22a18032135")
 	)
 	(wire
 		(pts
@@ -4572,6 +5068,26 @@
 		)
 		(uuid "edde2fa1-686f-49ab-b06e-df641acc5127")
 	)
+	(bus
+		(pts
+			(xy 35.56 149.86) (xy 35.56 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee2c34f2-47b2-43dc-babc-02de41d74fe8")
+	)
+	(wire
+		(pts
+			(xy 38.1 137.16) (xy 91.44 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eed2b8b0-8100-4a1f-8b05-9b9f07bc0061")
+	)
 	(wire
 		(pts
 			(xy 210.82 39.37) (xy 213.36 39.37)
@@ -4581,6 +5097,16 @@
 			(type default)
 		)
 		(uuid "efc7c83f-ea01-44d3-8935-f7bbec1cba7d")
+	)
+	(wire
+		(pts
+			(xy 64.77 144.78) (xy 64.77 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4868612-cbd9-4708-917a-c5adb72e1481")
 	)
 	(wire
 		(pts
@@ -4632,6 +5158,16 @@
 		)
 		(uuid "ffd097f3-c852-4541-89f6-0514f10eb90b")
 	)
+	(label "LED6"
+		(at 38.1 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06ba6eed-5b89-4a86-89a9-76d8dcfbd26b")
+	)
 	(label "Motor1"
 		(at 123.19 107.95 0)
 		(effects
@@ -4641,6 +5177,46 @@
 			(justify left bottom)
 		)
 		(uuid "156ca075-1230-49d5-a78e-634dbbea1aa9")
+	)
+	(label "LED1"
+		(at 38.1 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3207b0e4-d073-4e2f-91fa-fc4a9dc50e94")
+	)
+	(label "LED4"
+		(at 38.1 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ed7fe66-65c6-4b79-85e0-5750f156254c")
+	)
+	(label "LED2"
+		(at 38.1 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "654dee5a-c853-4c64-bec3-af95afce02a5")
+	)
+	(label "LED5"
+		(at 38.1 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7ea73673-56a1-4af1-a774-e991d3e951f9")
 	)
 	(label "Motor4"
 		(at 204.47 144.78 0)
@@ -4671,6 +5247,26 @@
 			(justify left bottom)
 		)
 		(uuid "c077692f-5d9d-4532-940e-5dac33a1288d")
+	)
+	(label "LED7"
+		(at 38.1 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "edd67f4b-1b06-4b22-ae2d-7d6d083bcc0c")
+	)
+	(label "LED3"
+		(at 38.1 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6493b55-e990-4dd4-a40a-53d718178a9c")
 	)
 	(global_label "GPS RX"
 		(shape input)
@@ -4734,6 +5330,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED[1..7]"
+		(shape input)
+		(at 35.56 154.94 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b4653374-4e7c-49d3-ad72-27ddc586b8a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35.56 166.6943 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4997,6 +5615,76 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 243.84 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1209876c-9839-4a67-aa4e-b44b4e7ba252")
+		(property "Reference" "R5"
+			(at 246.38 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 246.38 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.062 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 243.84 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 243.84 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "249808bf-b809-4949-89e7-0769d6eaaf01")
+		)
+		(pin "1"
+			(uuid "a6678236-4939-45e0-a740-b33556d92be7")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -5350,6 +6038,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 91.44 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "274a5f4c-a39a-4a9f-82e2-f08363c14b0c")
+		(property "Reference" "R18"
+			(at 93.98 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 93.98 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 89.662 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "296ee43a-d15a-465b-b65f-1c03da061071")
+		)
+		(pin "1"
+			(uuid "d7ac9bdb-f5a4-40ff-b79d-a9966c987f38")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 185.42 110.49 0)
 		(unit 1)
@@ -5621,6 +6379,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 46.99 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ef2de1c-0dbe-417e-a61b-08ce7ce4ddfc")
+		(property "Reference" "D15"
+			(at 43.18 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 44.704 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 46.99 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 46.99 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 46.99 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 46.99 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 46.99 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7b2e56a7-41cb-4433-85e7-33ea07485d2d")
+		)
+		(pin "1"
+			(uuid "12c6419a-9963-494d-88a7-bcd8b9e8ac79")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 254 43.18 0)
 		(unit 1)
@@ -5639,7 +6482,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150"
+		(property "Value" "3k6"
 			(at 256.54 44.4499 0)
 			(effects
 				(font
@@ -6270,6 +7113,91 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 55.88 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ef5eff3-d79d-4643-b54c-d8d4c856c2c4")
+		(property "Reference" "D8"
+			(at 52.07 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 53.594 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 55.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 55.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 55.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 55.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 55.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "66cb1764-c08f-4552-8656-3c07ad6a14fe")
+		)
+		(pin "1"
+			(uuid "e5e1de84-62d3-44e0-842e-99e69191321b")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -7304,6 +8232,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 82.55 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "864b53ef-d8c6-42cf-b7cf-3cff9677888b")
+		(property "Reference" "D11"
+			(at 78.74 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 80.264 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 82.55 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 82.55 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 82.55 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 82.55 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 82.55 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ffb95304-2613-4dc6-b6f8-648b7c2085e8")
+		)
+		(pin "1"
+			(uuid "edcd3276-c376-4819-92f9-08e370cfeb02")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 132.08 52.07 0)
 		(unit 1)
@@ -7438,6 +8451,72 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 46.99 175.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89ef29e1-052d-4a3a-b1b7-f1b9e66556bc")
+		(property "Reference" "#PWR059"
+			(at 46.99 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.99 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 46.99 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "baf9fa44-a447-49cd-8c17-d74fbf51e16b")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -7580,6 +8659,76 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92b6ab97-139b-471c-ad06-985a5aa9858d")
+		(property "Reference" "R17"
+			(at 85.09 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 85.09 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.772 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "225bde6d-2860-4a3f-91b6-36e827bd629d")
+		)
+		(pin "1"
+			(uuid "dc153781-e307-41e4-9504-d7aed911331c")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -7998,6 +9147,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 64.77 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ea001a2-f6f3-4a24-bf92-fe51dc313973")
+		(property "Reference" "D9"
+			(at 60.96 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 62.484 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "460fb0fd-447b-46dd-81c4-267223b7cc1c")
+		)
+		(pin "1"
+			(uuid "6679fbd2-4d86-4cb3-924f-db27441b0424")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 204.47 36.83 0)
 		(unit 1)
@@ -8304,6 +9538,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 46.99 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae36dff5-3ac2-45e4-a580-de676b5be5a2")
+		(property "Reference" "R13"
+			(at 49.53 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 49.53 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.212 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 46.99 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "349964c7-7d5b-4fb2-a15a-8487a2b433a4")
+		)
+		(pin "1"
+			(uuid "5eb8e132-d2cf-41e4-989f-3805e2b9e05b")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 40.64 85.09 0)
 		(unit 1)
@@ -8364,6 +9668,76 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aeee3bab-9461-4bbe-bc51-3ddee790d89e")
+		(property "Reference" "R15"
+			(at 67.31 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 67.31 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.992 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7d268382-c239-40ad-a146-39f61f4f92b5")
+		)
+		(pin "1"
+			(uuid "6a383d7d-624d-4307-b146-35a8f2be4fc7")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -8611,6 +9985,91 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "USB-C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5a5c4e9-1772-4653-a19b-8d46cfc3a47d")
+		(property "Reference" "D13"
+			(at 96.52 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 98.044 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f1cdcc2e-61f1-42e5-9de2-a63a66dabe9a")
+		)
+		(pin "1"
+			(uuid "25634d87-05f4-48d3-96e1-decf84d2ab3b")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -9096,6 +10555,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 91.44 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8894c96-a5d7-432c-9971-a35e57f409ee")
+		(property "Reference" "D12"
+			(at 87.63 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 89.154 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2c2fc436-490c-42ea-b070-e69254566812")
+		)
+		(pin "1"
+			(uuid "9471cc45-8056-477f-b7a2-366afdf94ffa")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 149.86 95.25 0)
 		(unit 1)
@@ -9359,6 +10903,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 73.66 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d83b0f4e-e17b-4365-924c-924460646faf")
+		(property "Reference" "R16"
+			(at 76.2 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 76.2 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.882 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 73.66 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 73.66 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d63f4292-1922-4c45-af70-457bfb54971f")
+		)
+		(pin "1"
+			(uuid "7597a405-6181-4150-98cb-bc9f524174a0")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 43.18 116.84 270)
 		(unit 1)
@@ -9420,6 +11034,231 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 100.33 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1d75df9-2c72-4ebd-ac58-ba87837f6b34")
+		(property "Reference" "R19"
+			(at 102.87 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 102.87 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 98.552 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 100.33 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "68d58f51-1718-425a-8baf-8d6068fae46e")
+		)
+		(pin "1"
+			(uuid "dcab810e-7023-4f0b-ab7f-262bf684ab57")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 55.88 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e230a422-89da-4b5d-b485-bcec92d223c9")
+		(property "Reference" "R14"
+			(at 58.42 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 58.42 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.102 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 55.88 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 55.88 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d1d69b96-ced3-43e7-b718-674178176be9")
+		)
+		(pin "1"
+			(uuid "7f980fed-8c34-462f-b63f-45880b6a9b57")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 73.66 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7d9cb19-279c-4466-b115-8fccfed63f12")
+		(property "Reference" "D10"
+			(at 69.85 165.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.374 165.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 73.66 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
+			(at 73.66 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 73.66 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
+			(at 73.66 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "87afc25d-8486-4080-a5d2-7afbdd2a1e96")
+		)
+		(pin "1"
+			(uuid "f327e67c-fdca-48c4-a063-a6b73a4d6038")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -9688,85 +11527,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "F2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 243.84 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f384b6cc-3c92-4259-b00c-9ee0f5dcdeb0")
-		(property "Reference" "R5"
-			(at 246.38 41.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "75"
-			(at 246.38 44.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 242.062 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-rc_51_rohs_p.pdf"
-			(at 243.84 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 243.84 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RC0805FR-0775RP?qs=sGAEpiMZZMtlubZbdhIBIEgN9MQql2m6PtgO4vXfRRc%3D"
-			(at 243.84 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7ee98e53-30c3-46b2-b045-a73b310d4898")
-		)
-		(pin "1"
-			(uuid "01baaf06-965a-4691-a84a-c8d0bba3ba18")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "R5")
 					(unit 1)
 				)
 			)
