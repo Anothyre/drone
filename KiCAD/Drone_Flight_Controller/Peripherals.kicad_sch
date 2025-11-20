@@ -9820,7 +9820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2f81ffc-01e1-4a34-8013-d4ee894fe26d")
-		(property "Reference" "Motor3"
+		(property "Reference" "Motor2"
 			(at 269.24 107.9499 0)
 			(effects
 				(font
@@ -9877,7 +9877,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "Motor3")
+					(reference "Motor2")
 					(unit 1)
 				)
 			)
@@ -10491,7 +10491,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c2618f4a-8333-4278-b552-c6d215f30f6b")
-		(property "Reference" "Motor2"
+		(property "Reference" "Motor3"
 			(at 187.96 147.3199 0)
 			(effects
 				(font
@@ -10548,7 +10548,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "Motor2")
+					(reference "Motor3")
 					(unit 1)
 				)
 			)
