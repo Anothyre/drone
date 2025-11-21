@@ -185,6 +185,182 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Amplifier_Current:INA195"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 3.81 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "INA195"
+				(at 3.81 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina193.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Current Shunt Monitor −16V to +80V Common-Mode Range, 100V/V, SOT-23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "current sense shunt monitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "INA195_0_1"
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "INA195_1_1"
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -3870,6 +4046,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 180.34) (xy 129.54 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f2c8d10-5634-4df6-906c-5a88bd8836cb")
+	)
+	(wire
+		(pts
 			(xy 220.98 91.44) (xy 259.08 91.44)
 		)
 		(stroke
@@ -3937,6 +4123,16 @@
 			(type default)
 		)
 		(uuid "2e8626b9-a9f0-417f-9cf7-7a994f899a9f")
+	)
+	(wire
+		(pts
+			(xy 129.54 182.88) (xy 129.54 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31e44a7f-90d5-46b5-a9ce-c1288118b8fd")
 	)
 	(wire
 		(pts
@@ -4097,6 +4293,16 @@
 			(type default)
 		)
 		(uuid "434fd2ac-6853-43d5-93fd-c603ed174612")
+	)
+	(wire
+		(pts
+			(xy 129.54 179.07) (xy 132.08 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44ad7d89-eb4a-450f-8750-c2470e58fbc3")
 	)
 	(wire
 		(pts
@@ -4347,6 +4553,16 @@
 			(type default)
 		)
 		(uuid "67811577-c209-46e8-8548-5198ddd6c223")
+	)
+	(wire
+		(pts
+			(xy 132.08 184.15) (xy 129.54 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69930c70-815b-4735-970f-ae6a5f0e5bd4")
 	)
 	(bus
 		(pts
@@ -5040,6 +5256,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 180.34) (xy 129.54 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb5734da-36a9-4630-9104-2f2d5b5ed7dc")
+	)
+	(wire
+		(pts
 			(xy 238.76 144.78) (xy 261.62 144.78)
 		)
 		(stroke
@@ -5097,6 +5323,16 @@
 			(type default)
 		)
 		(uuid "efc7c83f-ea01-44d3-8935-f7bbec1cba7d")
+	)
+	(wire
+		(pts
+			(xy 125.73 182.88) (xy 129.54 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2384517-aeff-4968-973f-92263ad7a636")
 	)
 	(wire
 		(pts
@@ -5308,6 +5544,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CurrentSense"
+		(shape output)
+		(at 147.32 181.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "86e1b963-7801-48f2-8801-5d6a9733474b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.8237 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6102,6 +6360,83 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Current:INA195")
+		(at 139.7 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30f4fdb3-07e3-4976-b001-a514686b48b4")
+		(property "Reference" "U9"
+			(at 149.86 175.1898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA195"
+			(at 149.86 177.7298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 139.7 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina193.pdf"
+			(at 139.7 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Current Shunt Monitor −16V to +80V Common-Mode Range, 100V/V, SOT-23-5"
+			(at 139.7 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "da456c13-4c76-4336-9da8-b0a7e7090f57")
+		)
+		(pin "4"
+			(uuid "c4d02e08-2425-4ef5-8b23-58fe4be72cb4")
+		)
+		(pin "5"
+			(uuid "5b8cae9d-c398-4c16-a455-b869134fd3c5")
+		)
+		(pin "1"
+			(uuid "b8b93bb6-50ae-4125-9b86-88f0402ef2df")
+		)
+		(pin "2"
+			(uuid "b652a410-0bc1-4a6d-be17-4ebf4a120ee0")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -8805,6 +9140,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 137.16 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94818f60-a011-43af-980d-d058d98523da")
+		(property "Reference" "#PWR060"
+			(at 137.16 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 137.16 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 137.16 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6708269-f2ab-464f-924e-923526eca9ec")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 88.9 116.84 270)
 		(unit 1)
@@ -9811,6 +10212,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 120.65 180.34 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af129100-9539-4e7e-9bae-9c4345eb480b")
+		(property "Reference" "J2"
+			(at 120.65 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.5mΩ high side shunt"
+			(at 120.65 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 120.65 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4db238c3-3828-4923-a5c6-62935cef1124")
+		)
+		(pin "2"
+			(uuid "0db486e5-086c-4056-8e2d-a9d65110d8e4")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 266.7 109.22 0)
 		(unit 1)
@@ -10549,6 +11019,72 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "Motor3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 189.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c435a31b-4ab4-4daf-ba7b-8addbc6412ce")
+		(property "Reference" "#PWR061"
+			(at 137.16 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d922ad7a-c142-4d43-8877-8bba11cfc4e5")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
