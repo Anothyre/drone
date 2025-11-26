@@ -3679,12 +3679,6 @@
 		(uuid "f3a238f6-c6cf-4175-b448-a4eb0b82e522")
 	)
 	(junction
-		(at 256.54 147.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1596cd20-74ab-4429-9c9b-8daccc80da80")
-	)
-	(junction
 		(at 91.44 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3709,22 +3703,10 @@
 		(uuid "30438115-de12-4ff7-8aee-96b26b7b1e87")
 	)
 	(junction
-		(at 180.34 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39cc1eb9-2015-45de-af4d-6c96c57d3e54")
-	)
-	(junction
 		(at 40.64 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c72fb28-9c46-4a3d-88c2-acebd7def93e")
-	)
-	(junction
-		(at 180.34 148.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4f9ff08f-8735-4729-90bc-674c63ae93b3")
 	)
 	(junction
 		(at 40.64 82.55)
@@ -3779,12 +3761,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b12f0a1f-5986-4b0e-8793-73e6a7746c5b")
-	)
-	(junction
-		(at 256.54 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c5b683c3-0e88-4203-8276-f7709c66cb60")
 	)
 	(junction
 		(at 106.68 55.88)
@@ -4132,16 +4108,6 @@
 			(type default)
 		)
 		(uuid "258a7591-e83f-476b-9001-9cb311a993e1")
-	)
-	(wire
-		(pts
-			(xy 254 109.22) (xy 256.54 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28d363e7-47c9-4c66-9338-8588cc7a9e8e")
 	)
 	(wire
 		(pts
@@ -4515,16 +4481,6 @@
 	)
 	(wire
 		(pts
-			(xy 254 147.32) (xy 256.54 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d9ce0d8-ef4b-474a-90b4-0184f4e52c95")
-	)
-	(wire
-		(pts
 			(xy 218.44 134.62) (xy 218.44 129.54)
 		)
 		(stroke
@@ -4602,16 +4558,6 @@
 			(type default)
 		)
 		(uuid "69930c70-815b-4735-970f-ae6a5f0e5bd4")
-	)
-	(wire
-		(pts
-			(xy 177.8 110.49) (xy 180.34 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a7acb46-6f2a-42ae-a7b5-7a873c97722a")
 	)
 	(bus
 		(pts
@@ -4872,16 +4818,6 @@
 			(type default)
 		)
 		(uuid "91b1b1e2-098c-4b46-826d-4176a7245158")
-	)
-	(wire
-		(pts
-			(xy 177.8 148.59) (xy 180.34 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "921c0432-f757-45a3-8d58-cf11be5ba9b7")
 	)
 	(wire
 		(pts
@@ -5750,91 +5686,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 242.57 147.32 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "009eb191-8def-4dc2-b184-afe3de281f70")
-		(property "Reference" "D18"
-			(at 242.824 150.114 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 243.078 151.638 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 242.57 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
-			(at 242.57 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 242.57 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 242.57 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
-			(at 242.57 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d92f1117-d356-4e25-97da-499f7bfb74a9")
-		)
-		(pin "1"
-			(uuid "10c499a6-b70e-41bd-ba48-8df81beb0cac")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "D18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 83.82 76.2 0)
 		(unit 1)
@@ -5894,91 +5745,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 242.57 109.22 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "07b8fe54-de2f-479c-b3dc-be72d810a77a")
-		(property "Reference" "D17"
-			(at 242.824 112.014 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 243.078 113.538 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "09eb06f1-9604-4c21-9cfe-32db9b788928")
-		)
-		(pin "1"
-			(uuid "ffc3baed-0956-47fc-bcae-44db74bf4ceb")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -6112,91 +5878,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 166.37 110.49 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0dbbd8fb-0ccd-4af2-b431-239fc11e6a72")
-		(property "Reference" "D14"
-			(at 166.624 113.284 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 166.878 114.808 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 166.37 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
-			(at 166.37 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 166.37 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 166.37 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
-			(at 166.37 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f54f5ee4-e995-4f83-9e00-675f3f89b04b")
-		)
-		(pin "1"
-			(uuid "7550a15e-cf8c-4d98-8903-49118c9a6c1a")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -6684,71 +6365,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "R18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 162.56 148.59 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2c5d497c-02c4-4c2d-823d-5c1867dd62bd")
-		(property "Reference" "#PWR063"
-			(at 156.21 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 159.258 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a668b7de-6d42-48b3-97a6-e1dc9bcd10dc")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -8418,71 +8034,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 238.76 109.22 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6c72ba58-f37c-4b19-886a-88e32c5a5c52")
-		(property "Reference" "#PWR064"
-			(at 232.41 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 235.458 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 238.76 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "be522004-43c4-4855-82db-14141800ee3a")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 256.54 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9721,85 +9272,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "GND1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 250.19 109.22 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "95e43438-66bc-4f14-92ca-4ba09b851a85")
-		(property "Reference" "R22"
-			(at 251.4601 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3k6"
-			(at 248.9201 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 250.19 107.442 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-re_105_rohs_l.pdf"
-			(at 250.19 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 250.19 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RE0805DRE07150RL?qs=sGAEpiMZZMtlubZbdhIBIKm0gsRX2fVk4SNsBClYUIM%3D"
-			(at 250.19 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "00d401aa-866f-41d8-8d5e-493180969f05")
-		)
-		(pin "1"
-			(uuid "4d3a292f-edfd-4f23-a7f8-39797ae28951")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -11335,91 +10807,6 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 166.37 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bb959aa6-3a1a-4816-82fa-9172f3a28cb8")
-		(property "Reference" "D16"
-			(at 166.624 151.384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 166.878 152.908 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 166.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.at/datasheet/2/588/asset_pdf_5057921-3418987.pdf"
-			(at 166.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 166.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 166.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.mouser.at/ProductDetail/ams-OSRAM/LS-R976-NR-1?qs=sGAEpiMZZMv0DJfhVcWlK3SnxywvxwccFdJuJKgnVSjl3mMpxGqr4A%3D%3D"
-			(at 166.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2fa5786c-ab0b-4d0e-8dc8-076caf8705c8")
-		)
-		(pin "1"
-			(uuid "3c27fa99-4dab-47a7-89e6-b908dc18492d")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
 		(at 254 50.8 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11709,71 +11096,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 162.56 110.49 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c6e85f18-dd53-479b-9190-73b37b8fecce")
-		(property "Reference" "#PWR062"
-			(at 156.21 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 159.258 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4b8ec1d9-62d2-4d8c-ae00-2172903e143f")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "#PWR062")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 91.44 166.37 90)
 		(unit 1)
@@ -12003,85 +11325,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 173.99 148.59 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ca8c4f42-ed48-4931-a336-4d682461576e")
-		(property "Reference" "R21"
-			(at 175.2601 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3k6"
-			(at 172.7201 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 173.99 146.812 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-re_105_rohs_l.pdf"
-			(at 173.99 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 173.99 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RE0805DRE07150RL?qs=sGAEpiMZZMtlubZbdhIBIKm0gsRX2fVk4SNsBClYUIM%3D"
-			(at 173.99 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b9d19919-7011-4deb-8383-907fab578173")
-		)
-		(pin "1"
-			(uuid "795d1f0a-6ec7-4632-a474-331a5fc4d297")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -12357,85 +11600,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 173.99 110.49 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3127f74-9053-42cf-84c8-e21a3e0ffe10")
-		(property "Reference" "R20"
-			(at 175.2601 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3k6"
-			(at 172.7201 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 173.99 108.712 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-re_105_rohs_l.pdf"
-			(at 173.99 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 173.99 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RE0805DRE07150RL?qs=sGAEpiMZZMtlubZbdhIBIKm0gsRX2fVk4SNsBClYUIM%3D"
-			(at 173.99 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ed8223c8-adc3-43a5-ac78-165943cbedae")
-		)
-		(pin "1"
-			(uuid "5e1d1103-3667-4216-b918-b102303b9188")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 73.66 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12566,150 +11730,6 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "H3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 238.76 147.32 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "df76189e-d02a-4ad8-8e71-6d8db63d3acc")
-		(property "Reference" "#PWR065"
-			(at 232.41 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 235.458 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 238.76 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "06ca0293-c22d-4e99-9e1a-0a4c37e4a33c")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "#PWR065")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 250.19 147.32 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e0a43548-c794-4ed5-9e6c-7ef34018be88")
-		(property "Reference" "R23"
-			(at 251.4601 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3k6"
-			(at 248.9201 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 250.19 145.542 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/508/1/pyu-re_105_rohs_l.pdf"
-			(at 250.19 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 250.19 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://eu.mouser.com/ProductDetail/YAGEO/RE0805DRE07150RL?qs=sGAEpiMZZMtlubZbdhIBIKm0gsRX2fVk4SNsBClYUIM%3D"
-			(at 250.19 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d4d5b401-236f-40a9-a471-a1e52fb1b956")
-		)
-		(pin "1"
-			(uuid "00a564b9-7484-40b4-81d9-5d4d032204ba")
-		)
-		(instances
-			(project "Drone_Flight_Controller"
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "R23")
 					(unit 1)
 				)
 			)
