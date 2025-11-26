@@ -7091,7 +7091,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4ff3c57c-0765-404a-b0a3-614fdcd3f4a5")
-		(property "Reference" "3V1"
+		(property "Reference" "3V3"
 			(at 93.98 120.6499 90)
 			(effects
 				(font
@@ -7142,7 +7142,7 @@
 		(instances
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "3V1")
+					(reference "3V3")
 					(unit 1)
 				)
 			)
@@ -9221,7 +9221,7 @@
 		(fields_autoplaced yes)
 		(uuid "953db0c6-3e84-49b4-9db1-9ca9d0be2fa4")
 		(property "Reference" "GND1"
-			(at 93.98 116.205 90)
+			(at 93.98 115.5699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9230,7 +9230,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 93.98 118.745 90)
+			(at 93.98 118.1099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
