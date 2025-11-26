@@ -4,4 +4,5 @@
   (lib (name "Connector_USB_")(type "KiCad")(uri "${KIPRJMOD}/footprints/Connector_USB.pretty")(options "")(descr "USB Connector footprints"))
   (lib (name "Solder_Pad_3x_1x3mm")(type "KiCad")(uri "${KIPRJMOD}/footprints/Solder_Pad_3x_1x3mm.pretty")(options "")(descr "Solder pin conector"))
   (lib (name "Symbol_")(type "KiCad")(uri "${KIPRJMOD}/footprints/Symbol.pretty")(options "")(descr "PCB symbols"))
+  (lib (name "htl_smd")(type "KiCad")(uri "${KIPRJMOD}/footprints/htl_smd.pretty")(options "")(descr ""))
 )
