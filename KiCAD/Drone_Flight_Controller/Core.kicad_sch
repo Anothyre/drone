@@ -3862,6 +3862,12 @@
 		(uuid "465cf1d1-6d10-4f3f-9e60-43f983630556")
 	)
 	(junction
+		(at 158.75 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "53a30282-8880-49a0-b290-1be26c34a446")
+	)
+	(junction
 		(at 209.55 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3968,6 +3974,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e3498f97-bdff-4393-b55e-8358a8b5cc38")
+	)
+	(junction
+		(at 143.51 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edb95014-3653-46c8-aa72-f6e98a0e0bec")
 	)
 	(junction
 		(at 254 49.53)
@@ -4390,6 +4402,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 113.03) (xy 143.51 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "266a8b19-83a1-4928-b386-1ff8d358cf46")
+	)
+	(wire
+		(pts
 			(xy 87.63 87.63) (xy 87.63 90.17)
 		)
 		(stroke
@@ -4770,6 +4792,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 113.03) (xy 143.51 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57067a00-13a8-40c0-9449-f432b31181ad")
+	)
+	(wire
+		(pts
 			(xy 254 49.53) (xy 254 46.99)
 		)
 		(stroke
@@ -4990,6 +5022,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 123.19) (xy 158.75 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87239ce0-53bc-43b1-b3be-8ac61888b71c")
+	)
+	(wire
+		(pts
 			(xy 50.8 40.64) (xy 53.34 40.64)
 		)
 		(stroke
@@ -5110,6 +5152,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 120.65) (xy 158.75 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98f1c596-a150-42a3-a127-b9b4149b0776")
+	)
+	(wire
+		(pts
 			(xy 83.82 63.5) (xy 83.82 68.58)
 		)
 		(stroke
@@ -5140,7 +5192,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 123.19) (xy 146.05 123.19)
+			(xy 133.35 123.19) (xy 143.51 123.19)
 		)
 		(stroke
 			(width 0)
@@ -5217,6 +5269,16 @@
 			(type default)
 		)
 		(uuid "a3838b93-8dab-4ec0-aa77-565db435ab6e")
+	)
+	(wire
+		(pts
+			(xy 158.75 115.57) (xy 158.75 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4958109-6ead-417a-b5fc-2136c3a861ad")
 	)
 	(wire
 		(pts
@@ -5580,6 +5642,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 123.19) (xy 146.05 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb77f883-e89a-4060-9b8a-6ba4f06fbebd")
+	)
+	(wire
+		(pts
 			(xy 162.56 91.44) (xy 165.1 91.44)
 		)
 		(stroke
@@ -5697,6 +5769,16 @@
 			(type default)
 		)
 		(uuid "fc600fab-3da1-4651-a5b7-01ec341210e8")
+	)
+	(wire
+		(pts
+			(xy 158.75 123.19) (xy 156.21 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc6ae01a-3974-4314-a7fd-19a27dd26f21")
 	)
 	(wire
 		(pts
@@ -7310,7 +7392,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 123.19 90)
+		(at 170.18 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7319,7 +7401,7 @@
 		(fields_autoplaced yes)
 		(uuid "4ff6ac7d-ef92-420a-a112-86a8e7c38364")
 		(property "Reference" "#PWR049"
-			(at 170.18 123.19 0)
+			(at 176.53 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7328,7 +7410,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 123.1899 90)
+			(at 173.99 123.1899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7337,7 +7419,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 123.19 0)
+			(at 170.18 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7346,7 +7428,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 123.19 0)
+			(at 170.18 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7355,7 +7437,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 163.83 123.19 0)
+			(at 170.18 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7729,6 +7811,75 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/c31581c9-6b89-48da-8db2-6196211c3da7"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 158.75 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c585bc1-6239-4120-bdb9-d3cb9112c547")
+		(property "Reference" "C14"
+			(at 164.592 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 166.37 117.348 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 158.75 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 158.75 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db239815-ac61-45c6-84af-a4784d1db140")
+		)
+		(pin "2"
+			(uuid "a5e71b4d-b838-47ce-bab2-834b9327c18f")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/c31581c9-6b89-48da-8db2-6196211c3da7"
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -10395,16 +10546,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 160.02 123.19 90)
+		(at 166.37 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f4b4cbe0-1479-4ff8-be98-bb7ac0bd5b19")
 		(property "Reference" "R8"
-			(at 160.02 116.84 90)
+			(at 166.37 125.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10412,7 +10562,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 160.02 119.38 90)
+			(at 166.37 127.762 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10420,7 +10570,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 160.02 124.968 90)
+			(at 166.37 124.968 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10429,7 +10579,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 123.19 0)
+			(at 166.37 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10438,7 +10588,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 160.02 123.19 0)
+			(at 166.37 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
