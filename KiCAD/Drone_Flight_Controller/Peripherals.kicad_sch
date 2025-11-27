@@ -3656,6 +3656,16 @@
 		)
 		(uuid "475e33a1-a921-46c4-bd3f-2e9dd042e4b2")
 	)
+	(text "Video"
+		(exclude_from_sim no)
+		(at 45.974 149.098 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "518d571f-39d7-4be6-b332-3e9891729a31")
+	)
 	(text "Error"
 		(exclude_from_sim no)
 		(at 43.18 138.938 0)
