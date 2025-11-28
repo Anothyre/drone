@@ -3646,16 +3646,6 @@
 		)
 		(uuid "3fdd7d5a-4ff5-437c-b1fd-e8ef9a558810")
 	)
-	(text "Use a shielded cable!"
-		(exclude_from_sim no)
-		(at 108.204 181.864 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "475e33a1-a921-46c4-bd3f-2e9dd042e4b2")
-	)
 	(text "Video"
 		(exclude_from_sim no)
 		(at 45.974 149.098 0)
@@ -3676,6 +3666,16 @@
 			(justify left)
 		)
 		(uuid "a151f3cf-1123-4192-990e-aa3d9bb7c0f5")
+	)
+	(text "Shield"
+		(exclude_from_sim no)
+		(at 116.078 185.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "afbb6854-c037-4a94-af1f-73d39d8adcab")
 	)
 	(text "Signal"
 		(exclude_from_sim no)
@@ -4741,6 +4741,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 186.69) (xy 127 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8958d81a-ffa5-4012-8964-a71357fd70ec")
+	)
+	(wire
+		(pts
 			(xy 39.37 36.83) (xy 39.37 39.37)
 		)
 		(stroke
@@ -4908,6 +4918,16 @@
 			(type default)
 		)
 		(uuid "a2347c16-9a18-4877-b237-228a4551a2cc")
+	)
+	(wire
+		(pts
+			(xy 127 185.42) (xy 125.73 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a41a3362-c5f0-463e-b196-0fb74782331d")
 	)
 	(wire
 		(pts
@@ -6174,29 +6194,27 @@
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 264.16 147.32 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1c858a3e-a95a-4f53-be63-5890de9f4fb5")
 		(property "Reference" "Motor4"
-			(at 266.7 146.0499 0)
+			(at 264.16 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 266.7 148.5899 0)
+			(at 264.16 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
@@ -6460,29 +6478,27 @@
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 187.96 110.49 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "350274dd-2615-4c3f-9f1a-47f58d90cdc8")
 		(property "Reference" "Motor1"
-			(at 190.5 109.2199 0)
+			(at 187.96 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 190.5 111.7599 0)
+			(at 187.96 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
@@ -6657,6 +6673,72 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3abb3a2a-324f-4aa7-9a06-5dc29ff951ec")
+		(property "Reference" "#PWR062"
+			(at 127 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "714bef55-a6c6-4476-b2ef-40f7a4aacb0e")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -7229,6 +7311,78 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 120.65 182.88 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51426e73-3d3d-4cba-8e64-cf6b17d02201")
+		(property "Reference" "J2"
+			(at 118.11 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.5mΩ high side shunt"
+			(at 118.11 180.086 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 120.65 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 120.65 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "100c6f09-2410-4356-8114-61898a1e70d7")
+		)
+		(pin "2"
+			(uuid "92ef4380-f0e5-4c69-b2a5-122bcce34136")
+		)
+		(pin "1"
+			(uuid "ebb5d05d-7eeb-4b34-81f5-9407fb38318c")
+		)
+		(instances
+			(project "Drone_Flight_Controller"
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -9795,14 +9949,12 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 31.75 41.91 0)
-		(mirror y)
+		(at 31.75 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a71b399e-048a-4c8f-a236-22e616c05d7e")
 		(property "Reference" "GPS1"
 			(at 31.75 33.02 0)
@@ -9821,7 +9973,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 31.75 41.91 0)
+			(at 31.75 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9830,7 +9982,7 @@
 			)
 		)
 		(property "Datasheet" "/"
-			(at 31.75 41.91 0)
+			(at 31.75 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9839,7 +9991,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 31.75 41.91 0)
+			(at 31.75 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9848,7 +10000,7 @@
 			)
 		)
 		(property "Link" "/"
-			(at 31.75 41.91 0)
+			(at 31.75 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10227,100 +10379,29 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 120.65 180.34 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "af129100-9539-4e7e-9bae-9c4345eb480b")
-		(property "Reference" "J2"
-			(at 120.65 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0.5mΩ high side shunt"
-			(at 120.65 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 120.65 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 120.65 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 120.65 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4db238c3-3828-4923-a5c6-62935cef1124")
-		)
-		(pin "2"
-			(uuid "0db486e5-086c-4056-8e2d-a9d65110d8e4")
-		)
-		(instances
-			(project ""
-				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 264.16 109.22 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b2f81ffc-01e1-4a34-8013-d4ee894fe26d")
 		(property "Reference" "Motor2"
-			(at 266.7 107.9499 0)
+			(at 264.16 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 266.7 110.4899 0)
+			(at 264.16 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
@@ -10969,29 +11050,27 @@
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 187.96 148.59 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c2618f4a-8333-4278-b552-c6d215f30f6b")
 		(property "Reference" "Motor3"
-			(at 190.5 147.3199 0)
+			(at 187.96 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 190.5 149.8599 0)
+			(at 187.96 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
