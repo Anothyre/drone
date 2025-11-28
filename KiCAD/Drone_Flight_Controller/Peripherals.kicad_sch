@@ -2548,6 +2548,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "R_Small"
+				(at 1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
@@ -3689,6 +3814,12 @@
 		(uuid "f3a238f6-c6cf-4175-b448-a4eb0b82e522")
 	)
 	(junction
+		(at 130.81 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "07175ce5-c29e-48e4-a7a6-3babc384f7ab")
+	)
+	(junction
 		(at 91.44 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3759,6 +3890,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aebe0b4c-182d-433e-9182-d57d34d7c711")
+	)
+	(junction
+		(at 130.81 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aee8636a-bb9e-45be-ba17-68224c57f70f")
 	)
 	(junction
 		(at 38.1 116.84)
@@ -4321,7 +4458,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 179.07) (xy 132.08 179.07)
+			(xy 129.54 179.07) (xy 130.81 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4401,6 +4538,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 184.15) (xy 135.89 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f68bdd0-e1c8-497a-9ea4-87e6e4a3d1b1")
+	)
+	(wire
+		(pts
 			(xy 180.34 113.03) (xy 182.88 113.03)
 		)
 		(stroke
@@ -4468,6 +4615,16 @@
 			(type default)
 		)
 		(uuid "5547b203-7950-48e9-a028-3f3a0d21760e")
+	)
+	(wire
+		(pts
+			(xy 130.81 179.07) (xy 135.89 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b4c2b70-d606-4859-b3e4-951e7430bfa8")
 	)
 	(wire
 		(pts
@@ -4558,16 +4715,6 @@
 			(type default)
 		)
 		(uuid "67811577-c209-46e8-8548-5198ddd6c223")
-	)
-	(wire
-		(pts
-			(xy 132.08 184.15) (xy 129.54 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69930c70-815b-4735-970f-ae6a5f0e5bd4")
 	)
 	(bus
 		(pts
@@ -4868,6 +5015,16 @@
 			(type default)
 		)
 		(uuid "97083869-aaf2-4776-94ea-f55688181bdc")
+	)
+	(wire
+		(pts
+			(xy 129.54 184.15) (xy 130.81 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bcb6179-7616-40bb-8c51-1084dc9c51e6")
 	)
 	(bus
 		(pts
@@ -5585,7 +5742,7 @@
 	)
 	(global_label "CurrentSense"
 		(shape output)
-		(at 147.32 181.61 0)
+		(at 151.13 181.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5595,7 +5752,7 @@
 		)
 		(uuid "86e1b963-7801-48f2-8801-5d6a9733474b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.8237 181.61 0)
+			(at 166.6337 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6400,7 +6557,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Current:INA195")
-		(at 139.7 181.61 0)
+		(at 143.51 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6409,7 +6566,7 @@
 		(fields_autoplaced yes)
 		(uuid "30f4fdb3-07e3-4976-b001-a514686b48b4")
 		(property "Reference" "U9"
-			(at 149.86 175.1898 0)
+			(at 153.67 175.1898 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6417,7 +6574,7 @@
 			)
 		)
 		(property "Value" "INA195"
-			(at 149.86 177.7298 0)
+			(at 153.67 177.7298 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6425,7 +6582,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 139.7 181.61 0)
+			(at 143.51 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6434,7 +6591,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina193.pdf"
-			(at 139.7 181.61 0)
+			(at 143.51 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6443,7 +6600,7 @@
 			)
 		)
 		(property "Description" "Current Shunt Monitor −16V to +80V Common-Mode Range, 100V/V, SOT-23-5"
-			(at 139.7 181.61 0)
+			(at 143.51 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9310,7 +9467,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 137.16 173.99 0)
+		(at 140.97 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9319,7 +9476,7 @@
 		(fields_autoplaced yes)
 		(uuid "94818f60-a011-43af-980d-d058d98523da")
 		(property "Reference" "#PWR060"
-			(at 137.16 177.8 0)
+			(at 140.97 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9328,7 +9485,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 137.16 168.91 0)
+			(at 140.97 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9336,7 +9493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 173.99 0)
+			(at 140.97 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9345,7 +9502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 173.99 0)
+			(at 140.97 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9354,7 +9511,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 137.16 173.99 0)
+			(at 140.97 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11120,7 +11277,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 137.16 189.23 0)
+		(at 140.97 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11129,7 +11286,7 @@
 		(fields_autoplaced yes)
 		(uuid "c435a31b-4ab4-4daf-ba7b-8addbc6412ce")
 		(property "Reference" "#PWR061"
-			(at 137.16 195.58 0)
+			(at 140.97 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11138,7 +11295,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 137.16 194.31 0)
+			(at 140.97 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11146,7 +11303,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 189.23 0)
+			(at 140.97 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11155,7 +11312,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 189.23 0)
+			(at 140.97 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11164,7 +11321,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 137.16 189.23 0)
+			(at 140.97 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11264,6 +11421,76 @@
 			(project "Drone_Flight_Controller"
 				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
 					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 130.81 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9334fce-16d8-4930-a996-2f2940dd540c")
+		(property "Reference" "R20"
+			(at 133.35 180.3399 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "24"
+			(at 133.35 182.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 130.81 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 130.81 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "88f98727-9a1d-4535-99af-7e1e90f6bf93")
+		)
+		(pin "1"
+			(uuid "d88e0685-785a-4b15-a5b8-a25810c2fd17")
+		)
+		(instances
+			(project ""
+				(path "/51ab9491-7068-4b24-bb38-47a0c739796e/a1832adb-c070-4778-a5ef-97ea378c06da"
+					(reference "R20")
 					(unit 1)
 				)
 			)
