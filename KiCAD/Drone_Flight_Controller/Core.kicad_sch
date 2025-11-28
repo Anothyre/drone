@@ -9343,7 +9343,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3D-SF"
+		(property "Footprint" "uSD_Card:502570-0893_MOL"
 			(at 279.4 130.81 0)
 			(effects
 				(font
@@ -9352,7 +9352,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/693072010801.pdf"
+		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/5025700893?display=pdf"
 			(at 250.19 138.43 0)
 			(effects
 				(font
