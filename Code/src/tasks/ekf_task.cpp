@@ -16,6 +16,8 @@ void TaskEKF(void *pvParameters)
         // Extended Kalman Filter implementation
         // TODO: TOGETHER
 
+    // probaly to complex and unneccesarry for our purpose
+
         // care if gps is valid
 
         vTaskDelay(pdMS_TO_TICKS(20)); // 50Hz
