@@ -10,7 +10,7 @@ void TaskFSM(void *pvParameters)
     {
         if (xQueueReceive(fsm_command_queue, &cmd, pdMS_TO_TICKS(20)))
         {
-            if (cmd.mode ==) // arm command
+            if (cmd.mode == EV_ARM_CMD) // arm command
             {
                 // check arming conditions
             }

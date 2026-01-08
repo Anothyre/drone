@@ -10,13 +10,10 @@ void TaskEKF(void *pvParameters)
         useGps = gps_data.valid;
         
             
-         
-         
-         
         // Extended Kalman Filter implementation
         // TODO: TOGETHER
 
-    // probaly to complex and unneccesarry for our purpose
+         // probaly to complex and unneccesarry for our purpose
 
         // care if gps is valid
 
