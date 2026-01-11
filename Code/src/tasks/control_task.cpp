@@ -1,36 +1,9 @@
 #include "tasks/control_task.h"
 #include "tasks.h"
-
-
-
-
-
 #define PLACEHOLDER (0) //TODO: implement actual reading 
 
+float scaleOutput(float voltage);
 
-
-// struct PIDvars{
-//        //static because multiple calls
-//         static float Fuehrungsgroesse_w ;
-//         static float Regelgroesse_x;
-//         static float Regeldiff_e ;
-//         static float last_x;
-//         static float Integral_Ie;
-//         static float rawDerivative_De;
-//         static float filtertDerivative_fDe;
-//         static float lastfiltertDerivative_lfDe;
-//         static float p;
-//         static float i;
-//         static float d;
-//         static float Regelausgangsgr_m;
-//         static bool  saturated ; 
-//         static float DELTA_T;                     // TOD: adjust according to task frequency
-//         static float ProportionalVerstaerkung_Kp;   //tune
-//         static float IntegralVerstaerkung_Ki    ;
-//         static float DerivativeVerstaerkung_Kd  ;
-//         static float D_FILETR_ALPHA;           //TOD: tune bzw. ideet calculate
- 
-// };
 
 class PID{  
     //All we need i guess: https://www.linkedin.com/pulse/mastering-pid-control-drones-from-intuition-dr-ma-mohin-zbjqe/ 
@@ -38,7 +11,7 @@ class PID{
     
     private:
         float Regeldiff_e ;
-        float last_x;
+        float last_e;
         float Integral_Ie;
         float rawDerivative_De;
         float filtertDerivative_fDe;
@@ -48,7 +21,7 @@ class PID{
         float d; 
         bool  saturated ; 
         float DELTA_T;                     // TODO: adjust according to task frequency
-        float ProportionalVerstaerkung_Kp;   //tune
+        float ProportionalVerstaerkung_Kp;   //TODO: tune
         float IntegralVerstaerkung_Ki    ;
         float DerivativeVerstaerkung_Kd  ;
         float D_FILETR_ALPHA;           //TODO: tune bzw. ideet calculate
@@ -63,7 +36,7 @@ class PID{
         Fuehrungsgroesse_w =0.0f;
         Regelgroesse_x=0.0f;
         Regeldiff_e =0.0f;
-        last_x=0.0f;
+        last_e=0.0f;
         Integral_Ie=0.0f;
         rawDerivative_De=0.0f;
         filtertDerivative_fDe=0.0f;
@@ -82,13 +55,12 @@ class PID{
         D_FILETR_ALPHA =alpha;    
 
         TickType_t last = DELTA_T;
-        
     }
 
      
   
     void pidStep(){
-        int64_t now_us = esp_timer_get_time();
+        int64_t now_us = esp_timer_get_time();//TODO:move out of loop for cascade
     
         // Schutz gegen den ersten Sprung
         if (last_us == 0) {
@@ -105,14 +77,14 @@ class PID{
         Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
         
         saturated = false; //TODO: implement saturation detection
-        //TODO: better anti windup aproche
+        //TODO: better anti windup aproche needed?
         if(!saturated) //TODO: check saturation condition  -:https://youtu.be/NVLXCwc8HzM?si=FpmdmcUAy8FntkJC&t=386
         {
         Integral_Ie += Regeldiff_e * (DELTA_T);
         }
 
-        rawDerivative_De = (Regeldiff_e - last_x) / (DELTA_T);
-        last_x     = Regelgroesse_x;  
+        rawDerivative_De = (Regeldiff_e - last_e) / (DELTA_T);
+        last_e     = Regeldiff_e;
         filtertDerivative_fDe = D_FILETR_ALPHA * rawDerivative_De + (1 - D_FILETR_ALPHA) * lastfiltertDerivative_lfDe;
         //https://www.youtube.com/watch?v=HJ-C4Incgpw - die haben den ganzen fourje spaß imlementiert um unsr Alpha zu finden
         lastfiltertDerivative_lfDe = filtertDerivative_fDe;
@@ -127,17 +99,10 @@ class PID{
         // out = clamp(out, MIN_CMD, MAX_CMD);
         // saturated = (out != unclamped_out);
         
-        int64_t now_us = esp_timer_get_time();
-        DELTA_T = (now_us - last_us) * 1e-6f;
-        last_us = now_us;
     
     }       
 
 };
-
-
-
-
 
 
 
@@ -149,95 +114,228 @@ void TaskControl(void *pvParameters)
    // TODO; Concept - TOGETHER
    //TODO: decide if fastforwarded 
    //TODO: cascade / rate control implementation
-
-
+    //TODO: might speed PID controller 
 
     //TODO: split in subtasks 
-    PID pitchPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
-    PID rollPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
-    PID yawPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
-        //TODO: ==> in rate controller schieben
-    PID ratePitchPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
-    PID rateRollPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
-    PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+    static PID pitchPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+    static PID rollPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+    static PID yawPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+        //TODO: Ausgaben ==> in rate controller schieben
+    static PID ratePitchPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+    static PID rateRollPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+    static PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
 
+    static PID ZspeedPID(1.0f, 0.0f, 0.0f, 0.7f); //TODO: tune parameters
+
+
+    for (;;)
+    {
+
+        ZspeedPID.Fuehrungsgroesse_w = PLACEHOLDER; //TODO: set desired Z speed 
+        ZspeedPID.Regelgroesse_x = PLACEHOLDER; //TODO: read current Z speed from EKF or barometer
+        ZspeedPID.pidStep();
+        float throttle = ZspeedPID.Regelausgangsgr_m; 
+
+
+        // Read current attitude from EKF
+        float currentPitch = PLACEHOLDER; //TODO: implement actual reading
+        float currentRoll  = PLACEHOLDER; //TODO: implement actual reading
+        float currentYaw   = PLACEHOLDER; //TODO: implement actual reading
+
+        // Update PID controllers for attitude
+        pitchPID.Regelgroesse_x = currentPitch;
+        rollPID.Regelgroesse_x  = currentRoll;
+        yawPID.Regelgroesse_x   = currentYaw;
+
+
+        // Update for Führungsgroesse_w from desired attitude commands
+        pitchPID.Fuehrungsgroesse_w = PLACEHOLDER; //TODO:
+        rollPID.Fuehrungsgroesse_w  = PLACEHOLDER; //TODO:
+        yawPID.Fuehrungsgroesse_w   = PLACEHOLDER; //TODO 
+
+
+        
+        pitchPID.pidStep();
+        rollPID.pidStep();
+        yawPID.pidStep();
+
+        // Use attitude PID outputs as setpoints for rate controllers
+        ratePitchPID.Fuehrungsgroesse_w = pitchPID.Regelausgangsgr_m;
+        rateRollPID.Fuehrungsgroesse_w  = rollPID.Regelausgangsgr_m;
+        rateYawPID.Fuehrungsgroesse_w   = yawPID.Regelausgangsgr_m;
+
+        // Read current rates from gyroscope
+        float currentRatePitch = PLACEHOLDER; //TODO: implement actual reading
+        float currentRateRoll  = PLACEHOLDER; //TODO: implement actual reading
+        float currentRateYaw   = PLACEHOLDER; //TODO: implement actual reading
+
+        // Update PID controllers for rates
+        ratePitchPID.Regelgroesse_x = currentRatePitch;
+        rateRollPID.Regelgroesse_x  = currentRateRoll;
+        rateYawPID.Regelgroesse_x   = currentRateYaw;  
+        ratePitchPID.pidStep();
+        rateRollPID.pidStep();
+        rateYawPID.pidStep();
+        // Compute motor commands based on rate PID outputs
+        float motorCommandPitch = ratePitchPID.Regelausgangsgr_m;
+        float motorCommandRoll  = rateRollPID.Regelausgangsgr_m;
+        float motorCommandYaw   = rateYawPID.Regelausgangsgr_m;
+
+
+         // mix motors - probaly just default quadcopter x config
+            // float throttle = rc_throttle; // Basisgas vom Stick
+
+
+        float motorOutputsRaw[4];
+
+           // Beispiel Quad X - by gemini ahh bard
+         motorOutputsRaw[0] = throttle + motorCommandPitch + motorCommandRoll - motorCommandYaw; // Vorne Links (CW)
+         motorOutputsRaw[1] = throttle + motorCommandPitch - motorCommandRoll + motorCommandYaw; // Vorne Rechts (CCW)
+         motorOutputsRaw[2] = throttle - motorCommandPitch - motorCommandRoll - motorCommandYaw; // Hinten Links (CCW)
+         motorOutputsRaw[3] = throttle - motorCommandPitch + motorCommandRoll + motorCommandYaw; // Hinten Rechts (CW)
+
+
+        float voltage = PLACEHOLDER; //TODO: implement actual reading
+        float scalingFactor =  scaleOutput(voltage);
+
+        float motorOutputs[4];
+            for (int i = 0; i < 4; i++) {
+                motorOutputs[i] = motorOutputsRaw[i] * scalingFactor;        
+                if (motorOutputs[i] > 1.0f) motorOutputs[i] = 1.0f;
+                if (motorOutputs[i] < 0.0f) motorOutputs[i] = 0.0f;
+            }
+        
+        
+        // output PWM
+        //vTaskDelayUntil(&last, pdMS_TO_TICKS(2)); // ~500Hz // TODO: adjust for all tasks
+    }
+}
+
+    const TickType_t xDelay = pdMS_TO_TICKS(2); // 500Hz control loop
+
+  
+float scaleOutput(float voltage) {
+    return 42;   //TODO: implement actual scaling based on voltage table
+    
+}
 
    
 
 
-    // //   DEMO PID 
-    //     PIDvars demoPID;
+/*CHATER LÄSST GRÜßEN mit guten einwänden 
+================================================================================
+FLIGHT CONTROL – ARCHITEKTUR & ENTSCIDUNGEN (WARUM DAS SO GEMACHT WIRD)
+================================================================================
 
-    //     Fuehrungsgroesse_w =0.0f;
-    //     Regelgroesse_x=0.0f;
-    //     Regeldiff_e =0.0f;
-    //     last_x=0.0f;
-    //     Integral_Ie=0.0f;
-    //     rawDerivative_De=0.0f;
-    //     filtertDerivative_fDe=0.0f;
-    //     lastfiltertDerivative_lfDe=0.0f;
-    //     p;
-    //     i;
-    //     d;
-    //     Regelausgangsgr_m;
-    //     saturated = false;  
-
-    //     //Konstanten
-    //      DELTA_T                    =0.002f; // TODO: adjust according to task frequency
-    //      ProportionalVerstaerkung_Kp=0.0f;   
-    //      IntegralVerstaerkung_Ki    =0.0f;
-    //      DerivativeVerstaerkung_Kd  =0.0f;
-    //     D_FILETR_ALPHA = 0.7;         
+GRUNDIDEE
+---------
+Die Flugregelung läuft in EINEM FreeRTOS-Task mit fester Grundfrequenz
+(z. B. 500 Hz). Es gibt KEINE separaten Tasks für Attitude-, Rate- oder
+Z-Regelung. Mehr Tasks erzeugen Jitter, Phasenverschiebung und schwer
+debugbare Seiteneffekte. Regelung braucht Determinismus, nicht Parallelität.
 
 
-    //     TickType_t last = xTaskGetTickCount();
-    //     int64_t last_us = 0;//TODO: initialize properly
+ZEITSKALEN / KASKADIERUNG
+------------------------
+Die Regelung ist kaskadiert:
 
-    // for (;;)
-    // {
-    //     ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(2)); //TODO: anscheinded mit vTaskDelayUntil zusammen doof
+    Attitude  (langsam, z. B. 100 Hz)
+        ↓  liefert Rate-Setpoints
+    Rate      (schnell, z. B. 500 Hz)
+        ↓
+    Motor-Mixer
 
-    //     int64_t now_us = esp_timer_get_time();
-    //     DELTA_T = (now_us - last_us) * 1e-6f;
-    //     last_us = now_us;
-    //     
+Der Rate-Controller läuft in JEDEM Loop-Durchlauf.
+Der Attitude-Controller läuft seltener über einen Zeitakkumulator.
+Beide teilen sich dieselbe Zeitbasis.
 
-    //     Fuehrungsgroesse_w = PLACEHOLDER;//TODO: implement actual reading and writing
-    //     Regelgroesse_x = PLACEHOLDER;
-    //     Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
-    //     saturated = false; //TODO: implement saturation detection
+WICHTIG:
+Zeit (dt) wird vom Control-Task vorgegeben und an die PIDs übergeben.
+PID-Objekte messen KEINE Zeit selbst.
 
-    //     //TODO: better anti windup aproche
-    //     if(!saturated) //TODO: check saturation condition  -:https://youtu.be/NVLXCwc8HzM?si=FpmdmcUAy8FntkJC&t=386
-    //     {
-    //     Integral_Ie += Regeldiff_e * (DELTA_T);
-    //     }
 
-    //     rawDerivative_De = (Regelgroesse_x - last_x) / (DELTA_T);
-    //     last_x     = Regelgroesse_x;  
-    //     filtertDerivative_fDe = D_FILETR_ALPHA * rawDerivative_De + (1 - D_FILETR_ALPHA) * lastfiltertDerivative_lfDe;
-    //     //https://www.youtube.com/watch?v=HJ-C4Incgpw - die haben den ganzen fourje spaß imlementiert um unsr Alpha zu finden
-    //     lastfiltertDerivative_lfDe = filtertDerivative_fDe;
+PID-DESIGN
+----------
+PID-Klassen sind zustandsbehaftete Rechenbausteine, keine Scheduler.
+Sie bekommen:
+- aktuellen Fehler oder Messwert
+- ein explizites dt
+und liefern einen Ausgang.
 
-    //     p = Regeldiff_e * ProportionalVerstaerkung_Kp;
-    //     i = Integral_Ie * IntegralVerstaerkung_Ki;
-    //     d = filtertDerivative_fDe * DerivativeVerstaerkung_Kd;
-    //     Regelausgangsgr_m = p+i+d;//might fastforwarded 
+Keine:
+- esp_timer_get_time() im PID
+- versteckte Zeitmessung
+- Nebenläufigkeit
 
-        
-        //gpt concept of anti windup
-        // out = clamp(out, MIN_CMD, MAX_CMD);
-        // saturated = (out != unclamped_out);
-        
-        // mix motors - probaly just default quadcopter x config
-            // float throttle = rc_throttle; // Basisgas vom Stick
 
-           // Beispiel Quad X - by gemini ahh bard
-            // float motor1 = throttle + pid_out_pitch + pid_out_roll - pid_out_yaw; // Vorne Links (CW)
-            // float motor2 = throttle + pid_out_pitch - pid_out_roll + pid_out_yaw; // Vorne Rechts (CCW)
-            // float motor3 = throttle - pid_out_pitch - pid_out_roll - pid_out_yaw; // Hinten Links (CCW)
-            // float motor4 = throttle - pid_out_pitch + pid_out_roll + pid_out_yaw; // Hinten Rechts (CW)
+DERIVATIVE-ANTEIL
+-----------------
+Der D-Term sollte bevorzugt auf dem Messwert basieren, nicht auf dem
+Fehler. Das vermeidet Derivative-Kicks bei Setpoint-Sprüngen
+(z. B. Stick-Input) und reduziert Rauschen.
 
-        // output PWM
-        //vTaskDelayUntil(&last, pdMS_TO_TICKS(2)); // ~500Hz // TODO: adjust for all tasks
-}
+Ein Lowpass auf dem D-Term ist Pflicht, idealerweise dt-abhängig
+und nicht mit fixem Alpha.
+
+
+INTEGRAL & ANTI-WINDUP
+---------------------
+Motoren sättigen IMMER.
+Ohne Anti-Windup läuft das Integral weg und destabilisiert das System
+nach der Sättigung.
+
+Mindestens erforderlich:
+- Output-Clamp
+- Integral-Clamp
+- Reset des Integrals bei Modewechsel (DISARM, FAILSAFE)
+
+
+ACHSENSTRUKTUR
+--------------
+Pitch, Roll und Yaw sind strukturell identisch.
+Daher:
+- Eine Funktion pro Achse
+- Je Achse: Attitude-PID + Rate-PID
+- Keine verstreuten PID-Aufrufe im Task
+
+Das reduziert Code-Duplikation und verhindert asymmetrische Bugs.
+
+
+MOTOR-MIX & DESATURATION
+-----------------------
+Nach dem Motor-Mix muss geprüft werden, ob ein Motor clippt.
+Wenn ja:
+- zuerst Throttle reduzieren
+- Attitude so gut wie möglich erhalten
+
+Einfaches Clamping zerstört Drehmomente und führt zu Integrator-Fehlern.
+
+
+Z-REGELUNG
+----------
+Vertikale Regelung koppelt stark in Attitude.
+Rauschen oder Latenz erzeugen Throttle-Pumpen.
+
+Empfohlen:
+- Lowpass auf Z-Speed
+- oder Feedforward
+- konservative Gains
+
+
+FREE RTOS – WICHTIGE KLARSTELLUNG
+--------------------------------
+FreeRTOS ist kein Regelungswerkzeug.
+Mehr Tasks, höhere Prioritäten oder kürzere Delays machen die Regelung
+NICHT besser.
+
+Eine gute Regelung ist:
+- zeitlich deterministisch
+- explizit getaktet
+- so seriell wie möglich
+
+
+MERKSATZ
+--------
+Eine ruhige Zeitbasis fliegt besser als ein cleverer Scheduler.
+================================================================================
+*/
