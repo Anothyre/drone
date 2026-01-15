@@ -58,7 +58,6 @@ class PID{
         float d; 
         bool  saturated ;
         float unclamped_m;
-        float DELTA_T;                    
         float ProportionalVerstaerkung_Kp;  
         float IntegralVerstaerkung_Ki    ;
         float DerivativeVerstaerkung_Kd  ;
@@ -90,7 +89,6 @@ class PID{
         saturated = false;  
 
         //Konstanten
-        DELTA_T   =0.002f; // TODO: adjust according to task frequency
         ProportionalVerstaerkung_Kp=kp;   
         IntegralVerstaerkung_Ki    =ki;
         DerivativeVerstaerkung_Kd  =kd;
@@ -103,20 +101,7 @@ class PID{
 
      
   
-    void pidStep(){
-        int64_t now_us = esp_timer_get_time();//TODO:move out of loop for cascade
-    
-        // Schutz gegen den ersten Sprung
-        if (last_us == 0) {
-            last_us = now_us;
-            return; // Erster Durchlauf überspringen
-        }
-
-        DELTA_T = (now_us - last_us) * 1e-6f;
-        last_us = now_us;
-        if(DELTA_T <= 0.00001f) {
-           //TODO: handle too small DELTA_T
-        }
+    void pidStep(DELTA_T){
 
         Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
         
@@ -178,8 +163,27 @@ void TaskControl(void *pvParameters)
     static PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
     static PID ZspeedPID(1.0f, 0.2f, 0.0f, 0.7f,0.0f,1.0f); 
     
+    float DELTA_T ;
+    int64_t last_us = 0;
+    int64_t now_us;
+
     for (;;)
     {
+        now_us = esp_timer_get_time();
+    
+        // Schutz gegen den ersten Sprung
+        if (last_us == 0) {
+            last_us = now_us;
+            return; // Erster Durchlauf überspringen
+        }
+
+        DELTA_T = (now_us - last_us) * 1e-6f;
+        last_us = now_us;
+        if(DELTA_T <= 0.00001f) {
+           //TODO: handle too small DELTA_T and not with random magic numbers
+        }
+
+
 
         ZspeedPID.Fuehrungsgroesse_w = PLACEHOLDER; //TODO: calc desired Z speed 
         ZspeedPID.Regelgroesse_x = PLACEHOLDER; //TODO: read current Z speed
@@ -204,10 +208,10 @@ void TaskControl(void *pvParameters)
         yawPID.Fuehrungsgroesse_w   = PLACEHOLDER; 
 
 
-        
-        pitchPID.pStep();
-        rollPID. pStep();
-        yawPID. pStep();
+        //TODO: Call less often
+        pitchPID.pStep(DELTA_T);
+        rollPID. pStep(DELTA_T);
+        yawPID. pStep(DELTA_T);
 
         // Use attitude PID outputs as setpoints for rate controllers
         ratePitchPID.Fuehrungsgroesse_w = pitchPID.Regelausgangsgr_m;
@@ -223,9 +227,9 @@ void TaskControl(void *pvParameters)
         ratePitchPID.Regelgroesse_x = currentRatePitch;
         rateRollPID.Regelgroesse_x  = currentRateRoll;
         rateYawPID.Regelgroesse_x   = currentRateYaw;  
-        ratePitchPID.pidStep();
-        rateRollPID.pidStep();
-        rateYawPID.pidStep();
+        ratePitchPID.pidStep(DELTA_T);
+        rateRollPID.pidStep(DELTA_T);
+        rateYawPID.pidStep(DELTA_T);
         // Compute motor commands based on rate PID outputs
         float motorCommandPitch = ratePitchPID.Regelausgangsgr_m;
         float motorCommandRoll  = rateRollPID.Regelausgangsgr_m;

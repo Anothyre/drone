@@ -25,7 +25,10 @@ void loop()
 -- Tasks --
 alles was parrallel läuft oder eine andere Verabeitungsgeschwindichkeit braucht muss in einen eigenen Task
 
-Wifi Control (In eigenem Kern!!)
+
+
+
+Wifi Control (In eigenem Kern!!) - nein eigentlich Regler eigener Kern oder so 
 
 Statemachine
 - Regler Regler(evtl.)
