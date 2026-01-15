@@ -47,6 +47,9 @@ class PID{
  
     
     private:
+         float Fuehrungsgroesse_w ;/
+        float Regelgroesse_x;
+
         float Regeldiff_e ;
         float last_x;
         float Integral_Ie;
@@ -68,9 +71,8 @@ class PID{
         int64_t last_us = 0; 
 
     public:
-        float Fuehrungsgroesse_w ;//TODO: make private with getter and setter (resetter)
-        float Regelgroesse_x;
-        float Regelausgangsgr_m;
+       
+        float Regelausgangsgr_m;/TODO:getter?
 
     PID(float kp, float ki, float kd, float alpha,float out_min=0.0f, float out_max=1.0f){
         Fuehrungsgroesse_w =0.0f;
@@ -97,6 +99,10 @@ class PID{
         OUT_MIN = out_min; 
 
         TickType_t last = DELTA_T;
+    }
+    void setInput(float w, float x) {
+    Fuehrungsgroesse_w = w;
+    Regelgroesse_x = x;
     }
 
      
@@ -135,9 +141,12 @@ class PID{
         saturated = (Regelausgangsgr_m != unclamped_m);
         
     
-    }       
-    void resetIntegral() {
+    }    
+
+    void reseter() {
     Integral_Ie = 0.0f;
+    last_x = Regelgroesse_x;
+    lastfiltertDerivative_lfDe = 0.0f;
     }   
 
 };
