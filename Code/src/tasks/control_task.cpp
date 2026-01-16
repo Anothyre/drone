@@ -7,19 +7,17 @@ float scaleOutput(float voltage);
 
 
 class P{
-
-
     private:
         float Regeldiff_e ;
         float p; 
         float ProportionalVerstaerkung_Kp;   
-
-    public:
         float Fuehrungsgroesse_w ;
         float Regelgroesse_x;
+
+    public:
         float Regelausgangsgr_m;
 
-    P(float kp){
+        P(float kp){
         Fuehrungsgroesse_w =0.0f;
         Regelgroesse_x=0.0f;
         Regeldiff_e =0.0f;
@@ -32,13 +30,20 @@ class P{
 
      
   
-    void pStep(){
-        Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
-        
-        p = Regeldiff_e * ProportionalVerstaerkung_Kp;
-        Regelausgangsgr_m = p;       
-    
-    }       
+        void pStep(float dt){
+            Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
+            p = Regeldiff_e * ProportionalVerstaerkung_Kp;
+            Regelausgangsgr_m = p;       
+        }
+        void reseter() {
+        }
+        void setInput(float w, float x) {
+            Fuehrungsgroesse_w = w;
+            Regelgroesse_x = x;
+        }   
+        void getOutput(float &out) {
+            out = Regelausgangsgr_m;
+        }
 };
 
 
@@ -47,9 +52,8 @@ class PID{
  
     
     private:
-         float Fuehrungsgroesse_w ;/
+        float Fuehrungsgroesse_w ;
         float Regelgroesse_x;
-
         float Regeldiff_e ;
         float last_x;
         float Integral_Ie;
@@ -70,9 +74,12 @@ class PID{
 
         int64_t last_us = 0; 
 
+
+
     public:
+            float Regelausgangsgr_m; 
+
        
-        float Regelausgangsgr_m;/TODO:getter?
 
     PID(float kp, float ki, float kd, float alpha,float out_min=0.0f, float out_max=1.0f){
         Fuehrungsgroesse_w =0.0f;
@@ -97,12 +104,13 @@ class PID{
         D_FILETR_ALPHA =alpha;    
         OUT_MAX = out_max;
         OUT_MIN = out_min; 
-
-        TickType_t last = DELTA_T;
     }
     void setInput(float w, float x) {
     Fuehrungsgroesse_w = w;
     Regelgroesse_x = x;
+    }
+    void getOutput(float &out) {
+    out = Regelausgangsgr_m;
     }
 
      
@@ -156,7 +164,7 @@ class PID{
 void TaskControl(void *pvParameters)
 {
     // TODO:Read sensors 
-    //TODO: think about dt handling
+    //TODO: think about dt handling - shold be done but discuss
 
     //TODO: decide if fastforwarded and how  
     //TODO: might speed PID controller 
@@ -183,20 +191,19 @@ void TaskControl(void *pvParameters)
         // Schutz gegen den ersten Sprung
         if (last_us == 0) {
             last_us = now_us;
-            return; // Erster Durchlauf überspringen
+            continue; // Erster Durchlauf überspringen
         }
 
         DELTA_T = (now_us - last_us) * 1e-6f;
         last_us = now_us;
         if(DELTA_T <= 0.00001f) {
+
            //TODO: handle too small DELTA_T and not with random magic numbers
         }
 
 
-
-        ZspeedPID.Fuehrungsgroesse_w = PLACEHOLDER; //TODO: calc desired Z speed 
-        ZspeedPID.Regelgroesse_x = PLACEHOLDER; //TODO: read current Z speed
-        ZspeedPID.pidStep();
+        ZspeedPID.setInput(PLACEHOLDER, PLACEHOLDER);
+        ZspeedPID.pidStep(DELTA_T);
         float throttle = ZspeedPID.Regelausgangsgr_m; 
 
 
@@ -206,36 +213,37 @@ void TaskControl(void *pvParameters)
         float currentYaw   = PLACEHOLDER; 
 
         // Update PID controllers for attitude
-        pitchPID.Regelgroesse_x = currentPitch;
-        rollPID.Regelgroesse_x  = currentRoll;
-        yawPID.Regelgroesse_x   = currentYaw;
-
+       
 
         // Update for Führungsgroesse_w from desired attitude commands
-        pitchPID.Fuehrungsgroesse_w = PLACEHOLDER; 
-        rollPID.Fuehrungsgroesse_w  = PLACEHOLDER; 
-        yawPID.Fuehrungsgroesse_w   = PLACEHOLDER; 
+       
+        pitchPID.setInput(currentPitch, PLACEHOLDER);
+        rollPID.setInput(currentRoll, PLACEHOLDER);
+        yawPID.setInput(currentYaw, PLACEHOLDER);
 
 
-        //TODO: Call less often
+
+
+        // TODO: Call less often
         pitchPID.pStep(DELTA_T);
-        rollPID. pStep(DELTA_T);
-        yawPID. pStep(DELTA_T);
+        rollPID.pStep(DELTA_T);
+        yawPID.pStep(DELTA_T);
 
-        // Use attitude PID outputs as setpoints for rate controllers
-        ratePitchPID.Fuehrungsgroesse_w = pitchPID.Regelausgangsgr_m;
-        rateRollPID.Fuehrungsgroesse_w  = rollPID.Regelausgangsgr_m;
-        rateYawPID.Fuehrungsgroesse_w   = yawPID.Regelausgangsgr_m;
 
+
+        // Read current rates from gyroscope
         float currentRatePitch = PLACEHOLDER; //TODO: implement actual reading - if given use current rates from gyroscope
-
         float currentRateRoll  = PLACEHOLDER;
         float currentRateYaw   = PLACEHOLDER;
 
-        // Update PID controllers for rates
-        ratePitchPID.Regelgroesse_x = currentRatePitch;
-        rateRollPID.Regelgroesse_x  = currentRateRoll;
-        rateYawPID.Regelgroesse_x   = currentRateYaw;  
+
+        // Use attitude PID outputs as setpoints for rate controllers
+        ratePitchPID.setInput(pitchPID.Regelausgangsgr_m, currentRatePitch);
+        rateRollPID.setInput(rollPID.Regelausgangsgr_m, currentRateRoll);
+        rateYawPID.setInput(yawPID.Regelausgangsgr_m, currentRateYaw);
+
+      
+        // Update PID controllers for rates via setInput and pidStep
         ratePitchPID.pidStep(DELTA_T);
         rateRollPID.pidStep(DELTA_T);
         rateYawPID.pidStep(DELTA_T);
@@ -264,17 +272,15 @@ void TaskControl(void *pvParameters)
                 if (motorOutputs[i] < 0.0f) motorOutputs[i] = 0.0f;
             }
         
-        //TODO: clamp motoers and skale 
-        //TODO: output PWM
-        //TODO:vTaskDelayUntil(&last, pdMS_TO_TICKS(2)); // ~500Hz 
-}
-
-    //const TickType_t xDelay = pdMS_TO_TICKS(2); // 500Hz control loop
+        // TODO: clamp motors and scale 
+        // TODO: output PWM
+        // TODO: vTaskDelayUntil(&last, pdMS_TO_TICKS(2)); // ~500Hz 
+    }
 }
   
 float scaleOutput(float voltage) {
-    return 42;   //TODO: implement actual scaling based on voltage table
-    
+    //TODO: implement actual scaling based on voltage table
+    return 42;
 }
 
    
