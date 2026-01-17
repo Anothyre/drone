@@ -74,8 +74,6 @@ class PID{
 
         int64_t last_us = 0; 
 
-
-
     public:
             float Regelausgangsgr_m; 
 
@@ -138,7 +136,7 @@ class PID{
 
                 
         
-        //TODO: better anti windup aproche needed?
+        //TODO:THINK better anti windup aproche needed?
         //gpt concept of anti windup
 
         unclamped_m = Regelausgangsgr_m;
@@ -164,14 +162,14 @@ class PID{
 void TaskControl(void *pvParameters)
 {
     // TODO:Read sensors 
-    //TODO: think about dt handling - shold be done but discuss
+    //TODO:THINK about dt handling - shold be done but discuss
 
-    //TODO: decide if fastforwarded and how  
-    //TODO: might speed PID controller 
+    //TODO:THINK: decide if fastforwarded and how  
+    //TODO:THINK: might speed PID controller 
     //TODO#TOFU: Es gibt bessere Kotroller aufbauten als PID -https://www.preprints.org/manuscript/202509.1583
 
     //TODO: split in subtasks per axis and deside afterhow many rate call a normal call is needed 
-     //TODO: tune all parameters
+     //TODO: TUNE all parameters
     static P pitchPID(1.0f);
     static P  rollPID(1.0f);
     static P   yawPID(1.0f);
@@ -179,8 +177,11 @@ void TaskControl(void *pvParameters)
     static PID rateRollPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
     static PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
     static PID ZspeedPID(1.0f, 0.2f, 0.0f, 0.7f,0.0f,1.0f); 
-    
+
+        
     float DELTA_T ;
+    const int64_t min_dt = 0.00001f; //1ms minimum dt
+
     int64_t last_us = 0;
     int64_t now_us;
 
@@ -195,11 +196,12 @@ void TaskControl(void *pvParameters)
         }
 
         DELTA_T = (now_us - last_us) * 1e-6f;
-        last_us = now_us;
-        if(DELTA_T <= 0.00001f) {
-
-           //TODO: handle too small DELTA_T and not with random magic numbers
+         if(DELTA_T <= min_dt) {
+            
+            continue;
         }
+        last_us = now_us;//wait until bigger than min dt
+       
 
 
         ZspeedPID.setInput(PLACEHOLDER, PLACEHOLDER);
