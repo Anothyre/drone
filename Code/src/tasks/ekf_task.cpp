@@ -12,7 +12,8 @@ void TaskEKF(void *pvParameters)
             
         // Extended Kalman Filter implementation OR DIFFERENT SENSOR FUSION APPROCHE
         // TODO: TOGETHER
-
+        //USe https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/04-Stream-and-message-buffers/01-RTOS-stream-and-message-buffers
+    // to communicate between cores 
          // probaly to complex and unneccesarry for our purpose
 
         // care if gps is valid
