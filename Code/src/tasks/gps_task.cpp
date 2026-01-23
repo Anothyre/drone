@@ -5,6 +5,12 @@
 TinyGPSPlus gps; // globaler Zugriff, pfui! - Dining Philosophers
 HardwareSerial gpsSerial(GPS_UART);
 
+
+#include "data_structures.h"
+
+gps_data_t gps_data;
+
+
 void TaskGPS(void *pvParameters)
 {
     // Initialize GPS UART

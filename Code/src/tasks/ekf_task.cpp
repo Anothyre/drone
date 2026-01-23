@@ -3,10 +3,16 @@
 #include "data_structures.h"
 #include <TinyGPS++.h>
 
+
+// Global GPS data instance
+extern TinyGPSPlus gps;
+extern gps_data_t gps_data;
+
 void TaskEKF(void *pvParameters)
 {
     bool useGps; 
     for (;;)
+    
     {
         useGps = gps_data.valid;
         
