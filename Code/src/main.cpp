@@ -2,24 +2,108 @@
 #include "tasks.h"
 #include "data_structures.h"
 #include "core_config.h"
+#include "shared.h"
 #include <tasks/fsm_task.h>
 #include <queue.h>
 #include <tasks/wifi_task.h>
+
+#define BUZZER 21 // Pin für den Summer
+#define LED_Start 8// Pin für die eingebauten LEDs (ESP32)
+#define LED_End 14
+
+
+void AliveTask(void* pvParameters) {
+  const int motorPin = 1; // Dein gewählter Pin
+    pinMode(motorPin, OUTPUT);
+
+    for (int i = 0; i <= 100; i += 1) {
+        Serial.printf("Speed: %d%%\n", i);
+        
+        // analogWrite auf ESP32 hat standardmäßig 8-Bit (0-255)
+        // Wir rechnen 0-100% einfach um:
+        analogWrite(motorPin, i);
+                
+  vTaskDelay(pdMS_TO_TICKS(100))   
+ }
+ analogWrite(motorPin, 0); // Motor ausschalten
+
+
+
+    for(int pin = LED_Start; pin <= LED_End; pin++){
+        pinMode(pin, OUTPUT);
+    }
+    while (true) {
+      for(int pin = LED_Start; pin <= LED_End; pin++){
+        digitalWrite(pin, HIGH);
+      }
+      int tM = 3;
+      for(int i = 0; i<3;i++){
+      tone(BUZZER, 440*2);
+      vTaskDelay(pdMS_TO_TICKS(100*tM));
+      noTone(BUZZER);
+      vTaskDelay(pdMS_TO_TICKS(50));
+      }
+      tone(BUZZER, 370*2);
+      vTaskDelay(pdMS_TO_TICKS(100*tM*3));
+      noTone(BUZZER);
+
+      vTaskDelay(pdMS_TO_TICKS(50));
+      noTone(BUZZER);
+      vTaskDelay(pdMS_TO_TICKS(200*tM));
+
+       for(int i = 0; i<3;i++){
+      tone(BUZZER, 392*2);
+      vTaskDelay(pdMS_TO_TICKS(100*tM));
+      noTone(BUZZER);
+      vTaskDelay(pdMS_TO_TICKS(50));
+      }
+      tone(BUZZER, 330*2);
+      vTaskDelay(pdMS_TO_TICKS(100*tM*3));
+      noTone(BUZZER);
+      vTaskDelay(pdMS_TO_TICKS(50));
+
+      for(int pin = LED_Start; pin <= LED_End; pin++){
+        digitalWrite(pin, LOW);
+      }
+        
+
+        // Längere Pause nach der Phrase, damit es nicht dauernd repeatet
+        vTaskDelay(10000); 
+    }
+}
+
+
+
+
+
 
 void setup()
 {
   Serial.begin(115200);
   delay(2000);
   Serial.println("--- Alive ---");//TODO text
-  create_tasks();
-  fsm_command_queue = xQueueCreate(10, sizeof(control_packet_t));
-  // TODO: Add more as needed
+   xTaskCreate(
+        AliveTask,       // Task-Funktion
+        "AliveTask",     // Name
+        2048,            // Stack-Größe
+        NULL,            // Parameter
+        1,               // Priorität
+        NULL             // Task-Handle
+    );
+
+
+  //create_tasks();//TODO auskommentiert zum testen
+  initQueues(); 
+
+  Serial.println("Setup complete.");
 }
 
 void loop()
 {
+  //Kas - brach ma ned
   vTaskDelay(1000);
 }
+
 
 /*
 -- Tasks --
