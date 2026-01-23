@@ -11,6 +11,7 @@
 // Konstanten für den DPS368 (16x Oversampling)//TODO: Anpassen je nach Oversampling
 const int32_t SCALING_FACTOR = 253952;
 const float SEA_LEVEL_PRESSURE = 101325.0f;
+const int BARO = 34; 
 
 
 
@@ -18,17 +19,18 @@ const float SEA_LEVEL_PRESSURE = 101325.0f;
 void TaskBaro(void *pvParameters)
 {
     // SETUP: Wird einmal beim Start der Task ausgeführt
-    const int csPin = 5; // Dein CS Pin
+    const int csPin = BARO ; // TODO : BARA PIN
     pinMode(csPin, OUTPUT);
     digitalWrite(csPin, HIGH);
 
-    // Initialisierung der Kalibrierungskoeffizienten (Platzhalter-Werte)
+    // Initialisierung der Kalibrierungskoeffizienten (Platzhalter-Werte) 
+    //TODO 
     // Diese müssen normalerweise einmalig aus dem Sensor-PROM gelesen werden
     int32_t c00 = 0, c10 = 0, c20 = 0, c30 = 0, c01 = 0, c11 = 0, c21 = 0, c0 = 0, c1 = 0;
 
     // Zeitsteuerung für 50Hz (20ms Periode)
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    const TickType_t xFrequency = pdMS_TO_TICKS(20);
+    const TickType_t xFrequency = pdMS_TO_TICKS(20);//TODO: Anpassen je nach gewünschter Frequenz
 
     for (;;) 
     {
@@ -49,7 +51,7 @@ void TaskBaro(void *pvParameters)
         if (raw_p & 0x800000) raw_p -= 0x1000000;
         if (raw_t & 0x800000) raw_t -= 0x1000000;
 
-        // 3. Berechnung
+        // 3. Berechnung TODO
         float p_sc = (float)raw_p / SCALING_FACTOR;
         float t_sc = (float)raw_t / SCALING_FACTOR;
 
@@ -61,7 +63,9 @@ void TaskBaro(void *pvParameters)
         float altitude = 44330.0f * (1.0f - powf(comp_press / SEA_LEVEL_PRESSURE, 0.1902949f));
 
         // Hier könntest du die Daten in eine globale Variable oder Queue schreiben
-        // Serial.println(altitude); 
+        //
+    
+         Serial.println(altitude); 
 
         // 4. Präzises Warten (FreeRTOS)
         // vTaskDelayUntil sorgt für eine konstante Frequenz, unabhängig von der Rechenzeit

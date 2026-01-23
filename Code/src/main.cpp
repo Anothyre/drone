@@ -10,22 +10,30 @@
 #define BUZZER 21 // Pin für den Summer
 #define LED_Start 8// Pin für die eingebauten LEDs (ESP32)
 #define LED_End 14
+#define MOTOR1 1
+#define MOTOR2 2
+#define MOTOR3 3
+#define MOTOR4 4
+
+
 
 
 void AliveTask(void* pvParameters) {
-  const int motorPin = 1; // Dein gewählter Pin
-    pinMode(motorPin, OUTPUT);
+    pinMode(MOTOR1, OUTPUT);
+    pinMode(MOTOR2, OUTPUT);
+    pinMode(MOTOR3, OUTPUT);
+    pinMode(MOTOR4, OUTPUT);
 
     for (int i = 0; i <= 100; i += 1) {
         Serial.printf("Speed: %d%%\n", i);
         
         // analogWrite auf ESP32 hat standardmäßig 8-Bit (0-255)
         // Wir rechnen 0-100% einfach um:
-        analogWrite(motorPin, i);
+        analogWrite(MOTOR1, i);
                 
-  vTaskDelay(pdMS_TO_TICKS(100))   
+  vTaskDelay(pdMS_TO_TICKS(100));
  }
- analogWrite(motorPin, 0); // Motor ausschalten
+ analogWrite(MOTOR1, 0); // Motor ausschalten
 
 
 

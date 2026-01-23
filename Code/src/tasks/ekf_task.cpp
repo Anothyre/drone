@@ -6,7 +6,7 @@
 
 // Global GPS data instance
 extern TinyGPSPlus gps;
-extern gps_data_t gps_data;
+extern gps_data_t gps_data; //TODO: KAS
 
 void TaskEKF(void *pvParameters)
 {

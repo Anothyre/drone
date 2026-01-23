@@ -1,5 +1,5 @@
 #include "tasks/adc_task.h"
-// analog digital converter task
+// analog digital converter task for ???
 
 void TaskADC(void *pvParameters)
 {
