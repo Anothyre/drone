@@ -9,6 +9,9 @@ static IPAddress last_remote_ip;
 static uint16_t last_remote_port;
 static uint32_t last_rx_time = 0;
 
+static void wifi_init();
+static uint16_t crc16(const uint8_t *data, size_t len);
+
 void TaskWiFi(void *pvParameters)
 {
     wifi_init();
@@ -33,7 +36,7 @@ void TaskWiFi(void *pvParameters)
 
             uint16_t crc_rx = pkt.crc;
             pkt.crc = 0;
-            if (crc16((uint8_t *)&pkt, sizeof(pkt)) != crc_rx)
+            if (crc16((uint8_t *)&pkt, sizeof(pkt)) != crc_rx) 
                 continue;
 
             last_rx_time = millis();

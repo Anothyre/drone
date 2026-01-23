@@ -1,6 +1,10 @@
 #include "tasks/fsm_task.h"
 #include "tasks/wifi_task.h"
 #include <Arduino.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <freertos/queue.h>
+#include "data_structures.h"
 
 void TaskFSM(void *pvParameters)
 {

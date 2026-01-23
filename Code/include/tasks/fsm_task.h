@@ -1,9 +1,13 @@
 #ifndef FSM_TASK_H
 #define FSM_TASK_H
 
+
+
+#include <Arduino.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 
+#include "shared.h"
 typedef enum
 {
     ST_BOOT,

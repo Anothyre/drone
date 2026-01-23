@@ -5,7 +5,7 @@
 
 // GPS data structure (shared with EKF/FSM)
 // TODO: Think if needed - eigentlich schoen so
-typedef struct
+struct gps_data_t
 {
     double lat, lon, alt;
     float speed, course;
@@ -13,7 +13,15 @@ typedef struct
     float hdop;
     bool valid;
     uint32_t timestamp;
-} gps_data_t;
+} ;
+
+
+// Struktur für die Rückgabewerte
+struct BaroData {
+    float pressure;    // Pascal
+    float temperature; // Celsius
+    float altitude;    // Meter
+};
 
 // Global GPS data instance
 extern gps_data_t gps_data; //TODO: dining philosophers??

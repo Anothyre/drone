@@ -1,5 +1,6 @@
 #include "tasks/ekf_task.h"
 #include "tasks/gps_task.h"
+#include "data_structures.h"
 #include <TinyGPS++.h>
 
 void TaskEKF(void *pvParameters)
