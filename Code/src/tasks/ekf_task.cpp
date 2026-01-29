@@ -15,6 +15,8 @@ void TaskEKF(void *pvParameters)
     
     {
         useGps = gps_data.valid;
+
+        
         
             
         // Extended Kalman Filter implementation OR DIFFERENT SENSOR FUSION APPROCHE

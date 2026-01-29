@@ -148,9 +148,9 @@ void TaskControl(void *pvParameters)
 
     //TODO: split in subtasks per axis and deside afterhow many rate call a normal call is needed 
      //TODO: TUNE all parameters
-    static P pitchPID(1.0f);
-    static P  rollPID(1.0f);
-    static P   yawPID(1.0f);
+    static P pitchPID(0.5f);
+    static P  rollPID(0.5f);
+    static P   yawPID(0.4f);
     static PID ratePitchPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f);
     static PID rateRollPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
     static PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 

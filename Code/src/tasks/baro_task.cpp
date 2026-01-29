@@ -98,7 +98,7 @@ bool DroneBaro::init(
 
     // 7. Richte Interrupt ein (optional)
     if (_intPin != -1) {
-        attachInterrupt(digitalPinToInterrupt(_intPin), isrHandler, FALLING);
+        //TODO: attachInterrupt(digitalPinToInterrupt(_intPin), isrHandler, FALLING);
     }
 
     Serial.println("[BARO] Initialized successfully");

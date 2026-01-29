@@ -6,6 +6,7 @@
 #include <tasks/fsm_task.h>
 #include <queue.h>
 #include <tasks/wifi_task.h>
+// #include <ESP32Servo.h>
 
 #define BUZZER 21 // Pin für den Summer
 #define LED_Start 8// Pin für die eingebauten LEDs (ESP32)
@@ -17,30 +18,63 @@
 
 
 
+#include <Arduino.h>
+#include "tasks.h"
+#include "data_structures.h"
+#include "core_config.h"
+#include "shared.h"
+#include <tasks/fsm_task.h>
+#include <queue.h>
+#include <tasks/wifi_task.h>
+
+// --- Hardware ---
+#define BUZZER     21
+#define LED_Start   8
+#define LED_End    14
+
+#define MOTOR1     1  
+
+// --- LEDC / PWM ---
+constexpr int MOTOR_PIN   = MOTOR1;
+constexpr int LEDC_CH     = 2;     // PWM-Kanal
+constexpr uint32_t PWM_FREQ = 50;  // 50 Hz = Servo/ESC
+constexpr uint8_t PWM_RES  = 12;   // 12 Bit → 0..4095
+
+
+// Maximaler Duty-Wert bei 12 Bit
+constexpr uint32_t MAX_DUTY = (1UL << PWM_RES) - 1;
+
+
 
 void AliveTask(void* pvParameters) {
-    pinMode(MOTOR1, OUTPUT);
-    pinMode(MOTOR2, OUTPUT);
-    pinMode(MOTOR3, OUTPUT);
-    pinMode(MOTOR4, OUTPUT);
+  // ledcAttachPin(MOTOR_PIN, LEDC_CH);//koruppt - wenn da kein ton 
+        tone(BUZZER, 440*2);
 
-    for (int i = 0; i <= 100; i += 1) {
-        Serial.printf("Speed: %d%%\n", i);
-        
-        // analogWrite auf ESP32 hat standardmäßig 8-Bit (0-255)
-        // Wir rechnen 0-100% einfach um:
-        analogWrite(MOTOR1, i);
-                
-  vTaskDelay(pdMS_TO_TICKS(100));
- }
- analogWrite(MOTOR1, 0); // Motor ausschalten
+        vTaskDelay(pdMS_TO_TICKS(2000));         
 
 
+
+
+   
 
     for(int pin = LED_Start; pin <= LED_End; pin++){
         pinMode(pin, OUTPUT);
     }
     while (true) {
+        
+   Serial.println("[AliveTask] Motor ramp test");
+
+    for (uint32_t duty = 0; duty <= MAX_DUTY; duty += MAX_DUTY / 100) {
+        ledcWrite(LEDC_CH, duty);              // PWM setzen
+        Serial.printf("Duty: %lu / %lu\n", duty, MAX_DUTY);
+        vTaskDelay(pdMS_TO_TICKS(5));         // langsam hochfahren
+    }
+
+    // Motor wieder aus
+    ledcWrite(LEDC_CH, 0);
+    Serial.println("[AliveTask] Motor off");
+
+
       for(int pin = LED_Start; pin <= LED_End; pin++){
         digitalWrite(pin, HIGH);
       }
@@ -87,6 +121,7 @@ void AliveTask(void* pvParameters) {
 
 void setup()
 {
+
   Serial.begin(115200);
   delay(2000);
   Serial.println("--- Alive ---");//TODO text
