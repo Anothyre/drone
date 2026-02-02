@@ -12,7 +12,7 @@
 #include "tasks/housekeeping_task.h"
 
 
-// TODO:Remove Magic Numbers (prioritysy,cores)
+// TODO:Remove Magic Numbers (prioritysy,cores,stacksizes)
 
 // Task handle definitions
 TaskHandle_t TaskIMU_Handle = NULL;
