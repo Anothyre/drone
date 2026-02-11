@@ -1,38 +1,48 @@
 #include "Arduino.h"
 #include "tasks/adc_task.h"
+#include "shared.h"
 
 void TaskADC(void *pvParameters)
 {
-
     // Init ADC
-    analogReadResolution(ADC_RESOLUTION);                   // 0–4095
-    analogSetPinAttenuation(ADC_CURRENT_PIN, ADC_GAIN);     // up to ~3.3V
+    analogReadResolution(ADC_RESOLUTION);
+    analogSetPinAttenuation(ADC_CURRENT_PIN, ADC_GAIN);
     analogSetPinAttenuation(ADC_VOLTAGE_PIN, ADC_GAIN);
+
+    // Init previous data (Assuming full charge and still motors)
+    static float p_batteryCurrent = INITIAL_BATTERY_CURRENT;
+    static float p_batteryVoltage = INITIAL_BATTERY_VOLTAGE;
 
     for (;;)
     {
-        // Init previous data (Assuming full charge and stil Motors)
-        static float p_current = INITIAL_CURRENT;
-        static float p_batteryVoltage = INITIAL_BATTERY_VOLTAGE;
-        
+        ADCSample_t sample;
+
         // Read raw Data
         uint16_t rawCurrent     = analogRead(ADC_CURRENT_PIN);
         uint16_t rawVoltage     = analogRead(ADC_VOLTAGE_PIN);
 
         // Calculate actual current
-        float currentVoltage    = (rawCurrent / ADC_MAX_VALUE) * ADC_REF_VOLTAGE;
+        float currentVoltage    = ((float)rawCurrent / ADC_MAX_VALUE) * ADC_REF_VOLTAGE;
         float shuntVoltage      = currentVoltage / SHUNT_AMP_RATIO;
-        float current           = shuntVoltage / SHUNT_RESISTANCE;
+        float batteryCurrent    = shuntVoltage / SHUNT_RESISTANCE;
 
         // Calculate actual voltage
-        float busVoltage        = (rawVoltage / ADC_MAX_VALUE) * ADC_REF_VOLTAGE;
+        float busVoltage        = ((float)rawVoltage / ADC_MAX_VALUE) * ADC_REF_VOLTAGE;
         float batteryVoltage    = busVoltage * VOLTAGE_DIVIDER_RATIO;
 
         // Average with last value for smoothing
-        current                 = (current + p_current) / 2.0f;
-        p_current               = current;
+        batteryCurrent          = (batteryCurrent + p_batteryCurrent) / 2.0f;
+        p_batteryCurrent        = batteryCurrent;
+
         batteryVoltage          = (batteryVoltage + p_batteryVoltage) / 2.0f;
         p_batteryVoltage        = batteryVoltage;
+
+        // Fill struct
+        sample.batteryCurrent = batteryCurrent;
+        sample.batteryVoltage = batteryVoltage;
+
+        // Send to queue (non-blocking or short timeout recommended)
+        xQueueSend(ADCQueue, &sample, 0);
 
         vTaskDelay(pdMS_TO_TICKS(10)); // 100Hz
     }

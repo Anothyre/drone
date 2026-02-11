@@ -17,7 +17,7 @@ void TaskADC(void *pvParameters);
 
 #define SHUNT_AMP_RATIO         50          // 50V/V
 #define SHUNT_RESISTANCE        0.5e-3      // 0.5mOhm
-#define INITIAL_CURRENT         0           // 0A
+#define INITIAL_BATTERY_CURRENT         0           // 0A
 #define INITIAL_BATTERY_VOLTAGE         16.8f       // 4S LIPO full voltage
 
 #endif // ADC_TASK_H

@@ -6,6 +6,14 @@
 extern QueueHandle_t fsm_command_queue;
 extern QueueHandle_t fsm_event_queue;
 extern QueueHandle_t sensorQueue;
+extern QueueHandle_t ADCQueue;
+
+#define ADC_QUEUE_LENGHT 32
+
+typedef struct{
+    float batteryCurrent;
+    float batteryVoltage;
+} ADCSample_t;
 
 void initQueues(); // Prototyp für die Initialisierung
 #endif
