@@ -19,6 +19,7 @@ typedef struct __attribute__((packed)) // no padding
     float x; // velocity / position, absolute or relative?
     float y;
     float z;
+    float yaw;
     uint8_t mode; // one for each flight mode, *_cmd state and none.
     uint16_t crc; // CRC-16-IBM checksum
 } control_packet_t;

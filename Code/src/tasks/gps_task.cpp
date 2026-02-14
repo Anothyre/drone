@@ -60,6 +60,8 @@ void TaskGPS(void *pvParameters)
         vTaskDelay(pdMS_TO_TICKS(20)); // 50Hz loop (GPS updates at 1–5Hz)
     }
 }
+
+
 /*
 @ -1,56 +1,57 @@
 #include "tasks/gps_task.h"

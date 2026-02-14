@@ -1,5 +1,4 @@
 #include "shared.h"
-#
 
 // Hier tatsächlich definieren (ohne extern!)
 QueueHandle_t fsm_command_queue = NULL;
