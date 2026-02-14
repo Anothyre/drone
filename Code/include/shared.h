@@ -8,6 +8,8 @@ extern QueueHandle_t fsm_event_queue;
 extern QueueHandle_t sensorQueue;
 extern QueueHandle_t ADCQueue;
 
+#define FSM_COMMAND_QUEUE_LEN 10
+#define FSM_EVENT_QUEUE_LEN 10
 #define ADC_QUEUE_LENGHT 32
 
 typedef struct{

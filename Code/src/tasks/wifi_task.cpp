@@ -8,6 +8,7 @@ static WiFiUDP udp;
 static IPAddress last_remote_ip;
 static uint16_t last_remote_port;
 static uint32_t last_rx_time = 0;
+static bool control_link_timed_out = false;
 
 static void wifi_init();
 static uint16_t crc16(const uint8_t *data, size_t len);
@@ -15,6 +16,7 @@ static uint16_t crc16(const uint8_t *data, size_t len);
 void TaskWiFi(void *pvParameters)
 {
     wifi_init();
+    last_rx_time = millis();
 
     control_packet_t pkt;
 
@@ -40,16 +42,19 @@ void TaskWiFi(void *pvParameters)
                 continue;
 
             last_rx_time = millis();
+            control_link_timed_out = false;
 
             // Push to FSM
             xQueueSend(fsm_command_queue, &pkt, 0);
         }
 
         // CONTROL LINK TIMEOUT
-        if (millis() - last_rx_time > CONTROL_TIMEOUT_MS)
+        const bool is_timed_out = (millis() - last_rx_time > CONTROL_TIMEOUT_MS);
+        if (is_timed_out && !control_link_timed_out)
         {
             event_t evt = EV_EXCEPTION;
             xQueueSend(fsm_event_queue, &evt, 0);
+            control_link_timed_out = true;
         }
 
         vTaskDelay(pdMS_TO_TICKS(5));

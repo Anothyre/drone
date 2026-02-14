@@ -448,6 +448,7 @@ void fsm_process_command(control_packet_t cmd)
 void TaskFSM(void *pvParameters)
 {
     control_packet_t cmd;
+    event_t evt;
     const TickType_t tick_rate = pdMS_TO_TICKS(50); // 50ms loop rate
 
     // Initial state: BOOT
@@ -467,6 +468,14 @@ void TaskFSM(void *pvParameters)
             Serial.println("[FSM] CRITICAL BATTERY - EMERGENCY LANDING");
             cmd.mode = EV_EXCEPTION;
             fsm_process_command(cmd);
+        }
+
+        // Process incoming events first (higher priority than regular commands)
+        if (xQueueReceive(fsm_event_queue, &evt, 0))
+        {
+            control_packet_t evt_cmd = {};
+            evt_cmd.mode = (uint8_t)evt;
+            fsm_process_command(evt_cmd);
         }
 
         // Process incoming commands from queue
