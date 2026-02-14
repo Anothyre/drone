@@ -1,6 +1,7 @@
 import socket
 import struct
 import time
+from typing import Optional
 
 import pygame
 
@@ -97,7 +98,7 @@ def build_control_packet(seq: int, x: float, y: float, z: float, yaw: float, mod
     return packet_without_crc + struct.pack("<H", crc)
 
 
-def init_joystick(joystick: pygame.joystick.Joystick | None) -> pygame.joystick.Joystick | None:
+def init_joystick(joystick: Optional["pygame.joystick.Joystick"]) -> Optional["pygame.joystick.Joystick"]:
     if joystick is not None:
         try:
             if joystick.get_init() and joystick.get_attached():
@@ -115,7 +116,7 @@ def init_joystick(joystick: pygame.joystick.Joystick | None) -> pygame.joystick.
     return new_joystick
 
 
-def read_gamepad_axes(joystick: pygame.joystick.Joystick | None) -> dict:
+def read_gamepad_axes(joystick: Optional["pygame.joystick.Joystick"]) -> dict:
     result = {
         "connected": False,
         "x": 0.0,
@@ -138,6 +139,7 @@ def read_gamepad_axes(joystick: pygame.joystick.Joystick | None) -> dict:
     num_axes = joystick.get_numaxes()
     num_buttons = joystick.get_numbuttons()
 
+    # Left stick (X, Y)
     if num_axes >= 2:
         x_val = apply_deadzone(joystick.get_axis(0), GAMEPAD_DEADZONE)
         y_val = apply_deadzone(-joystick.get_axis(1), GAMEPAD_DEADZONE)
@@ -146,21 +148,31 @@ def read_gamepad_axes(joystick: pygame.joystick.Joystick | None) -> dict:
         result["x_active"] = abs(x_val) > 0.0
         result["y_active"] = abs(y_val) > 0.0
 
-    if num_axes >= 3:
+    # Right stick X (Yaw) - Xbox: Axis 3, fallback to Axis 2
+    lt = 0.0
+    rt = 0.0
+    
+    # Try Xbox layout first (LT=Axis 2, RightStickX=Axis 3, RT=Axis 4, RightStickY=Axis 5)
+    if num_axes >= 4:
+        yaw_val = apply_deadzone(joystick.get_axis(3), GAMEPAD_DEADZONE)
+        result["yaw"] = yaw_val
+        result["yaw_active"] = abs(yaw_val) > 0.0
+    elif num_axes >= 3:
+        # Fallback for other controller layouts
         yaw_val = apply_deadzone(joystick.get_axis(2), GAMEPAD_DEADZONE)
         result["yaw"] = yaw_val
         result["yaw_active"] = abs(yaw_val) > 0.0
 
-    lt = 0.0
-    rt = 0.0
-    if num_axes >= 6:
-        lt = (joystick.get_axis(4) + 1.0) * 0.5
-        rt = (joystick.get_axis(5) + 1.0) * 0.5
-    else:
-        if num_buttons > 6 and joystick.get_button(6):
-            lt = 1.0
-        if num_buttons > 7 and joystick.get_button(7):
-            rt = 1.0
+    # Triggers (LT, RT) - Xbox: LT=Axis 2, RT=Axis 4
+    if num_axes >= 5:
+        lt = (joystick.get_axis(2) + 1.0) * 0.5  # LT on Xbox
+        rt = (joystick.get_axis(4) + 1.0) * 0.5  # RT on Xbox
+    elif num_axes >= 3:
+        # Fallback: use buttons for triggers
+        if num_buttons > 6:
+            lt = 1.0 if joystick.get_button(6) else 0.0
+        if num_buttons > 7:
+            rt = 1.0 if joystick.get_button(7) else 0.0
 
     z_delta = (rt - lt) * Z_STEP_KEY
     result["z_delta"] = z_delta
@@ -228,8 +240,6 @@ def main() -> None:
                         event_mode = EVENT_ARM_CMD
                     elif event.key == pygame.K_l:
                         event_mode = EVENT_LAND_CMD
-
-            joystick = init_joystick(joystick)
 
             keys = pygame.key.get_pressed()
             kbd_x = float(keys[pygame.K_d]) - float(keys[pygame.K_a])
