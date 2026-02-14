@@ -97,7 +97,7 @@ def build_control_packet(seq: int, x: float, y: float, z: float, yaw: float, mod
     return packet_without_crc + struct.pack("<H", crc)
 
 
-def init_joystick(joystick: pygame.joystick.Joystick | None) -> pygame.joystick.Joystick | None:
+def init_joystick(joystick: "pygame.joystick.Joystick" | None) -> "pygame.joystick.Joystick" | None:
     if joystick is not None:
         try:
             if joystick.get_init() and joystick.get_attached():
