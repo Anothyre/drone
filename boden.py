@@ -186,6 +186,31 @@ def read_gamepad_axes(joystick: Optional["pygame.joystick.Joystick"]) -> dict:
     return result
 
 
+
+
+#######Main function#######
+def debug_controller(js):
+    if js is None:
+        return
+
+    for i in range(js.get_numbuttons()):
+        if js.get_button(i):
+            print("Button:", i)
+
+    for i in range(js.get_numaxes()):
+        val = js.get_axis(i)
+        if abs(val) > 0.9:
+            
+            print("Axis:", i, val)
+            
+
+    for i in range(js.get_numhats()):
+        hat = js.get_hat(i)
+        if hat != (0, 0):
+            print("Hat:", i, hat)
+
+
+
 def main() -> None:
     esp = (ESP_IP, ESP_PORT)
 
@@ -200,12 +225,13 @@ def main() -> None:
     print("Press Ctrl+C to stop.")
 
     pygame.init()
-    pygame.display.set_caption("Bodenstation Input Window")
-    pygame.display.set_mode((360, 120))
+    pygame.display.set_caption("Input Window - (Matze von mir vernhalten bitti) ")
+    screen = pygame.display.set_mode((500,500))
     pygame.joystick.init()
+    screen.fill("purple")
 
     joystick = init_joystick(None)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #ip v4 udp socket
 
     seq = 0
     x = 0.0
@@ -240,6 +266,7 @@ def main() -> None:
                         event_mode = EVENT_ARM_CMD
                     elif event.key == pygame.K_l:
                         event_mode = EVENT_LAND_CMD
+                    #TODO: add events
 
             keys = pygame.key.get_pressed()
             kbd_x = float(keys[pygame.K_d]) - float(keys[pygame.K_a])
@@ -247,7 +274,7 @@ def main() -> None:
             kbd_yaw = float(keys[pygame.K_RIGHT]) - float(keys[pygame.K_LEFT])
             kbd_z_delta = (Z_STEP_KEY if keys[pygame.K_UP] else 0.0) - (
                 Z_STEP_KEY if keys[pygame.K_DOWN] else 0.0
-            )
+            ) #TODO: find uniform "up" handling 
 
             gamepad = read_gamepad_axes(joystick)
 
@@ -259,7 +286,7 @@ def main() -> None:
             x = clamp(x, -MAX_XY_YAW, MAX_XY_YAW)
             y = clamp(y, -MAX_XY_YAW, MAX_XY_YAW)
             yaw = clamp(yaw, -MAX_XY_YAW, MAX_XY_YAW)
-            z = clamp(z + z_delta, MIN_Z, MAX_Z)
+            z = clamp(z + z_delta, MIN_Z, MAX_Z)# @
 
             if gamepad["connected"] and gamepad["lb"] and gamepad["rb"]:
                 if lb_rb_hold_started is None:
@@ -271,6 +298,8 @@ def main() -> None:
             else:
                 lb_rb_hold_started = None
                 lb_rb_takeoff_sent = False
+            
+
 
             packet = build_control_packet(seq, x, y, z, yaw, event_mode)
             sock.sendto(packet, esp)
@@ -305,6 +334,13 @@ def main() -> None:
                 time.sleep(sleep_for)
             else:
                 next_tick = time.monotonic()
+            screen.fill("purple")
+            circle_x = int(250 + x * 200)
+            circle_y = int(250 - y * 200)
+            #felix added kas
+            pygame.draw.circle(screen, "red", (circle_x, circle_y), 40)
+            pygame.display.flip()
+            debug_controller(joystick)
 
     except KeyboardInterrupt:
         print("\nStopping Bodenstation...")
