@@ -3,6 +3,22 @@
 
 #include <stdint.h>
 
+// Network control packet structure
+// WICHTIG: __attribute__((packed)) verhindert, dass C++ leere Bytes (Padding) einfügt.
+// Das muss exakt dem Python struct.pack("<I H I f f f f B H", ...) entsprechen.
+// Gesamtgröße: exakt 31 Bytes.
+typedef struct __attribute__((packed)) {
+    uint32_t magic;         // I (4 Byte) - 0x44524F4E ("DRON")
+    uint16_t seq;           // H (2 Byte)
+    uint32_t timestamp_ms;  // I (4 Byte)
+    float x;                // f (4 Byte)
+    float y;                // f (4 Byte)
+    float z;                // f (4 Byte)
+    float yaw;              // f (4 Byte)
+    uint8_t mode;           // B (1 Byte)
+    uint16_t crc;           // H (2 Byte)
+} control_packet_t;
+
 // GPS data structure (shared with EKF/FSM)
 // TODO: Think if needed - eigentlich schoen so
 

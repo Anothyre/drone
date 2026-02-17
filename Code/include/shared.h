@@ -7,6 +7,7 @@ extern QueueHandle_t fsm_command_queue;
 extern QueueHandle_t fsm_event_queue;
 extern QueueHandle_t sensorQueue;
 extern QueueHandle_t ADCQueue;
+extern QueueHandle_t wled_command_queue;
 
 #define FSM_COMMAND_QUEUE_LEN 10
 #define FSM_EVENT_QUEUE_LEN 10

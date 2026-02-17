@@ -10,6 +10,7 @@
 #include "tasks/fsm_task.h"
 #include "tasks/logger_task.h"
 #include "tasks/housekeeping_task.h"
+#include "tasks/wled_task.h"
 
 
 // TODO:Remove Magic Numbers (prioritysy,cores,stacksizes)
@@ -25,87 +26,88 @@ TaskHandle_t TaskWiFi_Handle = NULL;
 TaskHandle_t TaskFSM_Handle = NULL;
 TaskHandle_t TaskLogger_Handle = NULL;
 TaskHandle_t TaskHousekeeping_Handle = NULL;
+TaskHandle_t TaskWLED_Handle = NULL;
 
-void create_tasks(void)
+ void create_tasks(void)
 {
     // =======================
     // REAL-TIME TASKS (CORE 1)
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskIMU,
-        "IMU_Task",
-        8192,
-        NULL,
-        6, // highest priority
-        &TaskIMU_Handle,
-        CORE_REALTIME);
+    // xTaskCreatePinnedToCore(
+    //     TaskIMU,
+    //     "IMU_Task",
+    //     8192,
+    //     NULL,
+    //     6, // highest priority
+    //     &TaskIMU_Handle,
+    //     CORE_REALTIME);
 
-    xTaskCreatePinnedToCore(
-        TaskControl, // PID
-        "Control_Task",
-        8192,
-        NULL,
-        5,
-        &TaskControl_Handle,
-        CORE_REALTIME);
+    // xTaskCreatePinnedToCore(
+    //     TaskControl, // PID
+    //     "Control_Task",
+    //     8192,
+    //     NULL,
+    //     5,
+    //     &TaskControl_Handle,
+    //     CORE_REALTIME);
 
-    // =======================
-    // ESTIMATION
-    // =======================
+    // // =======================
+    // // ESTIMATION
+    // // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskEKF, // Extended Kalman Filter
-        "EKF_Task",
-        8192,
-        NULL,
-        4,
-        &TaskEKF_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskEKF, // Extended Kalman Filter
+    //     "EKF_Task",
+    //     8192,
+    //     NULL,
+    //     4,
+    //     &TaskEKF_Handle,
+    //     CORE_COMMS);
 
-    // =======================
-    // SENSOR TASKS
-    // =======================
+    // // =======================
+    // // SENSOR TASKS
+    // // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskGPS, // gps task
-        "GPS_Task",
-        4096,
-        NULL,
-        3,
-        &TaskGPS_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskGPS, // gps task
+    //     "GPS_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskGPS_Handle,
+    //     CORE_COMMS);
 
-    xTaskCreatePinnedToCore(
-        TaskBaro, // barometer task
-        "Baro_Task",
-        4096,
-        NULL,
-        3,
-        &TaskBaro_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskBaro, // barometer task
+    //     "Baro_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskBaro_Handle,
+    //     CORE_COMMS);
 
-    xTaskCreatePinnedToCore(
-        TaskADC, // adc task for current/voltage monitoring
-        "ADC_Task",
-        4096,
-        NULL,
-        3,
-        &TaskADC_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskADC, // adc task for current/voltage monitoring
+    //     "ADC_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskADC_Handle,
+    //     CORE_COMMS);
 
-    // =======================
-    // FSM / SUPERVISOR
-    // =======================
+    // // =======================
+    // // FSM / SUPERVISOR
+    // // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskFSM, // finite state machine
-        "FSM_Task",
-        4096,
-        NULL,
-        4, // higher than comms
-        &TaskFSM_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskFSM, // finite state machine
+    //     "FSM_Task",
+    //     4096,
+    //     NULL,
+    //     4, // higher than comms
+    //     &TaskFSM_Handle,
+    //     CORE_COMMS);
 
     // =======================
     // COMMUNICATION
@@ -120,29 +122,42 @@ void create_tasks(void)
         &TaskWiFi_Handle,
         CORE_COMMS);
 
+    // // =======================
+    // // LOGGING (LOW PRIORITY)
+    // // =======================
+
+    // xTaskCreatePinnedToCore(
+    //     TaskLogger, // blackbox logging task & telemetrie
+    //     "Logger_Task",
+    //     4096,
+    //     NULL,
+    //     1,
+    //     &TaskLogger_Handle,
+    //     CORE_COMMS);
+
+    // // =======================
+    // // HOUSEKEEPING / OTA / CLI
+    // // =======================
+
+    // xTaskCreatePinnedToCore(
+    //     TaskHousekeeping,
+    //     "Housekeeping_Task",
+    //     4096,
+    //     NULL,
+    //     1,
+    //     &TaskHousekeeping_Handle,
+    //     CORE_COMMS);
+
     // =======================
-    // LOGGING (LOW PRIORITY)
+    // VISUALIZATION (WLED)
     // =======================
 
     xTaskCreatePinnedToCore(
-        TaskLogger, // blackbox logging task & telemetrie
-        "Logger_Task",
+        TaskWLED,
+        "WLED_Task",
         4096,
         NULL,
         1,
-        &TaskLogger_Handle,
-        CORE_COMMS);
-
-    // =======================
-    // HOUSEKEEPING / OTA / CLI
-    // =======================
-
-    xTaskCreatePinnedToCore(
-        TaskHousekeeping,
-        "Housekeeping_Task",
-        4096,
-        NULL,
-        1,
-        &TaskHousekeeping_Handle,
+        &TaskWLED_Handle,
         CORE_COMMS);
 }

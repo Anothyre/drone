@@ -1,5 +1,6 @@
 #include "tasks/wifi_task.h"
 #include "tasks/fsm_task.h"
+#include "tasks/wled_task.h"
 #include <Arduino.h>
 #include <WiFiUdp.h>
 #include <WiFi.h>
@@ -46,6 +47,9 @@ void TaskWiFi(void *pvParameters)
 
             // Push to FSM
             xQueueSend(fsm_command_queue, &pkt, 0);
+            
+            // Push to WLED for telemetry display
+            xQueueSend(wled_command_queue, &pkt, 0);
         }
 
         // CONTROL LINK TIMEOUT
@@ -79,9 +83,25 @@ static uint16_t crc16(const uint8_t *data, size_t len) // whispers words of wisd
 
 static void wifi_init()
 {
+    Serial.println("Initializing WiFi...");
+    delay(100);
+    
     WiFi.mode(WIFI_AP);
-    WiFi.softAP("DRONE_FC", "drone123"); // TODO: maybe change passwrd, maybe not. Maybe also set as env variable or smth idk.
-    // soft means no internet, just local network <- BS! SoftAP is an abbreviated term for "software enabled access point". Such access points utilize software to enable a computer which hasn't been specifically made to be a router into a wireless access point. It is often used interchangeably with the term "virtual router".
-    udp.begin(CONTROL_PORT); // control port means the port we listen to for incoming control packets
-    Serial.println("WiFi AP started. Waiting for control packets...");
+    delay(100);
+    
+    bool ap_ok = WiFi.softAP("DRONE_FC", "drone123");//TODO: Might change password 
+    delay(500);
+    
+    if (ap_ok) {
+        Serial.print("WiFi AP started. IP: ");
+        Serial.println(WiFi.softAPIP());
+    } else {
+        Serial.println("ERROR: Failed to start WiFi AP!");
+    }
+    
+    if (udp.begin(CONTROL_PORT)) {
+        Serial.printf("UDP listening on port %d\n", CONTROL_PORT);
+    } else {
+        Serial.println("ERROR: Failed to start UDP!");
+    }
 }

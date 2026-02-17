@@ -205,7 +205,7 @@ def main() -> None:
     pygame.joystick.init()
 
     joystick = init_joystick(None)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # IPv4 UDP socket 
 
     seq = 0
     x = 0.0
