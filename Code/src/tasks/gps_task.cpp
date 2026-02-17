@@ -8,7 +8,7 @@ HardwareSerial gpsSerial(GPS_UART);
 
 #include "data_structures.h"
 
-gps_data_t gps_data;
+GPSData gps_data;
 
 
 void TaskGPS(void *pvParameters)

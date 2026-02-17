@@ -5,7 +5,10 @@
 // Nur "extern" - das verspricht dem Compiler, dass die Variable existiert
 extern QueueHandle_t fsm_command_queue;
 extern QueueHandle_t fsm_event_queue;
-extern QueueHandle_t sensorQueue;
+extern QueueHandle_t imuQueue;
+extern QueueHandle_t baroQueue;
+extern QueueHandle_t gpsQueue;
+extern QueueHandle_t inputQueue;
 extern QueueHandle_t ADCQueue;
 extern QueueHandle_t wled_command_queue;
 

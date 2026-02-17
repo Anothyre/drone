@@ -1,5 +1,7 @@
 #include "tasks/control_task.h"
 #include "tasks.h"
+#include "data_structures.h"
+#include "shared.h"
 #define PLACEHOLDER (0) 
 
 float scaleOutput(float voltage);
@@ -165,6 +167,7 @@ void TaskControl(void *pvParameters)
 
     for (;;)
     {
+         
         now_us = esp_timer_get_time();
     
         // Schutz gegen den ersten Sprung
@@ -179,10 +182,15 @@ void TaskControl(void *pvParameters)
             continue;
         }
         last_us = now_us;//wait until bigger than min dt
-       
+        control_packet_t pkt, latest;
+        bool has_new = false;
+        while (xQueueReceive(inputQueue, &pkt, 0) == pdPASS) {
+        latest = pkt;      // immer überschreiben -> neuestes bleibt
+        has_new = true;
+        }       
 
 
-        ZspeedPID.setInput(PLACEHOLDER, PLACEHOLDER);
+        ZspeedPID.setInput(latest.z, PLACEHOLDER);//TODO: what has to go in the PID actually ?
         ZspeedPID.step(DELTA_T);
         float throttle = ZspeedPID.Regelausgangsgr_m; 
 

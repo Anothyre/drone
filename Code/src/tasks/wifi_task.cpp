@@ -46,8 +46,11 @@ void TaskWiFi(void *pvParameters)
             control_link_timed_out = false;
 
             // Push to FSM
-            xQueueSend(fsm_command_queue, &pkt, 0);
+            xQueueSend(fsm_command_queue, &pkt, 0);//just send fsm command not pkt
             
+
+
+            xQueueSend(inputQueue, &pkt, 0);
             // Push to WLED for telemetry display
             xQueueSend(wled_command_queue, &pkt, 0);
         }

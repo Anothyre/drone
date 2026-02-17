@@ -30,18 +30,27 @@ struct BaroData {
     float temperature; // Celsius
     float altitude;    // Meter
 };
+struct IMUData {
+    float accelX; // m/s²
+    float accelY; // m/s²
+    float accelZ; // m/s²
+    float gyroX;  // °/s
+    float gyroY;  // °/s
+    float gyroZ;  // °/s
+    //TODO: actuall values
+    };
 
 
-typedef struct {
+ struct GPSData {
     double lat, lon, alt;
     float speed, course;
     uint8_t satellites;
     float hdop;
     bool valid;
     uint32_t timestamp;
-} gps_data_t;
+} ;
 
-extern gps_data_t gps_data;
+extern GPSData gps_data;
 
 
 #endif // DATA_STRUCTURES_H

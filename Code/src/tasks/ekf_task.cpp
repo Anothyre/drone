@@ -2,11 +2,12 @@
 #include "tasks/gps_task.h"
 #include "data_structures.h"
 #include <TinyGPS++.h>
+#include "shared.h"
 
 
 // Global GPS data instance
 extern TinyGPSPlus gps;
-extern gps_data_t gps_data; //TODO: KAS
+
 
 void TaskEKF(void *pvParameters)
 {
@@ -14,7 +15,37 @@ void TaskEKF(void *pvParameters)
     for (;;)
     
     {
-        useGps = gps_data.valid;
+
+
+    bool has_new = false;
+
+    
+
+
+    IMUData  IMUpkt,  IMUlatest;
+    has_new = false;
+
+    while (xQueueReceive(imuQueue, &IMUpkt, 0) == pdPASS) {
+    IMUlatest = IMUpkt;      
+    has_new = true;
+    }
+
+    BaroData baroPkt, baroLatest;
+    has_new = false;
+
+    while (xQueueReceive(baroQueue, &baroPkt, 0) == pdPASS) {
+    baroLatest = baroPkt;     
+    has_new = true;
+    }
+
+
+    GPSData gpsPkt, gpsLatest;
+    has_new = false;
+    while (xQueueReceive(gpsQueue, &gpsPkt, 0) == pdPASS) {
+    gpsLatest = gpsPkt;      
+    has_new = true;
+    }
+
 
         
         
