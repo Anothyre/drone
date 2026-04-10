@@ -9,8 +9,11 @@
 
 void setup()
 {
+
   Serial.begin(115200);
-  for(int i = 1; i <= 10; i++){ //TODO adjust how long dependet on serial 
+  digitalWrite(14, HIGH);
+
+  for(int i = 1; i <= 8; i++){ //TODO adjust how long dependet on serial 
     delay(2000); 
     Serial.printf("--- Alive for %d sec---\n", 2*i); 
   }

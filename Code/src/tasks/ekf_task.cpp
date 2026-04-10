@@ -1,5 +1,6 @@
 #include "tasks/ekf_task.h"
 #include "tasks/gps_task.h"
+#include "tasks/imu_task.h"   // bring IMUSample_t definition
 #include "data_structures.h"
 #include <TinyGPS++.h>
 #include "shared.h"
@@ -22,12 +23,13 @@ void TaskEKF(void *pvParameters)
     
 
 
-    IMUData  IMUpkt,  IMUlatest;
+    // queue now delivers quaternion samples
+    IMUSample_t IMUpkt, IMUlatest;
     has_new = false;
 
     while (xQueueReceive(imuQueue, &IMUpkt, 0) == pdPASS) {
-    IMUlatest = IMUpkt;      
-    has_new = true;
+        IMUlatest = IMUpkt;
+        has_new = true;
     }
 
     BaroData baroPkt, baroLatest;
