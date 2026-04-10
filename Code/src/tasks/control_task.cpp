@@ -156,6 +156,7 @@ void TaskControl(void *pvParameters)
     static PID ratePitchPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f);
     static PID rateRollPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
     static PID rateYawPID(1.0f, 0.0f, 0.0f, 0.7f,0.0f,1.0f); 
+
     static PID ZspeedPID(1.0f, 0.2f, 0.0f, 0.7f,0.0f,1.0f); 
 
         
@@ -182,6 +183,7 @@ void TaskControl(void *pvParameters)
             continue;
         }
         last_us = now_us;//wait until bigger than min dt
+        
         control_packet_t pkt, latest;
         bool has_new = false;
         while (xQueueReceive(inputQueue, &pkt, 0) == pdPASS) {
@@ -216,10 +218,9 @@ void TaskControl(void *pvParameters)
         float currentRateYaw   = PLACEHOLDER;
 
         // Use attitude PID outputs as setpoints for rate controllers
-        ratePitchPID.setInput(pitchPID.Regelausgangsgr_m, currentRatePitch);
-        rateRollPID.setInput(rollPID.Regelausgangsgr_m, currentRateRoll);
-        rateYawPID.setInput(yawPID.Regelausgangsgr_m, currentRateYaw);
-
+        ratePitchPID.setInput(pitchPID.Regelausgangsgr_m, currentRatePitch);      
+        rateRollPID.setInput(rollPID.Regelausgangsgr_m, currentRateRoll);     
+        rateYawPID.setInput(yawPID.Regelausgangsgr_m, currentRateYaw);                 
         // Update PID controllers for rates
         ratePitchPID.step(DELTA_T);
         rateRollPID.step(DELTA_T);

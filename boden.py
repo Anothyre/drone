@@ -1,3 +1,8 @@
+
+#run this file with
+""" py -3.12 boden.py  """
+
+
 import socket
 import struct
 import time
@@ -18,6 +23,8 @@ TAKEOFF_HOLD_S = 2.0
 MAX_XY_YAW = 1.0
 MIN_Z = 0.0
 MAX_Z = 1.0
+START_KEY1 = pygame.K_p
+START_KEY2 = pygame.K_p #TODO: define start procedure
 
 EVENT_NONE = 0
 EVENT_INIT_COMPLETE = 1
@@ -241,6 +248,8 @@ def main() -> None:
 
     lb_rb_hold_started = None
     lb_rb_takeoff_sent = False
+    key_hold_started = None
+    key_takeoff_sent = False
 
     last_event = EVENT_NONE
     packets_this_second = 0
@@ -272,9 +281,7 @@ def main() -> None:
             kbd_x = float(keys[pygame.K_d]) - float(keys[pygame.K_a])
             kbd_y = float(keys[pygame.K_w]) - float(keys[pygame.K_s])
             kbd_yaw = float(keys[pygame.K_RIGHT]) - float(keys[pygame.K_LEFT])
-            kbd_z_delta = (Z_STEP_KEY if keys[pygame.K_UP] else 0.0) - (
-                Z_STEP_KEY if keys[pygame.K_DOWN] else 0.0
-            ) #TODO: find uniform "up" handling 
+            kbd_z_delta = (Z_STEP_KEY if keys[pygame.K_UP] else 0.0) - (Z_STEP_KEY if keys[pygame.K_DOWN] else 0.0) #TODO: find uniform "up" handling 
 
             gamepad = read_gamepad_axes(joystick)
 
@@ -298,6 +305,20 @@ def main() -> None:
             else:
                 lb_rb_hold_started = None
                 lb_rb_takeoff_sent = False
+            
+
+
+
+            if keys[START_KEY1] and keys[START_KEY2]:
+                if key_hold_started is None:
+                    key_hold_started = now
+                    key_takeoff_sent = False
+                elif not key_takeoff_sent and (now - key_hold_started) >= TAKEOFF_HOLD_S:
+                    event_mode = EVENT_TAKEOFF_CMD
+                    key_takeoff_sent = True
+            else:
+                key_hold_started = None
+                key_takeoff_sent = False
             
 
 
@@ -340,7 +361,7 @@ def main() -> None:
             #felix added kas
             pygame.draw.circle(screen, "red", (circle_x, circle_y), 40)
             pygame.display.flip()
-            debug_controller(joystick)
+            #debug_controller(joystick)
 
     except KeyboardInterrupt:
         print("\nStopping Bodenstation...")
