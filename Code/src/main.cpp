@@ -11,9 +11,14 @@ void setup()
 {
 
   Serial.begin(115200);
-  digitalWrite(14, HIGH);
 
-  for(int i = 1; i <= 8; i++){ //TODO adjust how long dependet on serial 
+
+  pinMode(14, OUTPUT);
+  pinMode(21, OUTPUT);
+  digitalWrite(14, HIGH);
+  digitalWrite(21, HIGH);
+  
+  for(int i = 1; i <= 8; i++){ //TODO adjust how long depends on serial 
     delay(2000); 
     Serial.printf("--- Alive for %d sec---\n", 2*i); 
   }
