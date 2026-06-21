@@ -2,6 +2,7 @@
 #include "tasks.h"
 #include "data_structures.h"
 #include "shared.h"
+#include <queue.h>
 #define PLACEHOLDER (0) 
 
 float scaleOutput(float voltage);
@@ -201,6 +202,19 @@ void TaskControl(void *pvParameters)
         float currentPitch = PLACEHOLDER; //TODO: implement actual reading 
         float currentRoll  = PLACEHOLDER; 
         float currentYaw   = PLACEHOLDER; 
+        float currentAltitude = PLACEHOLDER;
+
+        EKFState_t ekfState = {};
+        if (xQueuePeek(ekfQueue, &ekfState, 0) == pdPASS) {
+            if (ekfState.valid_attitude) {
+                currentPitch = ekfState.pitch;
+                currentRoll = ekfState.roll;
+                currentYaw = ekfState.yaw;
+            }
+            if (ekfState.valid_altitude) {
+                currentAltitude = ekfState.altitude_m;
+            }
+        }
 
         // Update PID controllers for attitude
         pitchPID.setInput(PLACEHOLDER, currentPitch);

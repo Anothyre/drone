@@ -48,9 +48,22 @@ struct IMUData {
     float hdop;
     bool valid;
     uint32_t timestamp;
-} ;
+};
+
+typedef struct {
+    float pitch;
+    float roll;
+    float yaw;
+    float altitude_m;
+    float posX;
+    float posY;
+    float posZ;
+    uint32_t timestamp_ms;
+    bool valid_attitude;
+    bool valid_altitude;
+    bool valid_position;
+} EKFState_t;
 
 extern GPSData gps_data;
-
 
 #endif // DATA_STRUCTURES_H
