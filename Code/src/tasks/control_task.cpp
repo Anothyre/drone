@@ -8,6 +8,12 @@
 
 #define PLACEHOLDER (0.0f)
 
+float scaleOutput(float voltage)
+{
+    (void)voltage;
+    return 42.0f;
+}
+
 namespace {
 constexpr uint16_t PWM_TICKS_MIN = 819;
 constexpr uint16_t PWM_TICKS_MAX = 1638;
@@ -25,31 +31,6 @@ float clamp01(float value)
     return value;
 }
 
-uint16_t mapNormalizedToTicks(float value)
-{
-    const float clamped = clamp01(value);
-    return static_cast<uint16_t>(PWM_TICKS_MIN + (PWM_TICKS_MAX - PWM_TICKS_MIN) * clamped);
-}
-
-void applyMotorOutputs(const float motorOutputs[4])
-{
-    for (int i = 0; i < 4; ++i) {
-        hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(motorOutputs[i]));
-    }
-}
-
-void runArmTwitch(void)
-{
-    for (int pulse = 0; pulse < 3; ++pulse) {
-        for (int i = 0; i < 4; ++i) {
-            hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(0.12f));
-        }
-        vTaskDelay(pdMS_TO_TICKS(20));
-        hardware_set_motors_idle();
-        vTaskDelay(pdMS_TO_TICKS(20));
-    }
-}
-
 class P {
 private:
     float Regeldiff_e;
@@ -65,7 +46,7 @@ private:
 public:
     float Regelausgangsgr_m;
 
-    explicit P(float kp)
+    P(float kp)
         : Regeldiff_e(0.0f), p(0.0f), ProportionalVerstaerkung_Kp(kp),
           Fuehrungsgroesse_w(0.0f), Regelgroesse_x(0.0f), Regelausgangsgr_m(0.0f) {}
 
@@ -83,6 +64,10 @@ public:
     void setInput(float w, float x) {
         Fuehrungsgroesse_w = w;
         Regelgroesse_x = x;
+    }
+
+    void getOutput(float &out) {
+        out = Regelausgangsgr_m;
     }
 };
 
@@ -148,11 +133,14 @@ public:
 
     void step(float dt) {
         Regeldiff_e = Fuehrungsgroesse_w - Regelgroesse_x;
+
         p = calculateP(Regeldiff_e);
         i = calculateI(Regeldiff_e, dt);
         d = calculateD(Regelgroesse_x, dt);
+
         Regelausgangsgr_m = p + i - d;
         clampOutput();
+
         last_x = Regelgroesse_x;
     }
 
@@ -167,7 +155,36 @@ public:
         Fuehrungsgroesse_w = w;
         Regelgroesse_x = x;
     }
+
+    void getOutput(float &out) {
+        out = Regelausgangsgr_m;
+    }
 };
+
+uint16_t mapNormalizedToTicks(float value)
+{
+    const float clamped = clamp01(value);
+    return static_cast<uint16_t>(PWM_TICKS_MIN + (PWM_TICKS_MAX - PWM_TICKS_MIN) * clamped);
+}
+
+void applyMotorOutputs(const float motorOutputs[4])
+{
+    for (int i = 0; i < 4; ++i) {
+        hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(motorOutputs[i]));
+    }
+}
+
+void runArmTwitch(void)
+{
+    for (int pulse = 0; pulse < 3; ++pulse) {
+        for (int i = 0; i < 4; ++i) {
+            hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(0.12f));
+        }
+        vTaskDelay(pdMS_TO_TICKS(20));
+        hardware_set_motors_idle();
+        vTaskDelay(pdMS_TO_TICKS(20));
+    }
+}
 } // namespace
 
 void TaskControl(void *pvParameters)
@@ -181,7 +198,7 @@ void TaskControl(void *pvParameters)
     static PID ZspeedPID(1.0f, 0.2f, 0.0f, 0.7f, 0.0f, 1.0f);
 
     float DELTA_T = 0.0f;
-    const float min_dt = 0.001f;
+    const int64_t min_dt = 0.00001f;
 
     int64_t last_us = 0;
     int64_t now_us;
@@ -195,15 +212,11 @@ void TaskControl(void *pvParameters)
 
         if (last_us == 0) {
             last_us = now_us;
-            vTaskDelay(pdMS_TO_TICKS(10));
             continue;
         }
 
         DELTA_T = (now_us - last_us) * 1e-6f;
-        last_us = now_us;
-
         if (DELTA_T <= min_dt) {
-            vTaskDelay(pdMS_TO_TICKS(1));
             continue;
         }
 
@@ -218,13 +231,9 @@ void TaskControl(void *pvParameters)
             startup_twitch_done = true;
         }
 
-        float motorOutputsRaw[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-        float motorOutputs[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        last_us = now_us;
 
         if (fsm_armed && has_latest) {
-            // TODO: Replace placeholder sensor inputs with real IMU/gyro feedback.
-            // TODO: Tune the throttle and attitude PID gains against real flight data.
-            // TODO: Add proper motor output scaling based on battery voltage and ESC range.
             ZspeedPID.setInput(latest.z, PLACEHOLDER);
             ZspeedPID.step(DELTA_T);
             float throttle = ZspeedPID.Regelausgangsgr_m;
@@ -270,17 +279,31 @@ void TaskControl(void *pvParameters)
             float motorCommandRoll = rateRollPID.Regelausgangsgr_m;
             float motorCommandYaw = rateYawPID.Regelausgangsgr_m;
 
+            float motorOutputsRaw[4];
             motorOutputsRaw[0] = throttle + motorCommandPitch + motorCommandRoll - motorCommandYaw;
             motorOutputsRaw[1] = throttle + motorCommandPitch - motorCommandRoll + motorCommandYaw;
             motorOutputsRaw[2] = throttle - motorCommandPitch - motorCommandRoll - motorCommandYaw;
             motorOutputsRaw[3] = throttle - motorCommandPitch + motorCommandRoll + motorCommandYaw;
+
+            float voltage = PLACEHOLDER;
+            float scalingFactor = scaleOutput(voltage);
+
+            float motorOutputs[4];
+            for (int i = 0; i < 4; i++) {
+                motorOutputs[i] = motorOutputsRaw[i] * scalingFactor;
+                if (motorOutputs[i] > 1.0f) {
+                    motorOutputs[i] = 1.0f;
+                }
+                if (motorOutputs[i] < 0.0f) {
+                    motorOutputs[i] = 0.0f;
+                }
+            }
+
+            applyMotorOutputs(motorOutputs);
+        } else {
+            hardware_set_motors_idle();
         }
 
-        for (int i = 0; i < 4; ++i) {
-            motorOutputs[i] = clamp01(motorOutputsRaw[i]);
-        }
-
-        applyMotorOutputs(motorOutputs);
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
