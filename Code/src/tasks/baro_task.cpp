@@ -9,11 +9,13 @@
 
 const float DroneBaro::SEA_LEVEL_PRESSURE = 101325.0f;
 
-const int BARO_CS_PIN  = 37;  // Chip Select
-const int BARO_INT_PIN = 34;  // Interrupt Pin
-const int BARO_CLK_PIN = 36;  // Clock
-const int BARO_MOSI_PIN = 35; // MOSI
-const int BARO_MISO_PIN = 37; // MISO
+
+
+const int BARO_CS_PIN   = 34;  // Chip Select  (GPIO34)
+const int BARO_CLK_PIN  = 36;  // Clock        (GPIO36)
+const int BARO_MOSI_PIN = 35;  // MOSI / SDI   (GPIO35)
+const int BARO_MISO_PIN = 37;  // MISO / SDO   (GPIO37)
+const int BARO_INT_PIN  = -1;  // Not wired — DPS368 has no INT line in 4-wire SPI
 
 const uint16_t BARO_TASK_STACK_SIZE = 4096;
 const int BARO_TASK_PRIORITY = 5;
