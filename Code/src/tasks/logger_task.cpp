@@ -5,8 +5,7 @@ void TaskLogger(void *pvParameters)
     for (;;)
     {
 
-        // Logging task
-        //TODO: writre on SD
+        //TODO: Implement reliable SD-card logging for telemetry and flight data.
         vTaskDelay(pdMS_TO_TICKS(100)); // 10Hz
     }
 }

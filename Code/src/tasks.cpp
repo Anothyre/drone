@@ -13,7 +13,7 @@
 #include "tasks/wled_task.h"
 
 
-// TODO:Remove Magic Numbers (prioritysy,cores,stacksizes)
+// TODO: Replace all magic numbers for task priorities, stack sizes, and core assignments with named constants.
 
 // Task handle definitions
 TaskHandle_t TaskIMU_Handle = NULL;
@@ -43,14 +43,14 @@ TaskHandle_t TaskWLED_Handle = NULL;
     //     &TaskIMU_Handle,
     //     CORE_REALTIME);
 
-    // xTaskCreatePinnedToCore(
-    //     TaskControl, // PID
-    //     "Control_Task",
-    //     8192,
-    //     NULL,
-    //     5,
-    //     &TaskControl_Handle,
-    //     CORE_REALTIME);
+    xTaskCreatePinnedToCore(
+        TaskControl, // PID
+        "Control_Task",
+        8192,
+        NULL,
+        5,
+        &TaskControl_Handle,
+        CORE_REALTIME);
 
     // // =======================
     // // ESTIMATION

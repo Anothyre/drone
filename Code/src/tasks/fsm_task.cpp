@@ -2,6 +2,7 @@
 #include "tasks/wifi_task.h"
 #include "tasks/control_task.h"
 #include "tasks/logger_task.h"
+#include "hardware.h"
 #include <Arduino.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
@@ -31,13 +32,10 @@ bool fsm_armed = false;
 // Initialize all peripherals (hardware init)
 void fsm_initialize_peripherals(void)
 {
-    //TODO: Call initialization routines for:
-    //  - IMU (TaskIMU)
-    //  - Barometer (TaskBaro)
-    //  - GPS (TaskGPS)
-    //  - Motor ESCs
-    //  - Communication interfaces
     Serial.println("[FSM] Initializing peripherals...");
+    hardware_init();
+    hardware_set_system_status(true, false, false, false, false, false, false);
+    hardware_beep(2, 80, 60);
 }
 
 // Run self-test on all systems
@@ -57,33 +55,27 @@ bool fsm_run_self_tests(void)
 // Arm motors with safety checks
 void fsm_arm_motors(void)
 {
-    //TODO: Implement arming sequence:
-    //  - Verify all sensors operational
-    //  - Verify battery above threshold
-    //  - Verify no active errors
-    //  - Activate motor controllers
-    //  - Set motors to minimum throttle (idle)
-    //  - Call TaskControl to activate motor control loop
     Serial.println("[FSM] Arming motors...");
+    hardware_set_armed(true);
+    hardware_set_motors_enabled(true);
+    hardware_beep(3, 80, 60);
     fsm_armed = true;
 }
 
 // Disarm motors safely
 void fsm_disarm_motors(void)
 {
-    //TODO: Implement disarming sequence:
-    //  - Zero all control outputs
-    //  - Deactivate motor controllers
-    //  - Stop TaskControl loop
-    //  - Log disarm event
     Serial.println("[FSM] Disarming motors...");
+    hardware_set_armed(false);
+    hardware_set_motors_enabled(false);
+    hardware_beep(1, 60, 40);
     fsm_armed = false;
 }
 
 // Initiate takeoff sequence
 void fsm_begin_takeoff(void)
 {
-    //TODO: Implement takeoff initiation:
+    // TODO: Implement a real takeoff sequence with altitude target and throttle ramp.
     //  - Save current position as home_position
     //  - Enable Z-axis position controller
     //  - Gradually increase thrust
@@ -104,7 +96,7 @@ bool fsm_check_altitude_reached(void)
 // Switch to stabilize flight mode
 void fsm_switch_to_stabilize(void)
 {
-    //TODO: Enable stabilization control:
+    // TODO: Switch the controller into a real stabilize mode and feed attitude setpoints.
     //  - Activate velocity controllers for X, Y, Z
     //  - Enable attitude stabilization (roll, pitch, yaw)
     //  - Configure TaskControl for stabilize mode
@@ -137,7 +129,7 @@ void fsm_switch_to_pos_hold(void)
 // Initiate landing sequence
 void fsm_begin_landing(void)
 {
-    //TODO: Implement landing initiation:
+    // TODO: Implement a controlled descent and touchdown detection for landing.
     //  - Hold X, Y position at current location
     //  - Gradually reduce Z thrust
     //  - Set descent rate to FSM_LANDING_DESCENT_RATE m/s
@@ -161,30 +153,23 @@ bool fsm_check_touchdown_detected(void)
 // Handle failsafe procedure
 void fsm_enter_failsafe(void)
 {
-    //TODO: Implement failsafe logic:
-    //  - If in flight: Initiate emergency landing
-    //  - If on ground: Disarm motors immediately
-    //  - Log error cause
-    //  - Send distress signal/telemetry
-    //  - Disable all control inputs except manual override
     Serial.println("[FSM] ENTERING FAILSAFE MODE!");
+    hardware_set_warning(true);
+    hardware_set_motors_enabled(false);
+    hardware_beep(5, 120, 80);
 }
 
 // Update battery status from ADC
 void fsm_update_battery_level(void)
 {
-    //TODO: Read battery voltage from ADC task:
-    //  - Convert raw ADC value to percentage (0-100%)
-    //  - Update fsm_battery_level
-    //  - Log critical battery levels
-    // Dummy: battery decreases over time
     fsm_battery_level = max(0.0f, fsm_battery_level - 0.01f);
+    hardware_set_battery_low(fsm_battery_level <= FSM_BATTERY_LOW_PERCENT);
 }
 
 // Update position from EKF
 void fsm_update_position(void)
 {
-    //TODO: Read position estimate from EKF task:
+    // TODO: Read the fused EKF state and update position/velocity for navigation.
     //  - Get position (x, y, z) from EKF output
     //  - Update fsm_position
     //  - Update fsm_velocity
