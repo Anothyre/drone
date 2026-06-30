@@ -39,6 +39,34 @@ void testBuzzer() {
   
   Serial.println("[HARDWARE] Buzzer Test finished.");
 }
+void testMotors() {//DO NOT USE WHEN ROTOR IS ATTACHED, IT WILL SPIN UP!
+
+  for(int MOTOR_i = MOTOR_Start; MOTOR_i <= MOTOR_End; MOTOR_i++){
+    
+  // Pin sauber initialisieren
+  pinMode(MOTOR_i+2, INPUT); 
+
+  // LEDC Konfiguration für ESP32 Core 2.0.17
+  ledcSetup(ledc_channel, freq, resolution);
+  ledcAttachPin(MOTOR_i, ledc_channel);
+  
+  // 50% Duty Cycle (Rechteckwelle erzeugen)
+  ledcWrite(ledc_channel, 128); 
+  
+  
+  
+  }
+    delay(10000); 
+
+  for(int MOTOR_i = MOTOR_Start; MOTOR_i <= MOTOR_End; MOTOR_i++){
+    
+ 
+  ledcDetachPin(MOTOR_i);
+  
+  Serial.println("[HARDWARE] Motor Test finished.");
+  }
+  
+}
 
 void setup()
 {
@@ -53,7 +81,6 @@ void setup()
   Serial.println("--- Alive --- with version: " + String(ESP_ARDUINO_VERSION_MAJOR) + "." + String(ESP_ARDUINO_VERSION_MINOR) + "." + String(ESP_ARDUINO_VERSION_PATCH));
   Serial.flush();
 
-  // HARDWARE-TESTS ZUERST (Bevor der Scheduler dazwischenfunkt!)
   Serial.println("[SETUP] hardware test starting...");
   Serial.flush();
 
@@ -62,8 +89,8 @@ void setup()
     digitalWrite(pin, HIGH);
   }
 
-  // Buzzer testen, solange die CPU exklusiv uns gehört
   testBuzzer();
+  testMotors();
 
   delay(2000); 
   for(int pin = LED_Start+1; pin <= LED_End; pin++){
@@ -72,7 +99,6 @@ void setup()
   Serial.println("[SETUP] hardware test done");
   Serial.flush();
 
-  // JETZT ERST DIE TASKS UND QUEUES STARTEN
   Serial.println("[SETUP] initQueues starting...");
   Serial.flush();
   initQueues();

@@ -34,67 +34,67 @@ TaskHandle_t TaskWLED_Handle = NULL;
     // REAL-TIME TASKS (CORE 1)
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskIMU,
-        "IMU_Task",
-        8192,
-        NULL,
-        6, // highest priority
-        &TaskIMU_Handle,
-        CORE_REALTIME);
+    // xTaskCreatePinnedToCore(
+    //     TaskIMU,
+    //     "IMU_Task",
+    //     8192,
+    //     NULL,
+    //     6, // highest priority
+    //     &TaskIMU_Handle,
+    //     CORE_REALTIME);
 
-    xTaskCreatePinnedToCore(
-        TaskControl, // PID
-        "Control_Task",
-        8192,
-        NULL,
-        5,
-        &TaskControl_Handle,
-        CORE_REALTIME);
+    // xTaskCreatePinnedToCore(
+    //     TaskControl, // PID
+    //     "Control_Task",
+    //     8192,
+    //     NULL,
+    //     5,
+    //     &TaskControl_Handle,
+    //     CORE_REALTIME);
 
-    // =======================
-    // ESTIMATION
-    // =======================
+    // // =======================
+    // // ESTIMATION
+    // // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskEKF, // Extended Kalman Filter
-        "EKF_Task",
-        8192,
-        NULL,
-        4,
-        &TaskEKF_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskEKF, // Extended Kalman Filter
+    //     "EKF_Task",
+    //     8192,
+    //     NULL,
+    //     4,
+    //     &TaskEKF_Handle,
+    //     CORE_COMMS);
 
     // =======================
     // SENSOR TASKS
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskGPS, // gps task
-        "GPS_Task",
-        4096,
-        NULL,
-        3,
-        &TaskGPS_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskGPS, // gps task
+    //     "GPS_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskGPS_Handle,
+    //     CORE_COMMS);
 
-    xTaskCreatePinnedToCore(
-        TaskBaro, // barometer task
-        "Baro_Task",
-        4096,
-        NULL,
-        3,
-        &TaskBaro_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskBaro, // barometer task
+    //     "Baro_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskBaro_Handle,
+    //     CORE_COMMS);
 
-    xTaskCreatePinnedToCore(
-        TaskADC, // adc task for current/voltage monitoring
-        "ADC_Task",
-        4096,
-        NULL,
-        3,
-        &TaskADC_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskADC, // adc task for current/voltage monitoring
+    //     "ADC_Task",
+    //     4096,
+    //     NULL,
+    //     3,
+    //     &TaskADC_Handle,
+    //     CORE_COMMS);
 
     // =======================
     // FSM / SUPERVISOR
