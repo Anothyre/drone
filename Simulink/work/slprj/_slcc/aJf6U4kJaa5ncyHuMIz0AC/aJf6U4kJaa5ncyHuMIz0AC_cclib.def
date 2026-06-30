@@ -1,0 +1,7 @@
+EXPORTS
+    drone_control_default_params_aJf6U4kJaa5ncyHuMIz0AC @1
+    drone_control_init_aJf6U4kJaa5ncyHuMIz0AC @2
+    drone_control_reset_aJf6U4kJaa5ncyHuMIz0AC @3
+    drone_control_step_aJf6U4kJaa5ncyHuMIz0AC @4
+    get_checksum_source_info @5
+    get_dll_checksum_aJf6U4kJaa5ncyHuMIz0AC @6

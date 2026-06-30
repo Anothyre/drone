@@ -2,8 +2,9 @@
 #include "tasks/gps_task.h"
 #include "tasks/imu_task.h"   // bring IMUSample_t definition
 #include "data_structures.h"
-#include <TinyGPS++.h>
 #include "shared.h"
+#include <TinyGPS++.h>
+#include <cmath>
 
 
 // Global GPS data instance

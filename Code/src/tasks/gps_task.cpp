@@ -1,10 +1,10 @@
 #include "tasks/gps_task.h"
+#include "shared.h"
 #include <Arduino.h>
 #include <TinyGPS++.h>
 
 TinyGPSPlus gps; // globaler Zugriff, pfui! - Dining Philosophers
 HardwareSerial gpsSerial(GPS_UART);
-
 
 #include "data_structures.h"
 
@@ -45,6 +45,7 @@ void TaskGPS(void *pvParameters)
                 gps_data.valid = true;
                 gps_data.timestamp = xTaskGetTickCount();
 
+                xQueueOverwrite(gpsQueue, &gps_data);
                 last_valid = xTaskGetTickCount();
             }
             else
@@ -53,6 +54,7 @@ void TaskGPS(void *pvParameters)
                 if ((xTaskGetTickCount() - last_valid) > 5000)
                 {
                     gps_data.valid = false;
+                    xQueueOverwrite(gpsQueue, &gps_data);
                 }
             }
         }
