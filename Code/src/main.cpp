@@ -13,59 +13,68 @@
 #define LED_Start 8
 #define LED_End 14
 #define BUZZER 21 
+// Konfiguration für Buzzer (2 kHz, 8-Bit)
+const int buzzer_freq = 2000;       
+const int buzzer_channel = 0;  
+const int buzzer_res = 8;    
 
-// Einheitliche Benennung
-const int freq = 2000;       
-const int ledc_channel = 2;  // Kanal 2 nutzen (0 und 1 meiden beim S3)
-const int resolution = 8;    
+// Konfiguration für ESC-Motoren (50 Hz, 14-Bit für präzise µs)
+const int esc_freq = 50;
+const int esc_res = 14;
+
+// Signal-Grenzwerte bei 14-Bit (2^14 = 16384 Ticks bei 20ms Periodendauer)
+const int ESC_THROTTLE_MIN = 819;  // entspricht ~1.0 ms (Nullgas / Arming)
+const int ESC_THROTTLE_TEST = 900; // Minimales Gas zum Testen (~1.1 ms)
 
 void testBuzzer() {
-  // Pin sauber initialisieren
   pinMode(BUZZER, INPUT); 
-
-  // LEDC Konfiguration für ESP32 Core 2.0.17
-  ledcSetup(ledc_channel, freq, resolution);
-  ledcAttachPin(BUZZER, ledc_channel);
+  ledcSetup(buzzer_channel, buzzer_freq, buzzer_res);
+  ledcAttachPin(BUZZER, buzzer_channel);
   
-  // 50% Duty Cycle (Rechteckwelle erzeugen)
-  ledcWrite(ledc_channel, 128); 
+  ledcWrite(buzzer_channel, 128); 
+  delay(1000); 
   
-  // Da hier noch keine FreeRTOS-Tasks laufen, blockiert ets_delay_us oder ein sauberes delay nicht die Architektur
-  delay(4000); 
-  
-  // Stoppen
-  ledcWrite(ledc_channel, 0);
+  ledcWrite(buzzer_channel, 0);
   ledcDetachPin(BUZZER);
-  
   Serial.println("[HARDWARE] Buzzer Test finished.");
 }
-void testMotors() {//DO NOT USE WHEN ROTOR IS ATTACHED, IT WILL SPIN UP!
 
-  for(int MOTOR_i = MOTOR_Start; MOTOR_i <= MOTOR_End; MOTOR_i++){
+void testMotors() {
+  Serial.println("[HARDWARE] Initialisiere ESCs (Sende Nullgas)...");
+  
+  // 1. Alle Motoren auf eigenen Kanälen mit 50Hz initialisieren und auf Nullgas setzen
+  for(int pin = MOTOR_Start; pin <= MOTOR_End; pin++){
+    int current_channel = pin + 1; // Kanal 2, 3, 4, 5 nutzen (Kanal 0/1 meiden)
     
-  // Pin sauber initialisieren
-  pinMode(MOTOR_i+2, INPUT); 
-
-  // LEDC Konfiguration für ESP32 Core 2.0.17
-  ledcSetup(ledc_channel, freq, resolution);
-  ledcAttachPin(MOTOR_i, ledc_channel);
-  
-  // 50% Duty Cycle (Rechteckwelle erzeugen)
-  ledcWrite(ledc_channel, 128); 
-  
-  
-  
+    pinMode(pin, INPUT); // Aus digitalem Zustand lösen
+    ledcSetup(current_channel, esc_freq, esc_res);
+    ledcAttachPin(pin, current_channel);
+    
+    // Sofort 1.0ms Puls senden, damit der ESC beim Booten nicht in den Error-Mode geht
+    ledcWrite(current_channel, ESC_THROTTLE_MIN); 
   }
-    delay(10000); 
 
-  for(int MOTOR_i = MOTOR_Start; MOTOR_i <= MOTOR_End; MOTOR_i++){
-    
- 
-  ledcDetachPin(MOTOR_i);
+  // 2. Halte das Nullgas-Signal für 4 Sekunden, damit die ESCs booten und "Scharf" schalten
+  delay(4000); 
+  Serial.println("[HARDWARE] ESCs armed. Starte kurzen Drehtest...");
+
+  // 3. Signal leicht anheben, um zu sehen, ob die Motoren reagieren
+  for(int pin = MOTOR_Start; pin <= MOTOR_End; pin++){
+    int current_channel = pin + 1;
+    ledcWrite(current_channel, ESC_THROTTLE_TEST); 
+  }
+
+  // Testlauf für 3 Sekunden
+  delay(3000);
+
+  // 4. Alle Motoren wieder stoppen und Peripherie freigeben
+  for(int pin = MOTOR_Start; pin <= MOTOR_End; pin++){
+    int current_channel = pin + 1;
+    ledcWrite(current_channel, ESC_THROTTLE_MIN); 
+    ledcDetachPin(pin);
+  }
   
   Serial.println("[HARDWARE] Motor Test finished.");
-  }
-  
 }
 
 void setup()
