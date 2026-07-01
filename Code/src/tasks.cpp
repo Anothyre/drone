@@ -69,14 +69,14 @@ TaskHandle_t TaskWLED_Handle = NULL;
     // SENSOR TASKS
     // =======================
 
-    // xTaskCreatePinnedToCore(
-    //     TaskGPS, // gps task
-    //     "GPS_Task",
-    //     4096,
-    //     NULL,
-    //     3,
-    //     &TaskGPS_Handle,
-    //     CORE_COMMS);
+    xTaskCreatePinnedToCore(
+        TaskGPS, // gps task
+        "GPS_Task",
+        4096,
+        NULL,
+        3,
+        &TaskGPS_Handle,
+        CORE_COMMS);
 
     // xTaskCreatePinnedToCore(
     //     TaskBaro, // barometer task

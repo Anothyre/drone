@@ -16,6 +16,10 @@ void TaskGPS(void *pvParameters)
     // Initialize GPS UART
     gpsSerial.begin(GPS_BAUD, SERIAL_8N1, GPS_RX_PIN, GPS_TX_PIN);
 
+
+    Serial.println("[SETUP] GPS task started");
+
+
     uint32_t last_valid = 0;
 
     for (;;)
@@ -24,8 +28,9 @@ void TaskGPS(void *pvParameters)
         while (gpsSerial.available() > 0)
         {
             char c = gpsSerial.read();
-            gps.encode(c);
         }
+                    gps.encode(c);
+
 
         // Process valid data (1–5Hz typical)
         if (gps.location.isUpdated())
@@ -35,6 +40,11 @@ void TaskGPS(void *pvParameters)
                 gps.satellites.value() >= 6 && // TODO: thik about magic numbers
                 gps.hdop.hdop() < 2.0)
             {
+
+
+
+
+
                 gps_data.lat = gps.location.lat();
                 gps_data.lon = gps.location.lng();
                 gps_data.alt = gps.altitude.meters();
@@ -44,12 +54,17 @@ void TaskGPS(void *pvParameters)
                 gps_data.hdop = gps.hdop.hdop(); // trustworthyness
                 gps_data.valid = true;
                 gps_data.timestamp = xTaskGetTickCount();
+                Serial.println("[GPS]" + String(gps_data.lat, 6) + ", " + String(gps_data.lon, 6) + ", " + String(gps_data.alt, 2) + "m, " + String(gps_data.speed, 2) + "km/h, " + String(gps_data.course, 2) + "deg, " + String(gps_data.satellites) + " satellites, HDOP: " + String(gps_data.hdop, 2));
+
 
                 xQueueOverwrite(gpsQueue, &gps_data);
                 last_valid = xTaskGetTickCount();
             }
             else
             {
+
+                Serial.println("[GPS] GPS invalid");
+
                 // Invalidate old data if no fix for > 5 seconds
                 if ((xTaskGetTickCount() - last_valid) > 5000)
                 {
