@@ -13,7 +13,7 @@ void setup()
   Serial.begin(115200);
   
   // USB-CDC Startup-Verzögerung
-  for(int i = 1; i <= 4; i++){ 
+  for(int i = 1; i <= 7; i++){ 
     delay(1000); 
     Serial.printf("--- Alive for %d sec---\n", i); 
   }
@@ -26,6 +26,11 @@ void setup()
 
   hardware_init();
   hardware_run_boot_sequence();
+
+
+
+
+  
 
   Serial.println("[SETUP] hardware init done");
   Serial.flush();
@@ -44,6 +49,8 @@ void setup()
   
   Serial.println("Setup complete.");
   Serial.flush();
+
+
 
 
   //test pwm

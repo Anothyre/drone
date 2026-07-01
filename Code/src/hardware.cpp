@@ -71,33 +71,7 @@ void hardware_init(void)
     hardware_setup_motors();
 }
 
-void hardware_run_boot_sequence(void)
-{
-    hardware_set_system_status(true, false, false, false, false, false, false);
-    hardware_beep(1, 120, 80);
-    delay(200);
 
-    hardware_set_system_status(true, true, false, false, false, false, false);
-    delay(200);
-
-    hardware_set_system_status(true, false, true, false, false, false, false);
-    delay(200);
-
-    hardware_set_system_status(true, false, false, true, false, false, false);
-    delay(200);
-
-    hardware_set_system_status(true, false, false, false, true, false, false);
-    delay(200);
-
-    hardware_set_system_status(true, false, false, false, false, true, false);
-    delay(200);
-
-    hardware_set_system_status(true, false, false, false, false, false, true);
-    delay(200);
-
-    hardware_set_system_status(true, false, false, false, false, false, false);
-    hardware_set_motors_idle();
-}
 
 void hardware_set_led(uint8_t led_index, bool on)
 {
@@ -167,6 +141,37 @@ void hardware_beep(uint8_t count, uint32_t on_ms, uint32_t off_ms)
     }
 }
 
+
+
+constexpr uint16_t PWM_TICKS_MIN = 819;
+constexpr uint16_t PWM_TICKS_MAX = 1638;
+constexpr float PWM_NORM_MIN = 0.0f;
+constexpr float PWM_NORM_MAX = 1.0f;
+
+float clamp01(float value)
+{
+    if (value < PWM_NORM_MIN) {
+        return PWM_NORM_MIN;
+    }
+    if (value > PWM_NORM_MAX) {
+        return PWM_NORM_MAX;
+    }
+    return value;
+}
+uint16_t mapNormalizedToTicks(float value)
+{
+    const float clamped = clamp01(value);
+    return static_cast<uint16_t>(PWM_TICKS_MIN + (PWM_TICKS_MAX - PWM_TICKS_MIN) * clamped);
+}
+
+void applyMotorOutputs(const float motorOutputs[4])
+{
+    for (int i = 0; i < 4; ++i) {
+        hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(motorOutputs[i]));
+    }
+}
+
+
 void hardware_set_motor_throttle(uint8_t motor_index, uint16_t pulse_ticks)
 {
     if (motor_index >= 4) {
@@ -190,4 +195,43 @@ void hardware_set_motors_enabled(bool enabled)
     for (uint8_t i = 0; i < 4; ++i) {
         hardware_set_motor_throttle(i, enabled ? ESC_THROTTLE_IDLE : ESC_THROTTLE_MIN);
     }
+}
+
+
+void hardware_run_boot_sequence(void)
+{
+    hardware_set_system_status(true, false, false, false, false, false, false);
+    hardware_beep(1, 120, 80);
+    delay(200);
+
+    hardware_set_system_status(true, true, false, false, false, false, false);
+    delay(200);
+
+    hardware_set_system_status(true, false, true, false, false, false, false);
+    delay(200);
+
+    hardware_set_system_status(true, false, false, true, false, false, false);
+    delay(200);
+
+    hardware_set_system_status(true, false, false, false, true, false, false);
+    delay(200);
+
+    hardware_set_system_status(true, false, false, false, false, true, false);
+    delay(200);
+
+    hardware_set_system_status(true, false, false, false, false, false, true);
+    delay(200);
+
+    hardware_set_system_status(true, false, false, false, false, false, false);
+    hardware_set_motors_idle();
+
+    hardware_set_motors_enabled(true);
+
+    float testThrottle[4] = {0.05f, 0.05f, 0.05f, 0.05f};
+    applyMotorOutputs(testThrottle);
+    delay(5000);
+    float zeroThrottle[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+    applyMotorOutputs(zeroThrottle);   
+
+  
 }

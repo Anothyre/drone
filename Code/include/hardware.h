@@ -21,4 +21,8 @@ void hardware_set_motor_throttle(uint8_t motor_index, uint16_t pulse_ticks);
 void hardware_set_motors_idle(void);
 void hardware_set_motors_enabled(bool enabled);
 
+
+
+uint16_t mapNormalizedToTicks(float value);
+void applyMotorOutputs(const float motorOutputs[4]);
 #endif

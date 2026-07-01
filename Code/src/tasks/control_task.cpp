@@ -15,21 +15,6 @@ float scaleOutput(float voltage)
 }
 
 namespace {
-constexpr uint16_t PWM_TICKS_MIN = 819;
-constexpr uint16_t PWM_TICKS_MAX = 1638;
-constexpr float PWM_NORM_MIN = 0.0f;
-constexpr float PWM_NORM_MAX = 1.0f;
-
-float clamp01(float value)
-{
-    if (value < PWM_NORM_MIN) {
-        return PWM_NORM_MIN;
-    }
-    if (value > PWM_NORM_MAX) {
-        return PWM_NORM_MAX;
-    }
-    return value;
-}
 
 class P {
 private:
@@ -161,18 +146,8 @@ public:
     }
 };
 
-uint16_t mapNormalizedToTicks(float value)
-{
-    const float clamped = clamp01(value);
-    return static_cast<uint16_t>(PWM_TICKS_MIN + (PWM_TICKS_MAX - PWM_TICKS_MIN) * clamped);
-}
 
-void applyMotorOutputs(const float motorOutputs[4])
-{
-    for (int i = 0; i < 4; ++i) {
-        hardware_set_motor_throttle(static_cast<uint8_t>(i), mapNormalizedToTicks(motorOutputs[i]));
-    }
-}
+
 
 void runArmTwitch(void)
 {
