@@ -14,8 +14,7 @@ GPSData gps_data;
 void TaskGPS(void *pvParameters)
 {
     // Initialize GPS UART
-    gpsSerial.begin(GPS_BAUD, SERIAL_8N1, GPS_RX_PIN, GPS_TX_PIN);
-
+    gpsSerial.begin(GPS_BAUD, SERIAL_8N1, 4, 5);
 
     Serial.println("[SETUP] GPS task started");
 
@@ -24,12 +23,18 @@ void TaskGPS(void *pvParameters)
 
     for (;;)
     {
+
+
+
         // Non-blocking serial read
         while (gpsSerial.available() > 0)
-        {
+        {                        Serial.println(String(gpsSerial.available()));
+
+
             char c = gpsSerial.read();
+            gps.encode(c);
+
         }
-                    gps.encode(c);
 
 
         // Process valid data (1–5Hz typical)

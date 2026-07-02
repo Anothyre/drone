@@ -43,14 +43,14 @@ TaskHandle_t TaskWLED_Handle = NULL;
     //     &TaskIMU_Handle,
     //     CORE_REALTIME);
 
-    xTaskCreatePinnedToCore(
-        TaskControl, // PID
-        "Control_Task",
-        8192,
-        NULL,
-        5,
-        &TaskControl_Handle,
-        CORE_REALTIME);
+    // xTaskCreatePinnedToCore(
+    //     TaskControl, // PID
+    //     "Control_Task",
+    //     8192,
+    //     NULL,
+    //     5,
+    //     &TaskControl_Handle,
+    //     CORE_REALTIME);
 
     // // =======================
     // // ESTIMATION
@@ -100,27 +100,27 @@ TaskHandle_t TaskWLED_Handle = NULL;
     // FSM / SUPERVISOR
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskFSM, // finite state machine
-        "FSM_Task",
-        4096,
-        NULL,
-        4, // higher than comms
-        &TaskFSM_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskFSM, // finite state machine
+    //     "FSM_Task",
+    //     4096,
+    //     NULL,
+    //     4, // higher than comms
+    //     &TaskFSM_Handle,
+    //     CORE_COMMS);
 
     // =======================
     // COMMUNICATION
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskWiFi, // communication task
-        "WiFi_Task",
-        8192,
-        NULL,
-        2,
-        &TaskWiFi_Handle,
-        CORE_COMMS);
+    // xTaskCreatePinnedToCore(
+    //     TaskWiFi, // communication task
+    //     "WiFi_Task",
+    //     8192,
+    //     NULL,
+    //     2,
+    //     &TaskWiFi_Handle,
+    //     CORE_COMMS);
 
     // // =======================
     // // LOGGING (LOW PRIORITY)
@@ -152,12 +152,12 @@ TaskHandle_t TaskWLED_Handle = NULL;
     // VISUALIZATION (WLED)
     // =======================
 
-    xTaskCreatePinnedToCore(
-        TaskWLED,
-        "WLED_Task",
-        4096,
-        NULL,
-        1,
-        &TaskWLED_Handle,
-        CORE_COMMS);
-}
+//     xTaskCreatePinnedToCore(
+//         TaskWLED,
+//         "WLED_Task",
+//         4096,
+//         NULL,
+//         1,
+//         &TaskWLED_Handle,
+//         CORE_COMMS);
+ }
